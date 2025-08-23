@@ -1,0 +1,393 @@
+.conversion-optimization {
+  position: sticky;
+  top: 100px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  z-index: 100;
+}
+
+/* Social Proof Banner */
+.social-proof-banner {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.social-proof-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.social-proof-icon {
+  font-size: 1.2rem;
+}
+
+.social-proof-text {
+  flex: 1;
+  text-align: center;
+}
+
+.social-proof-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Limited Time Offer */
+.limited-time-offer {
+  background-color: #000;
+  border: 2px solid #ff6b35;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.offer-header h3 {
+  color: #ff6b35;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.countdown-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timer-label {
+  color: #ccc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.timer-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.timer-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  padding: 0.5rem;
+  border-radius: 4px;
+  min-width: 50px;
+}
+
+.timer-number {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.timer-unit .timer-label {
+  color: #999;
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+}
+
+.timer-separator {
+  color: #ff6b35;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Value Proposition */
+.value-proposition {
+  margin-bottom: 1.5rem;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.value-icon {
+  font-size: 1.2rem;
+  color: #ff6b35;
+  min-width: 20px;
+  text-align: center;
+}
+
+.value-content h4 {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.value-content p {
+  color: #ccc;
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Urgency Message */
+.urgency-message {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.5s ease-out;
+}
+
+.urgency-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.urgency-icon {
+  font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Price Comparison */
+.price-comparison {
+  background-color: #000;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-comparison h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.comparison-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comparison-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.comparison-row.highlight {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: #fff;
+  font-weight: 600;
+}
+
+.comparison-label {
+  font-size: 0.9rem;
+}
+
+.comparison-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.savings-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.comparison-benefits {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.comparison-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.comparison-benefits li {
+  color: #28a745;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Trust Signals */
+.trust-signals {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  text-align: center;
+}
+
+.trust-icon {
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+.trust-text {
+  color: #ccc;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Recently Viewed */
+.recently-viewed {
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+}
+
+.recently-viewed h4 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.related-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.related-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.related-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.item-name {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.item-badge {
+  background-color: #ff6b35;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .conversion-optimization {
+    position: static;
+    margin-top: 1rem;
+  }
+  
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .trust-signals {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .trust-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .comparison-benefits ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .timer-display {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

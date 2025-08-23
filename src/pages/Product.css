@@ -1,0 +1,1107 @@
+/* Product Page Shared Styles */
+
+/* Reviews Link Styles */
+.reviews-link {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.reviews-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.reviews-link .stars {
+  color: #ffd700;
+}
+
+.reviews-link .review-count {
+  color: #ccc;
+}
+
+/* Bundle Page Specific Styles */
+.product-hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #000 0%, #111 100%);
+}
+
+.product-badge {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.product-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.price-section {
+  margin-bottom: 3rem;
+}
+
+.bundle-price {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.current-price {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.original-price {
+  font-size: 1.5rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.savings {
+  background-color: #44ff44;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.individual-prices {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.savings-text {
+  color: #44ff44;
+  font-weight: 600;
+}
+
+.product-actions {
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.guarantee-text {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.guarantee-text p {
+  margin: 0.25rem 0;
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: #555;
+}
+
+.thumbnail .placeholder-image {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #666;
+  text-align: center;
+}
+
+.synergy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.synergy-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.synergy-card:hover {
+  transform: translateY(-2px);
+  border-color: #555;
+}
+
+.synergy-card h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.synergy-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ingredient-tag {
+  background-color: #222;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #333;
+}
+
+.routine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.routine-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.routine-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.routine-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.routine-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.routine-step .step-number {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.routine-step .step-content h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.routine-step .step-content p {
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.bundle-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.bundle-product-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bundle-product-card:hover {
+  transform: translateY(-4px);
+  border-color: #555;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.bundle-product-card .product-image {
+  height: 200px;
+  background-color: #222;
+}
+
+.bundle-product-card .product-details {
+  padding: 2rem;
+}
+
+.bundle-product-card h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.bundle-product-card .product-price {
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.bundle-product-card .product-description {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ingredients-section,
+.benefits-section {
+  margin-bottom: 1.5rem;
+}
+
+.ingredients-section h4,
+.benefits-section h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefits-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-section li {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.benefits-section li::before {
+  content: "•";
+  color: #666;
+  position: absolute;
+  left: 0;
+}
+
+.value-proposition {
+  margin-top: 3rem;
+}
+
+.value-points {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.value-point {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.value-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.value-point h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.value-point p {
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.comparison-chart {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.comparison-chart h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.chart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #0a0a0a;
+  border-radius: 4px;
+}
+
+.chart-bar {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.chart-bar.individual {
+  background-color: #333;
+  color: #fff;
+}
+
+.chart-bar.bundle {
+  background-color: #44ff44;
+  color: #000;
+}
+
+.savings-highlight {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #44ff44;
+  color: #000;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.final-cta {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.final-cta .guarantee-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Product Detail Section */
+.product-detail-section {
+  padding: 2rem 0 4rem;
+}
+
+.product-images {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.main-image {
+  margin-bottom: 1rem;
+}
+
+.main-image .placeholder-image {
+  height: 500px;
+  background-color: #222;
+  border: 2px dashed #444;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-weight: 600;
+}
+
+.image-carousel {
+  text-align: center;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+/* Product Info */
+.product-info {
+  padding-left: 2rem;
+}
+
+.product-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.product-size {
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.product-description {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Product Sections */
+.product-section {
+  border-bottom: 1px solid #333;
+  margin-bottom: 1rem;
+}
+
+.section-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.section-toggle:hover {
+  color: #ccc;
+}
+
+.section-content {
+  padding-bottom: 1.5rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.benefits-list li::before {
+  content: "✓";
+  color: #44ff44;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.ingredients-list {
+  margin-bottom: 2rem;
+}
+
+.ingredient-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #222;
+}
+
+.ingredient-item:last-child {
+  border-bottom: none;
+}
+
+.ingredient-item h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.ingredient-item p {
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.full-ingredients {
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.full-ingredients h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.ingredient-list-text {
+  color: #999;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Reviews */
+.product-reviews {
+  margin-bottom: 2rem;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.reviews-label {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reviews-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.review-count {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Purchase Options */
+.purchase-options {
+  margin-bottom: 3rem;
+}
+
+.option-group {
+  margin-bottom: 2rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-label:hover {
+  border-color: #555;
+}
+
+.option-label.selected {
+  border-color: #fff;
+  background-color: #111;
+}
+
+.option-label input[type="radio"] {
+  margin-right: 1rem;
+  accent-color: #fff;
+}
+
+.option-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
+
+.option-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* Bundle Offer */
+.bundle-offer {
+  display: flex;
+  gap: 1rem;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.bundle-image {
+  flex-shrink: 0;
+}
+
+.bundle-image .placeholder-image {
+  width: 80px;
+  height: 80px;
+  background-color: #222;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #666;
+  text-align: center;
+}
+
+.bundle-info h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.bundle-savings {
+  color: #44ff44;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bundle-btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.bundle-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Usage Steps */
+.usage-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.usage-step {
+  text-align: center;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+}
+
+.step-content h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Customer Reviews */
+.customer-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  border-color: #555;
+}
+
+.review-rating {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.review-card h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.review-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.reviewer {
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Related Products */
+.related-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.related-product {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.related-product:hover {
+  transform: translateY(-4px);
+  border-color: #555;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.related-product .product-image {
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.related-product .placeholder-image {
+  height: 100%;
+  background-color: #222;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.related-product h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.related-product .product-price {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Science Sections */
+.peptide-science,
+.caffeine-science,
+.ingredient-deep-dive {
+  margin-top: 3rem;
+}
+
+.peptide-benefits ul,
+.caffeine-benefits ul,
+.tallow-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.peptide-benefits li,
+.caffeine-benefits li,
+.tallow-benefits li {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.peptide-benefits li::before,
+.caffeine-benefits li::before,
+.tallow-benefits li::before {
+  content: "✓";
+  color: #44ff44;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.peptide-comparison {
+  margin-top: 3rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.peptide-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.peptide-card h4 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.peptide-card p {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.peptide-card strong {
+  color: #fff;
+}
+
+/* NMF Components */
+.nmf-components {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.component {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.component h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.component p {
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-info {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+  
+  .product-images {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-info h1 {
+    font-size: 2rem;
+  }
+  
+  .usage-steps {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .customer-reviews {
+    grid-template-columns: 1fr;
+  }
+  
+  .related-products {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nmf-components {
+    grid-template-columns: 1fr;
+  }
+  
+  .bundle-offer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .bundle-image {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-section {
+    padding: 1rem 0 2rem;
+  }
+  
+  .main-image .placeholder-image {
+    height: 300px;
+  }
+  
+  .option-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .review-card,
+  .related-product,
+  .peptide-card,
+  .component {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,550 @@
+/* Science Page Specific Styles */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #000 0%, #111 100%);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.highlight {
+  color: #fff;
+  background: linear-gradient(45deg, #333, #666);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.hero-description {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  font-weight: 500;
+}
+
+/* Philosophy Section */
+.philosophy-points {
+  margin-top: 2rem;
+}
+
+.point {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #0a0a0a;
+  border-left: 3px solid #333;
+  border-radius: 4px;
+}
+
+.point h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.point p {
+  color: #bbb;
+  margin: 0;
+}
+
+/* Placeholder Images */
+.placeholder-image {
+  background-color: #222;
+  border: 2px dashed #444;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #666;
+  font-weight: 600;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-image p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 400;
+}
+
+/* Exclusions Grid */
+.exclusions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.exclusion-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.exclusion-card:hover {
+  border-color: #555;
+  transform: translateY(-2px);
+}
+
+.exclusion-icon {
+  font-size: 2rem;
+  color: #ff4444;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.exclusion-card h3 {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.exclusions-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Comparison Table */
+.comparison-table {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1.2fr 1fr 0.8fr 1fr 2fr;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+.table-header {
+  background-color: #222;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.rawdog-row {
+  background-color: #0a2a0a;
+  border: 1px solid #2a5a2a;
+}
+
+.brand-col {
+  font-weight: 600;
+}
+
+.risk-col {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.has-risk {
+  color: #ff4444;
+}
+
+.no-risk {
+  color: #44ff44;
+}
+
+.positioning-col {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Formulator Section */
+.formulator-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.formulator-content h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.formulator-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.product-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: #555;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+  height: 200px;
+}
+
+.product-content {
+  padding: 2rem;
+}
+
+.product-content h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.product-function,
+.ingredients-list {
+  margin-bottom: 1.5rem;
+}
+
+.product-function h4,
+.ingredients-list h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.ingredients-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients-list li {
+  color: #bbb;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ingredients-list li::before {
+  content: "•";
+  color: #666;
+  position: absolute;
+  left: 0;
+}
+
+/* Technology Section */
+.technology-benefits {
+  margin-top: 2rem;
+}
+
+.technology-benefits h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.technology-benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.technology-benefits li {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.technology-benefits li::before {
+  content: "✓";
+  color: #44ff44;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Peptide Cards */
+.peptide-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.peptide-card h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.peptide-card p {
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Hormone Section */
+.hormone-section {
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid #333;
+}
+
+.hormone-benefits h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.hormone-benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hormone-benefits li {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.hormone-benefits li::before {
+  content: "⚠️";
+  position: absolute;
+  left: 0;
+}
+
+/* Methodology Section */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.methodology-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.rawdog-approach {
+  border-color: #2a5a2a;
+  background-color: #0a2a0a;
+}
+
+.methodology-card h3 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.wrong-approach ul,
+.right-approach ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wrong-approach li {
+  color: #ff9999;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.wrong-approach li::before {
+  content: "✗";
+  color: #ff4444;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.right-approach li {
+  color: #99ff99;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.right-approach li::before {
+  content: "✓";
+  color: #44ff44;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.methodology-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.methodology-detail h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.formation-examples {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.formation-point {
+  background-color: #111;
+  border-left: 3px solid #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.formation-point strong {
+  color: #fff;
+}
+
+/* CTA Section */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Section Subtitles */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #bbb;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1.2fr 0.6fr 0.8fr 0.8fr 0.6fr 0.8fr 1.5fr;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .positioning-col {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .exclusions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  
+  .table-header > div,
+  .table-row > div {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+  }
+  
+  .table-header > div:last-child,
+  .table-row > div:last-child {
+    border-bottom: none;
+  }
+  
+  .risk-col {
+    text-align: left;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 200px;
+  }
+}
