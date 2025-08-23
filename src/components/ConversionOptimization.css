@@ -239,20 +239,16 @@
 
 .comparison-row.highlight .comparison-label {
   color: #ffffff !important;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 0.02em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
 }
 
 .comparison-row.highlight .comparison-price {
   color: #ffffff !important;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 1.3rem;
-  letter-spacing: 0.02em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
 }
 
 .comparison-row.highlight .savings-badge {
