@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Science from './pages/Science';
@@ -32,28 +32,43 @@ const ScrollToTop: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <Router>
       <div className="App">
         <nav className="navbar">
           <div className="nav-container">
-            <Link to="/" className="nav-logo">
+            <Link to="/" className="nav-logo" onClick={closeMobileMenu}>
               rawdog
             </Link>
-            <div className="nav-menu">
-              <Link to="/collection" className="nav-link">
+            <div className="nav-hamburger" onClick={toggleMobileMenu}>
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+            </div>
+            <div className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+              <Link to="/collection" className="nav-link" onClick={closeMobileMenu}>
                 Shop All
               </Link>
-              <Link to="/science" className="nav-link">
+              <Link to="/science" className="nav-link" onClick={closeMobileMenu}>
                 Science
               </Link>
-              <Link to="/about" className="nav-link">
+              <Link to="/about" className="nav-link" onClick={closeMobileMenu}>
                 About
               </Link>
-              <Link to="/faq" className="nav-link">
+              <Link to="/faq" className="nav-link" onClick={closeMobileMenu}>
                 FAQ
               </Link>
-              <Link to="/contact" className="nav-link">
+              <Link to="/contact" className="nav-link" onClick={closeMobileMenu}>
                 Contact
               </Link>
             </div>
