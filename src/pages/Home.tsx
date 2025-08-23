@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -31,6 +31,58 @@ interface Ambassador {
 }
 
 const Home: React.FC = () => {
+  // Countdown timer state
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 23,
+    minutes: 59,
+    seconds: 42
+  });
+
+  // Initialize countdown timer
+  useEffect(() => {
+    // Get or set end time (24 hours from now)
+    const getEndTime = () => {
+      const stored = localStorage.getItem('rawdog-sale-end');
+      if (stored) {
+        return new Date(stored);
+      } else {
+        const endTime = new Date();
+        endTime.setHours(endTime.getHours() + 24);
+        localStorage.setItem('rawdog-sale-end', endTime.toISOString());
+        return endTime;
+      }
+    };
+
+    const endTime = getEndTime();
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = endTime.getTime() - now;
+
+      if (distance > 0) {
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        setTimeLeft({ hours, minutes, seconds });
+      } else {
+        // Timer expired, reset for another 24 hours
+        const newEndTime = new Date();
+        newEndTime.setHours(newEndTime.getHours() + 24);
+        localStorage.setItem('rawdog-sale-end', newEndTime.toISOString());
+        setTimeLeft({ hours: 23, minutes: 59, seconds: 59 });
+      }
+    };
+
+    // Update immediately
+    updateTimer();
+
+    // Update every second
+    const timer = setInterval(updateTimer, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const ingredients = [
     {
       name: "BEEF TALLOW",
@@ -303,15 +355,15 @@ const Home: React.FC = () => {
               <h3>⏰ LIMITED TIME: 30% OFF ENDS IN</h3>
               <div className="countdown">
                 <div className="time-unit">
-                  <span className="time-number">23</span>
+                  <span className="time-number">{timeLeft.hours.toString().padStart(2, '0')}</span>
                   <span className="time-label">HOURS</span>
                 </div>
                 <div className="time-unit">
-                  <span className="time-number">59</span>
+                  <span className="time-number">{timeLeft.minutes.toString().padStart(2, '0')}</span>
                   <span className="time-label">MINUTES</span>
                 </div>
                 <div className="time-unit">
-                  <span className="time-number">42</span>
+                  <span className="time-number">{timeLeft.seconds.toString().padStart(2, '0')}</span>
                   <span className="time-label">SECONDS</span>
                 </div>
               </div>

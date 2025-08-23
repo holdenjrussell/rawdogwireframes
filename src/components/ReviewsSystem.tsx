@@ -22,22 +22,8 @@ interface ReviewsSystemProps {
   totalReviews: number;
 }
 
-const ReviewsSystem: React.FC<ReviewsSystemProps> = ({
-  productId,
-  productName,
-  averageRating,
-  totalReviews
-}) => {
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [filteredReviews, setFilteredReviews] = useState<Review[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'highest' | 'lowest' | 'helpful'>('newest');
-  const [showWriteReview, setShowWriteReview] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const reviewsPerPage = 10;
-
-  // Mock reviews data - in production this would come from an API
-  const mockReviews: Review[] = [
+// Mock reviews data - in production this would come from an API
+const mockReviews: Review[] = [
     {
       id: '1',
       customerName: 'Marcus T.',
@@ -99,6 +85,20 @@ const ReviewsSystem: React.FC<ReviewsSystemProps> = ({
       age: '25-34'
     }
   ];
+
+const ReviewsSystem: React.FC<ReviewsSystemProps> = ({
+  productId,
+  productName,
+  averageRating,
+  totalReviews
+}) => {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [filteredReviews, setFilteredReviews] = useState<Review[]>([]);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'highest' | 'lowest' | 'helpful'>('newest');
+  const [showWriteReview, setShowWriteReview] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const reviewsPerPage = 10;
 
   useEffect(() => {
     // In production, fetch reviews from API based on productId

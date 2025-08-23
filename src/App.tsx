@@ -8,6 +8,10 @@ import ProductCleanser from './pages/ProductCleanser';
 import ProductMoisturizer from './pages/ProductMoisturizer';
 import ProductEyeCream from './pages/ProductEyeCream';
 import ProductBundle from './pages/ProductBundle';
+import TermsOfService from './pages/TermsOfService';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import ContactUs from './pages/ContactUs';
+import Footer from './components/Footer';
 import './App.css';
 
 // Component to handle scroll to top on route change
@@ -54,7 +58,11 @@ const App: React.FC = () => {
           <Route path="/products/moisturizer" element={<ProductMoisturizer />} />
           <Route path="/products/eyecream" element={<ProductEyeCream />} />
           <Route path="/products/bundle" element={<ProductBundle />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

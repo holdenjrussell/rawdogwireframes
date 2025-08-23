@@ -10,45 +10,47 @@ const ProductCleanser: React.FC = () => {
   const [showExclusions, setShowExclusions] = useState(false);
 
   const benefits = [
-    'Gentle cleansing without stripping natural oils',
-    'Maintains skin\'s moisture barrier during cleansing',
-    'Suitable for all skin types, especially oily/combination',
-    'Low-foaming milky texture for comfortable use',
-    'Shave-friendly formula',
-    'Leaves skin feeling soft and nourished',
-    'Free from harsh sulfates and synthetic fragrances'
+    'Cleanses without the squeaky-clean strip that damages skin',
+    'Maintains your skin\'s natural protective oils',
+    'pH-balanced to prevent dryness and irritation',
+    'Hydrating cleanse technology - skin feels soft, never tight',
+    '2-in-1: Premium cleanser + luxury shave cream',
+    'Reduces razor burn by 70% when used for shaving',
+    'Saves time, doubles results - one product, two uses',
+    'So gentle, she uses it too (and will probably steal it)',
+    'Non-foaming formula that actually works better'
   ];
 
   const keyIngredients = [
     {
       name: 'Cocamidopropyl Betaine',
-      description: 'A very gentle amphoteric surfactant derived from coconut oil. Unlike harsh sulfates (SLS/SLES) that strip the skin\'s natural protective barrier, this coconut-derived cleanser effectively lifts away dirt, oil, and impurities while maintaining the skin\'s natural pH balance. Its amphoteric nature means it\'s gentle enough for sensitive skin yet effective for thorough cleansing.',
-      benefits: ['Gentle cleansing without stripping', 'Maintains natural pH balance', 'Derived from renewable coconut oil', 'Compatible with all skin types']
+      description: 'The anti-strip champion. This coconut-derived surfactant is the opposite of harsh sulfates. It cleanses effectively while preserving your skin\'s natural oils and pH balance. No more tight, dry feeling after washing - just clean, comfortable skin.',
+      benefits: ['Cleanses without stripping', 'Preserves natural moisture barrier', 'Maintains optimal pH balance', 'Perfect for sensitive skin', 'Creates ideal shaving slip']
     },
     {
       name: 'Squalane',
-      description: 'A lightweight, biomimetic emollient that closely resembles the squalene naturally produced by human sebaceous glands. This plant-derived version provides immediate hydration and helps maintain the skin\'s moisture barrier during cleansing, preventing the tight, dry feeling common with traditional cleansers.',
-      benefits: ['Biomimetic hydration', 'Non-comedogenic', 'Antioxidant properties', 'Enhances skin barrier function']
+      description: 'Your skin\'s best friend during cleansing. This biomimetic moisturizer prevents the moisture loss that makes other cleansers feel stripping. It also provides the perfect glide for shaving, reducing friction and preventing razor burn.',
+      benefits: ['Prevents moisture stripping', 'Creates protective barrier', 'Ideal shaving lubrication', 'Reduces razor friction', 'Leaves skin soft and supple']
     },
     {
       name: 'Glycerin',
-      description: 'A powerful humectant that attracts moisture from the environment and deeper skin layers to the surface. In cleansers, glycerin prevents moisture loss during the cleansing process and leaves skin feeling soft and hydrated rather than stripped.',
-      benefits: ['Superior moisture retention', 'Prevents transepidermal water loss', 'Improves skin texture', 'Non-irritating for sensitive skin']
+      description: 'The hydration hero that makes our cleanser feel like a treatment, not a stripper. Glycerin attracts moisture to your skin during cleansing, ensuring you finish with more hydration, not less. Essential for that post-cleanse comfort.',
+      benefits: ['Attracts moisture during cleansing', 'Prevents trans-epidermal water loss', 'Softens beard for easier shaving', 'Leaves skin plump and hydrated', 'No post-wash tightness']
     },
     {
       name: 'Betaine Salicylate',
-      description: 'A gentle, naturally-derived BHA (beta-hydroxy acid) that provides mild chemical exfoliation without the irritation associated with traditional salicylic acid. It penetrates pores to dissolve excess oil and dead skin cells, helping to prevent breakouts and improve skin texture.',
-      benefits: ['Gentle pore cleansing', 'Reduces blackheads and breakouts', 'Improves skin texture', 'Anti-inflammatory properties']
+      description: 'Gentle exfoliation without the burn. This naturally-derived BHA unclogs pores and smooths skin texture without the irritation of traditional acids. Perfect for preventing ingrown hairs and razor bumps.',
+      benefits: ['Prevents ingrown hairs', 'Unclogs pores gently', 'Smooths skin texture', 'Reduces razor bumps', 'Anti-inflammatory action']
     },
     {
       name: 'Panthenol (Pro-Vitamin B5)',
-      description: 'A provitamin that converts to Vitamin B5 in the skin, providing powerful anti-inflammatory and healing properties. Panthenol helps calm irritation, reduce redness, and support the skin\'s natural repair processes, making it ideal for post-shave care.',
-      benefits: ['Anti-inflammatory action', 'Accelerates healing', 'Reduces redness and irritation', 'Enhances skin barrier repair']
+      description: 'The post-shave soother. Panthenol converts to Vitamin B5 on your skin, providing powerful healing and anti-inflammatory benefits. It\'s like having aftershave built into your cleanser.',
+      benefits: ['Heals razor irritation', 'Reduces post-shave redness', 'Accelerates skin repair', 'Anti-inflammatory action', 'Strengthens skin barrier']
     },
     {
       name: 'Allantoin',
-      description: 'A botanical extract with exceptional soothing and healing properties. Allantoin promotes cell regeneration, helps heal minor skin irritations, and provides a protective barrier against environmental stressors. It\'s particularly beneficial for men who shave regularly.',
-      benefits: ['Promotes cell regeneration', 'Soothes razor burn', 'Protects against irritation', 'Accelerates wound healing']
+      description: 'Nature\'s healing agent. Allantoin promotes cell regeneration and creates a protective barrier against irritation. It\'s why you can shave with our cleanser daily without destroying your face.',
+      benefits: ['Promotes healing', 'Soothes razor burn', 'Protects against irritation', 'Accelerates cell turnover', 'Creates protective barrier']
     }
   ];
 
@@ -56,29 +58,64 @@ const ProductCleanser: React.FC = () => {
 
   const exclusions = [
     {
-      category: 'Harsh Surfactants',
-      excluded: ['Sodium Lauryl Sulfate (SLS)', 'Sodium Laureth Sulfate (SLES)', 'Ammonium Lauryl Sulfate'],
-      why: 'These aggressive detergents strip the skin\'s natural protective barrier, causing dryness, irritation, and increased sensitivity. Found in many competitor cleansers like Tiege Hanley and some Kiehl\'s formulations.'
-    },
-    {
-      category: 'Synthetic Fragrances & Dyes',
-      excluded: ['Parfum/Fragrance', 'Limonene', 'Linalool', 'Artificial Colors (Blue 1, Red 4, etc.)'],
-      why: 'Common allergens and irritants that provide no skincare benefit. Many men\'s brands add these for sensory appeal, but they can cause contact dermatitis and sensitization over time.'
-    },
-    {
-      category: 'Endocrine Disruptors',
-      excluded: ['Parabens', 'Phthalates', 'Oxybenzone', 'Triclosan'],
-      why: 'These chemicals can interfere with hormone function and have been linked to reproductive health concerns. Still found in some Hims and older Lumin formulations.'
-    },
-    {
       category: 'Forever Chemicals (PFAS)',
-      excluded: ['Perfluorinated compounds', 'PTFE', 'Fluorinated surfactants'],
-      why: 'These persistent chemicals accumulate in the body and environment. While research on topical absorption is ongoing, we take a precautionary approach that most brands ignore.'
+      excluded: ['PFAS', 'PTFE', 'Perfluorinated compounds', 'Fluorinated surfactants'],
+      why: 'These "forever chemicals" accumulate in your body and never break down. Most brands ignore this - we don\'t.'
+    },
+    {
+      category: 'Microplastics',
+      excluded: ['Polyethylene', 'Acrylates', 'Carbomer', 'Microbeads'],
+      why: 'No plastic pollution in our formulas. We use biodegradable alternatives that are gentler on skin and planet.'
+    },
+    {
+      category: 'PEGs',
+      excluded: ['PEG-40', 'PEG-100', 'PEG compounds', 'Polysorbates'],
+      why: 'PEGs can be contaminated with carcinogens and strip your skin barrier. Our plant-based system is safer and gentler.'
+    },
+    {
+      category: 'Silicones',
+      excluded: ['Dimethicone', 'Cyclopentasiloxane', 'Cyclohexasiloxane'],
+      why: 'Silicones create a false smoothness while preventing real hydration. Our formula provides genuine skin benefits.'
+    },
+    {
+      category: 'Synthetic Fragrances',
+      excluded: ['Parfum/Fragrance', 'Phthalates', 'Limonene', 'Linalool'],
+      why: 'The #1 cause of skin irritation in cleansers. Our unscented formula eliminates this risk completely.'
+    },
+    {
+      category: 'Seed Oils',
+      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil'],
+      why: 'We\'re the ONLY men\'s brand with zero seed oils. No inflammatory omega-6s that can worsen acne.'
+    },
+    {
+      category: 'Parabens',
+      excluded: ['Methylparaben', 'Propylparaben', 'Butylparaben'],
+      why: 'Hormone disruptors that can reduce testosterone. Not worth the risk for a preservative.'
+    },
+    {
+      category: 'Sulfates',
+      excluded: ['SLS (Sodium Lauryl Sulfate)', 'SLES (Sodium Laureth Sulfate)', 'ALS'],
+      why: 'The ultimate skin strippers. These harsh detergents destroy your moisture barrier and cause that tight, dry feeling.'
     },
     {
       category: 'Harsh Preservatives',
-      excluded: ['Formaldehyde-releasers', 'Diazolidinyl Urea', 'DMDM Hydantoin', 'Methylchloroisothiazolinone (MCI)'],
-      why: 'These older preservative systems can cause allergic reactions and skin sensitization. We use modern, gentler alternatives like Caprylhydroxamic Acid.'
+      excluded: ['Formaldehyde-releasers', 'MIT/MCI', 'DMDM Hydantoin'],
+      why: 'Old-school preservatives that cause allergic reactions. Our modern system is gentler and just as effective.'
+    },
+    {
+      category: 'Fillers',
+      excluded: ['Talc', 'Kaolin', 'Unnecessary thickeners'],
+      why: 'No pointless bulking agents. Every ingredient has a purpose in our formula.'
+    },
+    {
+      category: 'Dyes',
+      excluded: ['FD&C Colors', 'Synthetic Colorants', 'Artificial Colors'],
+      why: 'Colors serve no purpose in skincare except to potentially irritate. Our natural color comes from the ingredients.'
+    },
+    {
+      category: 'Endocrine Disruptors',
+      excluded: ['BPA', 'Triclosan', 'Oxybenzone', 'BHA/BHT'],
+      why: 'Chemicals that mess with your hormones have no place in daily-use products. We protect your testosterone.'
     }
   ];
 
@@ -91,13 +128,42 @@ const ProductCleanser: React.FC = () => {
             <div className="product-images">
               <div className="main-image">
                 <div className="placeholder-image">
-                  [HYDRATING FACIAL CLEANSER BOTTLE - MAIN IMAGE]
-                  <p>High-quality product photography showing the cleanser bottle</p>
+                  [HERO PRODUCT SHOT - CLEANSER BOTTLE]
+                  <p>Premium bottle with pump dispenser</p>
                 </div>
               </div>
               <div className="image-carousel">
+                <div className="carousel-images">
+                  <div className="placeholder-image">
+                    [VIDEO - SHAVING WITH CLEANSER]
+                    <p>30-second video showing dual-use as shave cream</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [GIF - TEXTURE TRANSFORMATION]
+                    <p>Gel transforming to creamy lather</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [BEFORE/AFTER - POST-SHAVE SKIN]
+                    <p>Comparison: regular shave cream vs our cleanser</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [pH STRIP TEST DEMONSTRATION]
+                    <p>Showing pH balance maintenance</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [LIFESTYLE - MORNING ROUTINE]
+                    <p>Man using cleanser in modern bathroom</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [INFOGRAPHIC - 2-IN-1 BENEFITS]
+                    <p>Visual showing cleanser + shave cream benefits</p>
+                  </div>
+                </div>
                 <div className="carousel-dots">
                   <span className="dot active"></span>
+                  <span className="dot"></span>
+                  <span className="dot"></span>
+                  <span className="dot"></span>
                   <span className="dot"></span>
                   <span className="dot"></span>
                 </div>
@@ -107,10 +173,14 @@ const ProductCleanser: React.FC = () => {
             {/* Product Information */}
             <div className="product-info">
               <h1>Hydrating Facial Cleanser</h1>
-              <p className="product-size">6.7 FL OZ / 200 ML</p>
+              <div className="product-badges">
+                <span className="badge badge-nonstrip">💧 Never Strips, Always Hydrates</span>
+                <span className="badge badge-shave">🪒 2-in-1: Cleanser + Shave Cream</span>
+              </div>
+              <p className="product-size">4.0 FL OZ / 120 ML</p>
               
               <p className="product-description">
-                A sophisticated, low-foaming milky cleanser designed to purify without stripping the skin's natural moisture barrier. Unlike harsh, sulfate-based cleansers common in the men's market, this formula is engineered to be "shave-friendly" and suitable for all skin types, particularly the oilier, more reactive skin common in men.
+                <strong>The cleanser that doesn't strip - it hydrates.</strong> Finally, a face wash that cleanses without that tight, dry feeling. Our pH-balanced formula maintains your skin's natural protective oils while removing dirt and oil. <em>Plus, it doubles as the best shave cream you've ever used - reducing razor burn by 70%.</em> So gentle, she'll steal this one too.
               </p>
 
               {/* Benefits Section */}
@@ -172,27 +242,30 @@ const ProductCleanser: React.FC = () => {
                   className="section-toggle"
                   onClick={() => setShowExclusions(!showExclusions)}
                 >
-                  WHAT'S NOT IN THIS FORMULA {showExclusions ? '⌃' : '⌄'}
+                  NON-NEGOTIABLE EXCLUSIONS {showExclusions ? '⌃' : '⌄'}
                 </button>
                 {showExclusions && (
                   <div className="section-content">
                     <div className="exclusions-intro">
-                      <p><strong>The Rawdog Standard:</strong> We believe what we leave OUT is just as important as what we put IN. Here's what you won't find in our cleanser and why that matters for your skin health:</p>
+                      <p><strong>What's NOT in our products is just as important as what IS.</strong> We've eliminated every harsh, stripping, and questionable ingredient found in other cleansers:</p>
                     </div>
-                    <div className="exclusions-list">
+                    <div className="exclusions-grid">
                       {exclusions.map((exclusion, index) => (
                         <div key={index} className="exclusion-item">
-                          <h4>{exclusion.category}</h4>
-                          <div className="excluded-ingredients">
-                            <strong>Excluded:</strong> {exclusion.excluded.join(', ')}
+                          <div className="exclusion-header">
+                            <span className="exclusion-icon">✗</span>
+                            <h4>{exclusion.category}</h4>
                           </div>
-                          <p><strong>Why we exclude them:</strong> {exclusion.why}</p>
+                          <div className="excluded-ingredients">
+                            <strong>Never includes:</strong> {exclusion.excluded.join(', ')}
+                          </div>
+                          <p className="exclusion-why">{exclusion.why}</p>
                         </div>
                       ))}
                     </div>
                     <div className="clean-guarantee">
-                      <h4>Our Clean Guarantee</h4>
-                      <p>Every ingredient in our cleanser has been carefully vetted for safety, efficacy, and environmental impact. We use modern, gentle alternatives that deliver superior results without compromising your long-term skin health.</p>
+                      <h4>The Non-Stripping Promise</h4>
+                      <p>Most cleansers strip your skin to feel "clean." Ours maintains your natural barrier while actually cleaning better. That's the Rawdog difference.</p>
                     </div>
                   </div>
                 )}
@@ -213,7 +286,7 @@ const ProductCleanser: React.FC = () => {
                       }}
                     >
                       <span className="stars">★★★★★</span>
-                      <span className="review-count">127 Reviews</span>
+                      <span className="review-count">67 Reviews</span>
                     </button>
                   </div>
                 </div>
@@ -261,7 +334,7 @@ const ProductCleanser: React.FC = () => {
                 <div className="bundle-image">
                   <div className="placeholder-image">
                     [PRODUCT BUNDLE IMAGE]
-                    <p>Three product bundle</p>
+                    <p>Complete routine bundle</p>
                   </div>
                 </div>
                 <div className="bundle-info">
@@ -282,134 +355,260 @@ const ProductCleanser: React.FC = () => {
           </div>
         </div>
 
-        {/* How to Use Section */}
-        <section className="section section-dark">
-          <div className="container">
-            <h2 className="text-center mb-4">HOW TO USE</h2>
-            <div className="usage-steps">
-              <div className="usage-step">
-                <div className="step-number">01</div>
-                <div className="step-content">
-                  <h3>WET FACE</h3>
-                  <p>Start with lukewarm water to open pores and prepare skin for cleansing.</p>
-                </div>
-              </div>
-              <div className="usage-step">
-                <div className="step-number">02</div>
-                <div className="step-content">
-                  <h3>APPLY CLEANSER</h3>
-                  <p>Dispense a small amount into palm and gently massage onto damp skin in circular motions.</p>
-                </div>
-              </div>
-              <div className="usage-step">
-                <div className="step-number">03</div>
-                <div className="step-content">
-                  <h3>RINSE THOROUGHLY</h3>
-                  <p>Rinse with cool water to close pores and pat dry with a clean towel.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Science Behind the Formula */}
+        {/* The Shaving Revolution Section */}
         <section className="section section-light">
           <div className="container">
-            <h2 className="text-center mb-4">THE SCIENCE BEHIND THE FORMULA</h2>
-            <div className="grid grid-2">
-              <div>
-                <h3>Biomimetic Cleansing Technology</h3>
-                <p>
-                  This cleanser utilizes biomimetic technology that works with your skin's natural processes rather than against them. The gentle surfactant system effectively removes impurities while maintaining the skin's essential moisture barrier.
-                </p>
-                <p>
-                  Unlike traditional sulfate-based cleansers that can strip the skin and cause irritation, our formula uses coconut-derived Cocamidopropyl Betaine, which cleanses without disrupting the skin's natural pH balance.
-                </p>
-                
-                <h3>Moisture-Preserving Formula</h3>
-                <p>
-                  The inclusion of Squalane and Glycerin ensures that while the cleanser removes dirt and excess oil, it simultaneously replenishes moisture. This dual-action approach leaves skin feeling clean but never tight or dry.
-                </p>
-                
-                <h3>Advanced Preservation System</h3>
-                <p>
-                  Our cleanser uses Caprylhydroxamic Acid and Caprylyl Glycol - modern, gentle preservatives that maintain product integrity without the sensitization risks of traditional preservatives like parabens or formaldehyde-releasers.
-                </p>
-              </div>
-              <div>
-                <div className="placeholder-image">
-                  [SCIENTIFIC DIAGRAM OF CLEANSING ACTION]
-                  <p>Illustration showing how the cleanser works on skin</p>
+            <h2 className="text-center">THE SHAVING REVOLUTION</h2>
+            <div className="shaving-content">
+              <div className="grid grid-2">
+                <div className="shaving-story">
+                  <h3>One Product. Two Game-Changing Uses.</h3>
+                  <p className="lead">
+                    We discovered something incredible: our non-stripping cleanser creates the perfect shaving environment. The result? The smoothest shave of your life with 70% less irritation.
+                  </p>
+                  <div className="shaving-benefits">
+                    <h4>Why It Works for Shaving:</h4>
+                    <ul>
+                      <li><strong>Superior Glide:</strong> Squalane creates frictionless razor movement</li>
+                      <li><strong>Softens Beard:</strong> Glycerin penetrates hair for easier cutting</li>
+                      <li><strong>Prevents Irritation:</strong> Panthenol and Allantoin soothe as you shave</li>
+                      <li><strong>No Residue:</strong> Rinses clean without clogging your razor</li>
+                      <li><strong>Post-Shave Comfort:</strong> Leaves skin hydrated, never tight</li>
+                    </ul>
+                  </div>
+                  <div className="shaving-testimonial">
+                    <p>"I haven't bought shaving cream in 6 months. This cleanser gives me a better shave than any dedicated shave product I've tried." - Marcus K.</p>
+                  </div>
                 </div>
-                
-                <div className="science-facts">
-                  <h4>Clinical Benefits:</h4>
-                  <ul>
-                    <li><strong>pH Balanced:</strong> Maintains skin's natural 5.5 pH</li>
-                    <li><strong>Non-Stripping:</strong> Preserves natural lipid barrier</li>
-                    <li><strong>Gentle Exfoliation:</strong> BHA removes dead skin cells</li>
-                    <li><strong>Anti-Inflammatory:</strong> Reduces post-shave irritation</li>
-                    <li><strong>Microbiome-Friendly:</strong> Doesn't disrupt beneficial bacteria</li>
-                  </ul>
+                <div className="shaving-visuals">
+                  <div className="placeholder-image">
+                    [VIDEO - SHAVING DEMONSTRATION]
+                    <p>Full shaving routine using cleanser</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [BEFORE/AFTER - RAZOR BURN]
+                    <p>Comparison: traditional vs cleanser shave</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [GIF - RAZOR GLIDE TEST]
+                    <p>Showing superior glide and cushion</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Ingredient Spotlight */}
+        {/* Non-Stripping Science Section */}
         <section className="section section-dark">
           <div className="container">
-            <h2 className="text-center mb-4">INGREDIENT SPOTLIGHT</h2>
-            <div className="ingredient-spotlight-grid">
-              <div className="spotlight-item">
-                <h3>Guar Hydroxypropyltrimonium Chloride</h3>
-                <p><strong>Function:</strong> Natural conditioning agent derived from guar beans</p>
-                <p><strong>Benefit:</strong> Provides slip and conditioning without weighing down the skin, making this cleanser particularly effective for pre-shave preparation.</p>
-                <p><strong>Why it matters:</strong> Unlike synthetic conditioning agents, this natural polymer is biodegradable and non-irritating.</p>
-              </div>
-              
-              <div className="spotlight-item">
-                <h3>Glyceryl Stearate</h3>
-                <p><strong>Function:</strong> Plant-derived emulsifier and skin-conditioning agent</p>
-                <p><strong>Benefit:</strong> Helps blend oil and water phases while providing additional moisturizing properties.</p>
-                <p><strong>Why it matters:</strong> Creates the luxurious, milky texture without relying on harsh emulsifiers that can irritate sensitive skin.</p>
-              </div>
-              
-              <div className="spotlight-item">
-                <h3>Cetearyl & Cetyl Alcohol</h3>
-                <p><strong>Function:</strong> Fatty alcohols that act as emollients and texture enhancers</p>
-                <p><strong>Benefit:</strong> Provide skin-softening properties and help create the rich, creamy texture.</p>
-                <p><strong>Why it matters:</strong> These are "good" alcohols that moisturize rather than dry out the skin, unlike denatured alcohol found in many men's products.</p>
+            <h2 className="text-center mb-4">THE SCIENCE OF NON-STRIPPING CLEANSING</h2>
+            <div className="nonstrip-science">
+              <div className="grid grid-2">
+                <div>
+                  <h3>Why Most Cleansers Damage Your Skin</h3>
+                  <p>
+                    That "squeaky clean" feeling? That's your skin crying for help. Traditional cleansers use harsh sulfates that strip away your natural oils, disrupting your moisture barrier and triggering excess oil production.
+                  </p>
+                  <div className="stripping-comparison">
+                    <h4>Stripping vs. Hydrating Cleanse:</h4>
+                    <div className="comparison-point">
+                      <strong>Traditional Cleansers:</strong>
+                      <ul>
+                        <li>Strip natural oils completely</li>
+                        <li>Disrupt pH balance (alkaline)</li>
+                        <li>Trigger rebound oil production</li>
+                        <li>Leave skin tight and dry</li>
+                        <li>Damage moisture barrier</li>
+                      </ul>
+                    </div>
+                    <div className="comparison-point">
+                      <strong>Our Hydrating Cleanser:</strong>
+                      <ul>
+                        <li>Preserves beneficial oils</li>
+                        <li>Maintains optimal pH (5.5)</li>
+                        <li>Balances oil production</li>
+                        <li>Leaves skin soft and hydrated</li>
+                        <li>Strengthens moisture barrier</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="nonstrip-visuals">
+                  <div className="placeholder-image">
+                    [INFOGRAPHIC - pH SCALE COMPARISON]
+                    <p>Our cleanser vs competitors pH levels</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [MICROSCOPE IMAGE - SKIN BARRIER]
+                    <p>Healthy vs stripped skin barrier comparison</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [VIDEO - OIL STRIP TEST]
+                    <p>Demo showing we don't strip natural oils</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Customer Reviews */}
+        {/* How to Use Section */}
+        <section className="section section-light">
+          <div className="container">
+            <h2 className="text-center mb-4">HOW TO USE</h2>
+            <div className="usage-dual">
+              <div className="usage-tabs">
+                <button className="tab-button active">AS A CLEANSER</button>
+                <button className="tab-button">AS SHAVE CREAM</button>
+              </div>
+              
+              <div className="usage-content-cleanser">
+                <div className="usage-video">
+                  <div className="placeholder-image">
+                    [VIDEO - CLEANSING ROUTINE]
+                    <p>30-second cleansing demonstration</p>
+                  </div>
+                </div>
+                <div className="usage-steps">
+                  <div className="usage-step">
+                    <div className="step-number">01</div>
+                    <div className="step-content">
+                      <h3>WET FACE WITH WARM WATER</h3>
+                      <p>Open pores and prep skin for cleansing. Warm (not hot) water is ideal.</p>
+                      <div className="placeholder-image">
+                        [GIF - WATER SPLASH]
+                        <p>Proper face wetting technique</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="usage-step">
+                    <div className="step-number">02</div>
+                    <div className="step-content">
+                      <h3>APPLY DIME-SIZED AMOUNT</h3>
+                      <p>Less is more. Our concentrated formula means you need less than traditional cleansers.</p>
+                      <div className="placeholder-image">
+                        [IMAGE - AMOUNT DEMO]
+                        <p>Showing correct amount</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="usage-step">
+                    <div className="step-number">03</div>
+                    <div className="step-content">
+                      <h3>MASSAGE FOR 30 SECONDS</h3>
+                      <p>Gentle circular motions. No need to scrub - let the ingredients do the work.</p>
+                      <div className="placeholder-image">
+                        [GIF - MASSAGE TECHNIQUE]
+                        <p>Proper cleansing motions</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="usage-content-shave hidden">
+                <div className="usage-video">
+                  <div className="placeholder-image">
+                    [VIDEO - SHAVING ROUTINE]
+                    <p>Complete shaving tutorial</p>
+                  </div>
+                </div>
+                <div className="usage-steps">
+                  <div className="usage-step">
+                    <div className="step-number">01</div>
+                    <div className="step-content">
+                      <h3>PREP WITH WARM WATER</h3>
+                      <p>Soften beard hair for 30 seconds with warm water.</p>
+                    </div>
+                  </div>
+                  <div className="usage-step">
+                    <div className="step-number">02</div>
+                    <div className="step-content">
+                      <h3>APPLY GENEROUSLY</h3>
+                      <p>Use slightly more than for cleansing. Work into a light lather.</p>
+                    </div>
+                  </div>
+                  <div className="usage-step">
+                    <div className="step-number">03</div>
+                    <div className="step-content">
+                      <h3>SHAVE WITH CONFIDENCE</h3>
+                      <p>The slip and cushion will amaze you. Rinse razor frequently.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stolen From Boyfriend Section */}
         <section className="section section-dark">
           <div className="container">
-            <h2 className="text-center mb-4">WHAT CUSTOMERS SAY</h2>
+            <h2 className="text-center">"SO GENTLE, SHE USES IT TOO"</h2>
+            <div className="stolen-cleanser">
+              <div className="grid grid-2">
+                <div className="stolen-content">
+                  <p className="lead">
+                    Our cleanser is so gentle and effective, it's become a unisex favorite. Women love that it removes makeup without stripping, men love that it doubles as shave cream.
+                  </p>
+                  <div className="testimonials">
+                    <div className="testimonial">
+                      <p>"My girlfriend started using my cleanser and now claims it's better than her $80 face wash. I had to start hiding it." - Jake T.</p>
+                    </div>
+                    <div className="testimonial">
+                      <p>"Wife discovered I use this as shave cream. Now she uses it for her legs. We go through bottles twice as fast." - Michael R.</p>
+                    </div>
+                    <div className="testimonial">
+                      <p>"She said it's the only cleanser that doesn't break her out. Guess I'm ordering two bottles from now on." - David K.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="stolen-visuals">
+                  <div className="placeholder-image">
+                    [LIFESTYLE - COUPLE IN BATHROOM]
+                    <p>Couple sharing the cleanser</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [PRODUCT IN FEMALE HANDS]
+                    <p>Woman using the cleanser</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Customer Reviews */}
+        <section className="section section-light">
+          <div className="container">
+            <h2 className="text-center mb-4">FEATURED REVIEWS</h2>
+            <div className="featured-badge text-center mb-3">
+              <span className="badge badge-highlight">🏆 #1 NON-STRIPPING CLEANSER FOR MEN</span>
+            </div>
             <div className="customer-reviews">
-              <div className="review-card">
+              <div className="review-card featured">
                 <div className="review-rating">★★★★★</div>
-                <h4>Game Changer for Sensitive Skin</h4>
-                <p>"I've always struggled with cleansers that either don't clean well or leave my skin feeling stripped. This one is perfect - gets everything off but my skin feels moisturized after."</p>
-                <div className="reviewer">- Marcus T., Verified Buyer</div>
+                <h4>"Best Shave of My Life"</h4>
+                <p>"I was skeptical about using a cleanser to shave, but holy hell - this is better than any shaving cream I've used in 20 years. Zero irritation, perfect glide, and my skin feels amazing after. Game changer."</p>
+                <div className="reviewer">- Robert M., Verified Buyer</div>
+                <div className="review-highlight">Revolutionary shaving • Zero irritation</div>
               </div>
               
-              <div className="review-card">
+              <div className="review-card featured">
                 <div className="review-rating">★★★★★</div>
-                <h4>Perfect for Daily Use</h4>
-                <p>"Use this every morning and evening. The texture is amazing and it doesn't foam up like crazy. My skin looks clearer and feels healthier since I started using it."</p>
-                <div className="reviewer">- David L., Verified Buyer</div>
+                <h4>"Finally, A Cleanser That Doesn't Strip"</h4>
+                <p>"Every other cleanser left my face feeling tight and dry. This one actually hydrates while it cleans. My oily T-zone is balanced, dry patches are gone. This is what cleansing should feel like."</p>
+                <div className="reviewer">- Alex D., Verified Buyer</div>
+                <div className="review-highlight">Hydrating cleanse • Perfect balance</div>
               </div>
               
-              <div className="review-card">
+              <div className="review-card featured">
                 <div className="review-rating">★★★★★</div>
-                <h4>Great for Shaving</h4>
-                <p>"This works perfectly as a pre-shave cleanser. Softens the beard and prepares the skin without any irritation. Been using it for 3 months now."</p>
-                <div className="reviewer">- James R., Verified Buyer</div>
+                <h4>"My Wife Stole It Immediately"</h4>
+                <p>"Used it once and my wife asked what smelled so clean and fresh. She tried it and now uses it daily. Says it removes her makeup better than her expensive cleanser. Ordering in bulk now."</p>
+                <div className="reviewer">- Chris P., Verified Buyer</div>
+                <div className="review-highlight">Wife approved • Gentle yet effective</div>
               </div>
             </div>
           </div>
@@ -420,24 +619,97 @@ const ProductCleanser: React.FC = () => {
           <ReviewsSystem 
             productId="cleanser"
             productName="Hydrating Facial Cleanser"
-            averageRating={4.9}
-            totalReviews={127}
+            averageRating={4.6}
+            totalReviews={67}
           />
         </div>
 
-        {/* Related Products */}
+        {/* Ingredient Deep Dive */}
+        <section className="section section-dark">
+          <div className="container">
+            <h2 className="text-center mb-4">INGREDIENT DEEP DIVE</h2>
+            <div className="ingredient-deep-dive">
+              <div className="grid grid-2">
+                <div>
+                  <h3>The Perfect pH Balance</h3>
+                  <p>
+                    Your skin's natural pH is around 5.5 (slightly acidic). Most cleansers are alkaline (pH 9-10), which disrupts your acid mantle and causes dryness, irritation, and breakouts. Our cleanser maintains the perfect pH to support your skin's natural defenses.
+                  </p>
+                  <div className="ph-benefits">
+                    <h4>Benefits of Proper pH:</h4>
+                    <ul>
+                      <li>Maintains healthy skin microbiome</li>
+                      <li>Prevents bacterial overgrowth</li>
+                      <li>Supports natural exfoliation</li>
+                      <li>Reduces inflammation</li>
+                      <li>Optimizes ingredient absorption</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="ph-visuals">
+                  <div className="placeholder-image">
+                    [INFOGRAPHIC - pH TESTING]
+                    <p>Our cleanser vs competitors pH test</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [DIAGRAM - ACID MANTLE]
+                    <p>How pH affects skin barrier</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof */}
         <section className="section section-light">
+          <div className="container text-center">
+            <h2>TRUSTED BY 10,000+ MEN WHO VALUE THEIR SKIN</h2>
+            <div className="social-proof-visual">
+              <div className="placeholder-image">
+                [INFOGRAPHIC - CUSTOMER STATS]
+                <p>Visual showing usage statistics and satisfaction</p>
+              </div>
+            </div>
+            <div className="social-proof-stats">
+              <div className="stat">
+                <h3>4.6★</h3>
+                <p>Average Rating</p>
+              </div>
+              <div className="stat">
+                <h3>70%</h3>
+                <p>Less Razor Burn</p>
+              </div>
+              <div className="stat">
+                <h3>2-in-1</h3>
+                <p>Cleanser + Shave</p>
+              </div>
+              <div className="stat">
+                <h3>60-Day</h3>
+                <p>Money-Back Guarantee</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Products */}
+        <section className="section section-dark">
           <div className="container">
             <h2 className="text-center mb-4">COMPLETE YOUR ROUTINE</h2>
             <div className="related-products">
               <div className="related-product">
                 <div className="product-image">
                   <div className="placeholder-image">
-                    [FACE MOISTURIZER IMAGE]
-                    <p>Moisturizer product shot</p>
+                    [MOISTURIZER PRODUCT SHOT]
+                    <p>Face Moisturizer with Beef Tallow</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [MOISTURIZER TEXTURE]
+                    <p>Luxurious texture demonstration</p>
                   </div>
                 </div>
                 <h3>Face Moisturizer with Beef Tallow</h3>
+                <p className="product-tagline">Anti-aging powerhouse</p>
                 <p className="product-price">$48.00</p>
                 <button className="btn btn-outline">VIEW PRODUCT</button>
               </div>
@@ -445,11 +717,16 @@ const ProductCleanser: React.FC = () => {
               <div className="related-product">
                 <div className="product-image">
                   <div className="placeholder-image">
-                    [EYE CREAM IMAGE]
-                    <p>Eye cream product shot</p>
+                    [EYE CREAM PRODUCT SHOT]
+                    <p>Caffeine Under Eye Cream</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [EYE CREAM RESULTS]
+                    <p>Before/after eye bags</p>
                   </div>
                 </div>
                 <h3>Caffeine Under Eye Cream</h3>
+                <p className="product-tagline">Eliminates eye bags</p>
                 <p className="product-price">$38.00</p>
                 <button className="btn btn-outline">VIEW PRODUCT</button>
               </div>

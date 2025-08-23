@@ -33,6 +33,189 @@
   background: linear-gradient(135deg, #000 0%, #111 100%);
 }
 
+/* Horizontal Scroll for What's Included */
+.bundle-products-scroll-container {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.bundle-products-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 2rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
+
+.bundle-products-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bundle-products-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bundle-products-scroll::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.bundle-products-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.bundle-product-card {
+  flex: 0 0 350px;
+  scroll-snap-align: start;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.scroll-indicator {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 2x2 Grid for Why the Routine Works */
+.synergy-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .synergy-grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Urgency Banner Styles */
+.urgency-banner {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.urgency-banner h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.urgency-banner p {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Social Proof Stats */
+.social-proof-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.social-proof-stats .stat {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.social-proof-stats .stat h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.social-proof-stats .stat p {
+  margin: 0;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.email-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 250px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.privacy-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* Customer Reviews Grid */
+.customer-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.review-card {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.review-rating {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.review-card h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.review-card p {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.reviewer {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
 .product-badge {
   background-color: #333;
   color: #fff;

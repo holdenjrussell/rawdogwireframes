@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReviewsSystem from '../components/ReviewsSystem';
+import ConversionOptimization from '../components/ConversionOptimization';
 import './Product.css';
 
 const ProductBundle: React.FC = () => {
@@ -163,6 +165,14 @@ const ProductBundle: React.FC = () => {
                   <p>✓ Results visible in 7-14 days</p>
                 </div>
               </div>
+
+              {/* Conversion Optimization */}
+              <ConversionOptimization 
+                productName="The Complete Routine"
+                originalPrice={118.00}
+                subscriptionPrice={98.00}
+                savings={20.00}
+              />
             </div>
           </div>
         </div>
@@ -178,7 +188,7 @@ const ProductBundle: React.FC = () => {
             </p>
           </div>
           
-          <div className="synergy-grid">
+          <div className="synergy-grid-2x2">
             {synergies.map((synergy, index) => (
               <div key={index} className="synergy-card">
                 <h3>{synergy.title}</h3>
@@ -202,8 +212,19 @@ const ProductBundle: React.FC = () => {
         </div>
       </section>
 
-      {/* Your Daily Routine */}
+      {/* Urgency Section */}
       <section className="section section-light">
+        <div className="container text-center">
+          <div className="urgency-banner">
+            <h3>🔥 LIMITED TIME: Save $20 on The Complete Routine</h3>
+            <p>Join 10,000+ men who've transformed their skin with our complete system</p>
+            <button className="btn btn-primary btn-large">CLAIM YOUR SAVINGS - $98</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Your Daily Routine */}
+      <section className="section section-dark">
         <div className="container">
           <div className="text-center mb-4">
             <h2>YOUR DAILY ROUTINE</h2>
@@ -230,6 +251,13 @@ const ProductBundle: React.FC = () => {
               </div>
             ))}
           </div>
+          
+          <div className="text-center mt-4">
+            <h3>Ready to Start Your Transformation?</h3>
+            <p>Get all three products working together for maximum results</p>
+            <button className="btn btn-primary btn-large">GET THE COMPLETE ROUTINE - $98</button>
+            <p className="guarantee-text">✓ 60-day guarantee ✓ Free shipping ✓ Results in 7-14 days</p>
+          </div>
         </div>
       </section>
 
@@ -243,44 +271,49 @@ const ProductBundle: React.FC = () => {
             </p>
           </div>
           
-          <div className="bundle-products-grid">
-            {bundleProducts.map((product, index) => (
-              <div key={index} className="bundle-product-card">
-                <div className="product-image">
-                  <div className="placeholder-image">
-                    {product.image}
-                    <p>High-quality product photography</p>
-                  </div>
-                </div>
-                <div className="product-details">
-                  <h3>{product.name}</h3>
-                  <p className="product-price">{product.price} value</p>
-                  <p className="product-description">{product.description}</p>
-                  
-                  <div className="ingredients-section">
-                    <h4>Key Ingredients:</h4>
-                    <div className="ingredient-list">
-                      {product.keyIngredients.map((ingredient, idx) => (
-                        <span key={idx} className="ingredient-tag">{ingredient}</span>
-                      ))}
+          <div className="bundle-products-scroll-container">
+            <div className="bundle-products-scroll">
+              {bundleProducts.map((product, index) => (
+                <div key={index} className="bundle-product-card">
+                  <div className="product-image">
+                    <div className="placeholder-image">
+                      {product.image}
+                      <p>High-quality product photography</p>
                     </div>
                   </div>
-                  
-                  <div className="benefits-section">
-                    <h4>Benefits:</h4>
-                    <ul>
-                      {product.benefits.map((benefit, idx) => (
-                        <li key={idx}>{benefit}</li>
-                      ))}
-                    </ul>
+                  <div className="product-details">
+                    <h3>{product.name}</h3>
+                    <p className="product-price">{product.price} value</p>
+                    <p className="product-description">{product.description}</p>
+                    
+                    <div className="ingredients-section">
+                      <h4>Key Ingredients:</h4>
+                      <div className="ingredient-list">
+                        {product.keyIngredients.map((ingredient, idx) => (
+                          <span key={idx} className="ingredient-tag">{ingredient}</span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="benefits-section">
+                      <h4>Benefits:</h4>
+                      <ul>
+                        {product.benefits.map((benefit, idx) => (
+                          <li key={idx}>{benefit}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <Link to={`/products/${product.id}`} className="btn btn-outline">
+                      VIEW INDIVIDUAL PRODUCT
+                    </Link>
                   </div>
-                  
-                  <Link to={`/products/${product.id}`} className="btn btn-outline">
-                    VIEW INDIVIDUAL PRODUCT
-                  </Link>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="scroll-indicator">
+              <span>← Scroll to see all products →</span>
+            </div>
           </div>
         </div>
       </section>
@@ -344,6 +377,46 @@ const ProductBundle: React.FC = () => {
         </div>
       </section>
 
+      {/* Customer Reviews */}
+      <section className="section section-dark">
+        <div className="container">
+          <h2 className="section-title text-center">WHAT CUSTOMERS SAY ABOUT THE COMPLETE ROUTINE</h2>
+          
+          <div className="customer-reviews">
+            <div className="review-card">
+              <div className="review-rating">★★★★★</div>
+              <h4>Best Investment I've Made for My Skin</h4>
+              <p>"I was skeptical about spending this much on skincare, but the Complete Routine has completely transformed my skin. The synergy between the products is real - my skin looks and feels better than it has in years."</p>
+              <div className="reviewer">- Marcus T., Verified Buyer</div>
+            </div>
+            
+            <div className="review-card">
+              <div className="review-rating">★★★★★</div>
+              <h4>Finally, a Routine That Actually Works</h4>
+              <p>"I've tried so many different products over the years. This is the first routine where I can actually see and feel the difference. The tallow moisturizer is incredible, and the eye cream really works."</p>
+              <div className="reviewer">- David L., Verified Buyer</div>
+            </div>
+            
+            <div className="review-card">
+              <div className="review-rating">★★★★★</div>
+              <h4>Clean Ingredients, Real Results</h4>
+              <p>"Love that these products are actually clean and don't have all the junk that other brands use. My skin is clearer, more hydrated, and I feel good about what I'm putting on my face every day."</p>
+              <div className="reviewer">- James R., Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews System */}
+      <div id="reviews-section">
+        <ReviewsSystem 
+          productId="bundle"
+          productName="The Complete Routine"
+          averageRating={4.9}
+          totalReviews={156}
+        />
+      </div>
+
       {/* What's NOT in Our Complete Routine */}
       <section className="section section-light">
         <div className="container">
@@ -404,70 +477,208 @@ const ProductBundle: React.FC = () => {
         </div>
       </section>
 
-      {/* Competitive Advantage */}
+      {/* Whole Body Health Risk Matrix */}
       <section className="section section-dark">
         <div className="container">
           <div className="text-center mb-4">
-            <h2>HOW WE COMPARE TO COMPETITORS</h2>
-            <p className="section-subtitle">
-              The only men's skincare routine that delivers clinical results without compromise
-            </p>
+            <h2>WHOLE BODY HEALTH RISK MATRIX</h2>
+            <p>Rawdog is the only brand that eliminates seed oils, synthetic polymers, and systemic toxins—while using clinically validated actives, custom-built for men's skin.</p>
           </div>
           
           <div className="comparison-table">
-            <div className="comparison-header">
-              <div className="feature-column">Feature</div>
-              <div className="brand-column">Rawdog</div>
-              <div className="brand-column">Hims</div>
-              <div className="brand-column">Lumin</div>
-              <div className="brand-column">Tiege Hanley</div>
+            <div className="table-header">
+              <div className="brand-col">BRAND</div>
+              <div className="risk-col">SEED OILS</div>
+              <div className="risk-col">ENDOCRINE DISRUPTORS</div>
+              <div className="risk-col">CARCINOGEN LINKS</div>
+              <div className="risk-col">MICROPLASTICS</div>
+              <div className="risk-col">SYNTHETIC FRAGRANCE</div>
+              <div className="positioning-col">BRAND POSITIONING</div>
             </div>
             
-            <div className="comparison-row">
-              <div className="feature">Hormone Disruptor Free</div>
-              <div className="rawdog">✓</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
+            <div className="table-row rawdog-row">
+              <div className="brand-col">
+                <strong>rawdog</strong>
+              </div>
+              <div className="risk-col">
+                <span className="no-risk">✗</span>
+              </div>
+              <div className="risk-col">
+                <span className="no-risk">✗</span>
+              </div>
+              <div className="risk-col">
+                <span className="no-risk">✗</span>
+              </div>
+              <div className="risk-col">
+                <span className="no-risk">✗</span>
+              </div>
+              <div className="risk-col">
+                <span className="no-risk">✗</span>
+              </div>
+              <div className="positioning-col">
+                First and only seed oil-free skincare brand. Built for men. Built for performance. Built for long-term health.
+              </div>
             </div>
-            
-            <div className="comparison-row">
-              <div className="feature">Fragrance Free</div>
-              <div className="rawdog">✓</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
+
+            <div className="table-row">
+              <div className="brand-col">
+                <strong>Jack Black</strong>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="positioning-col">
+                Premium-looking but ingredient-poor. Relies on synthetic shortcuts while claiming "clean."
+              </div>
             </div>
-            
-            <div className="comparison-row">
-              <div className="feature">Advanced Peptides</div>
-              <div className="rawdog">✓</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
+
+            <div className="table-row">
+              <div className="brand-col">
+                <strong>Cetaphil®</strong>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="positioning-col">
+                "Derm-recommended", but built on cheap synthetics and low-bar safety claims.
+              </div>
             </div>
-            
-            <div className="comparison-row">
-              <div className="feature">Biomimetic Ingredients</div>
-              <div className="rawdog">✓</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
-              <div className="competitor">✗</div>
+
+            <div className="table-row">
+              <div className="brand-col">
+                <strong>Kiehl's</strong>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="positioning-col">
+                Legacy apothecary brand masking outdated formulas with heritage marketing.
+              </div>
             </div>
-            
-            <div className="comparison-row">
-              <div className="feature">PFAS Free</div>
-              <div className="rawdog">✓</div>
-              <div className="competitor">?</div>
-              <div className="competitor">?</div>
-              <div className="competitor">?</div>
+
+            <div className="table-row">
+              <div className="brand-col">
+                <strong>BRICKELL MEN'S PRODUCTS</strong>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="positioning-col">
+                Natural-leaning image, but packed with essential oils, irritating synthetics, and seed oils.
+              </div>
+            </div>
+
+            <div className="table-row">
+              <div className="brand-col">
+                <strong>hims</strong>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="risk-col">
+                <span className="has-risk">✓</span>
+              </div>
+              <div className="positioning-col">
+                Claims to lead men's health—formulates with PEGs, fillers, and synthetic fragrance.
+              </div>
+            </div>
+          </div>
+
+          <div className="conversion-cta-section">
+            <h3>NO MEN'S BRAND HAS GONE THIS FAR.</h3>
+            <p>Don't settle for brands that compromise your health. Choose the only seed oil-free, hormone-safe skincare built specifically for men.</p>
+            <div className="cta-buttons">
+              <button className="btn btn-primary">GET THE COMPLETE ROUTINE - $98</button>
+              <button className="btn btn-outline">TRY RISK-FREE</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="section section-light">
+        <div className="container text-center">
+          <h2>JOIN 10,000+ MEN WHO CHOSE RAWDOG</h2>
+          <div className="social-proof-stats">
+            <div className="stat">
+              <h3>4.9★</h3>
+              <p>Average Rating</p>
+            </div>
+            <div className="stat">
+              <h3>10,000+</h3>
+              <p>Happy Customers</p>
+            </div>
+            <div className="stat">
+              <h3>7-14</h3>
+              <p>Days to See Results</p>
+            </div>
+            <div className="stat">
+              <h3>60-Day</h3>
+              <p>Money-Back Guarantee</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="section section-light">
+      <section className="section section-dark">
         <div className="container text-center">
           <h2>READY TO TRANSFORM YOUR SKIN?</h2>
           <p className="mb-4">
@@ -479,6 +690,19 @@ const ProductBundle: React.FC = () => {
             </button>
             <p className="guarantee-text">60-day money-back guarantee • Free shipping • Results in 7-14 days</p>
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="section section-light">
+        <div className="container text-center">
+          <h2>GET EXCLUSIVE SKINCARE TIPS</h2>
+          <p>Join our community and get expert advice, product updates, and exclusive offers.</p>
+          <div className="newsletter-form">
+            <input type="email" placeholder="Your email" className="email-input" />
+            <button className="btn" onClick={() => alert('Thank you for subscribing! We\'ll be in touch soon.')}>SUBSCRIBE</button>
+          </div>
+          <p className="privacy-text">We respect your privacy. Unsubscribe at any time.</p>
         </div>
       </section>
     </div>

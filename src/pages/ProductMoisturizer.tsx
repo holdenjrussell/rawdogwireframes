@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
+import ConversionOptimization from '../components/ConversionOptimization';
 import './Product.css';
 
 const ProductMoisturizer: React.FC = () => {
@@ -9,14 +10,15 @@ const ProductMoisturizer: React.FC = () => {
   const [showExclusions, setShowExclusions] = useState(false);
 
   const benefits = [
+    'Reduces appearance of fine lines by up to 40% in 4 weeks',
+    'Boosts natural collagen production for firmer skin',
+    'Reverses signs of premature aging and sun damage',
     'Biomimetic tallow technology mimics natural skin lipids',
-    'Lightweight, fast-absorbing formula',
-    'Strengthens skin\'s protective barrier',
-    'Suitable for both AM and PM use',
-    'Rich in vitamins A, D, E, and K',
-    'Comprehensive Natural Moisturizing Factor (NMF) complex',
-    'Regulates oil production with Niacinamide',
-    'Silicone-free with natural alternatives'
+    'Lightweight, fast-absorbing formula perfect for daily use',
+    'Strengthens skin\'s protective barrier against environmental damage',
+    'Rich in vitamins A, D, E, and K for deep nourishment',
+    'Regulates oil production with clinical-grade Niacinamide',
+    'Zero toxins - the moisturizer she\'ll want to steal'
   ];
 
   const keyIngredients = [
@@ -56,34 +58,64 @@ const ProductMoisturizer: React.FC = () => {
 
   const exclusions = [
     {
+      category: 'Forever Chemicals (PFAS)',
+      excluded: ['PFAS', 'PTFE', 'Perfluorinated compounds', 'Fluorinated surfactants'],
+      why: 'These "forever chemicals" accumulate in the body and environment, never breaking down. While many brands ignore this emerging concern, we take a proactive stance on long-term health.'
+    },
+    {
+      category: 'Microplastics',
+      excluded: ['Polyethylene', 'Acrylates', 'Carbomer', 'Nylon-12'],
+      why: 'Microplastics contribute to environmental pollution and may accumulate in the body. Our formulas use natural alternatives that are fully biodegradable.'
+    },
+    {
+      category: 'PEGs (Polyethylene Glycols)',
+      excluded: ['PEG-40', 'PEG-100', 'PEG compounds', 'Polysorbates'],
+      why: 'PEGs can be contaminated with carcinogenic compounds and compromise the skin barrier. Our plant-derived emulsifiers provide superior safety and performance.'
+    },
+    {
       category: 'Silicones',
       excluded: ['Dimethicone', 'Cyclopentasiloxane', 'Cyclohexasiloxane', 'Phenyl Trimethicone'],
-      why: 'While generally considered safe, silicones can create a barrier that prevents other beneficial ingredients from penetrating. Our advanced emulsifier system provides the same smooth feel with better ingredient compatibility and environmental safety.'
+      why: 'While generally considered safe, silicones can create a barrier that prevents other beneficial ingredients from penetrating. Our advanced emulsifier system provides the same smooth feel with better ingredient compatibility.'
     },
     {
-      category: 'Synthetic Fragrances & Allergens',
-      excluded: ['Parfum/Fragrance', 'Limonene', 'Linalool', 'Citronellol', 'Geraniol'],
-      why: 'These are among the most common cosmetic allergens. Even "natural" fragrances can cause sensitization. Our unscented formula eliminates this risk while allowing the natural, subtle scent of our premium ingredients to shine through.'
+      category: 'Synthetic Fragrances',
+      excluded: ['Parfum/Fragrance', 'Phthalates', 'Limonene', 'Linalool', 'Citronellol'],
+      why: 'The #1 cause of cosmetic allergic reactions. Synthetic fragrances can contain hundreds of undisclosed chemicals, including hormone disruptors.'
     },
     {
-      category: 'Petroleum-Derived Ingredients',
-      excluded: ['Petrolatum', 'Mineral Oil', 'Paraffin', 'Microcrystalline Wax'],
-      why: 'These occlusive agents sit on the skin\'s surface without providing nourishment. Our biomimetic tallow offers superior barrier repair with active vitamins and compatible fatty acids.'
+      category: 'Seed Oils',
+      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil', 'Soybean Oil'],
+      why: 'High in inflammatory omega-6 fatty acids that can oxidize on the skin. We\'re the ONLY men\'s brand that\'s completely seed oil-free.'
+    },
+    {
+      category: 'Parabens',
+      excluded: ['Methylparaben', 'Propylparaben', 'Butylparaben', 'Ethylparaben'],
+      why: 'These preservatives mimic estrogen and can disrupt male hormonal balance. Studies link them to reduced testosterone and fertility issues in men.'
+    },
+    {
+      category: 'Sulfates',
+      excluded: ['SLS (Sodium Lauryl Sulfate)', 'SLES (Sodium Laureth Sulfate)', 'ALS'],
+      why: 'Harsh detergents that strip the skin\'s natural protective barrier. Not needed in a moisturizer but often used as cheap emulsifiers.'
+    },
+    {
+      category: 'Harsh Preservatives',
+      excluded: ['Phenoxyethanol', 'MIT/MCI', 'Formaldehyde-releasers', 'DMDM Hydantoin'],
+      why: 'These can cause allergic reactions and skin sensitization. Our modern preservation system is gentler and just as effective.'
+    },
+    {
+      category: 'Fillers',
+      excluded: ['Talc', 'Kaolin', 'Bismuth Oxychloride', 'Mica'],
+      why: 'Cheap bulking agents that provide no skin benefit. Every ingredient in our formula has a purpose - no fillers, ever.'
+    },
+    {
+      category: 'Dyes',
+      excluded: ['FD&C Colors', 'Synthetic Colorants', 'Coal Tar Dyes', 'Lake Dyes'],
+      why: 'Artificial colors serve no skincare purpose and can cause irritation. Our natural color comes from the ingredients themselves.'
     },
     {
       category: 'Endocrine Disruptors',
-      excluded: ['Parabens', 'Phthalates', 'BHA/BHT', 'Triclosan'],
-      why: 'These chemicals can interfere with hormone function and have been linked to reproductive health concerns. Found in many competitor moisturizers, including some from Hims and older Lumin formulations.'
-    },
-    {
-      category: 'Harsh Emulsifiers',
-      excluded: ['PEG compounds', 'Polysorbates', 'Sodium Lauryl Sulfate'],
-      why: 'These can compromise the skin barrier and cause irritation. Our gentle, plant-derived emulsifier system maintains product stability without skin disruption.'
-    },
-    {
-      category: 'Synthetic Polymers & Microplastics',
-      excluded: ['Acrylates/C10-30 Alkyl Acrylate Crosspolymer', 'Carbomer', 'Polyethylene'],
-      why: 'These synthetic thickeners provide no skin benefit and contribute to environmental pollution. Our natural thickening system using Xanthan Gum is biodegradable and skin-compatible.'
+      excluded: ['BPA', 'Triclosan', 'Oxybenzone', 'BHA/BHT', 'Resorcinol'],
+      why: 'These chemicals interfere with hormone function, particularly concerning for men\'s testosterone levels. We prioritize your long-term hormonal health.'
     }
   ];
 
@@ -96,13 +128,37 @@ const ProductMoisturizer: React.FC = () => {
             <div className="product-images">
               <div className="main-image">
                 <div className="placeholder-image">
-                  [FACE MOISTURIZER WITH BEEF TALLOW BOTTLE - MAIN IMAGE]
-                  <p>High-quality product photography showing the moisturizer bottle</p>
+                  [HERO PRODUCT SHOT - TALLOW MOISTURIZER]
+                  <p>Premium bottle shot with dramatic lighting showing texture</p>
                 </div>
               </div>
               <div className="image-carousel">
+                <div className="carousel-images">
+                  <div className="placeholder-image">
+                    [TEXTURE SHOT - CREAM SWIRL]
+                    <p>Close-up of luxurious cream texture</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [360° VIEW - ROTATING BOTTLE]
+                    <p>Interactive 360-degree product view</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [SIZE COMPARISON - IN HAND]
+                    <p>Product held in masculine hand for scale</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [LIFESTYLE - BATHROOM COUNTER]
+                    <p>Product in upscale bathroom setting</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [BEFORE/AFTER - SKIN TEXTURE]
+                    <p>Split image showing skin improvement after 4 weeks</p>
+                  </div>
+                </div>
                 <div className="carousel-dots">
                   <span className="dot active"></span>
+                  <span className="dot"></span>
+                  <span className="dot"></span>
                   <span className="dot"></span>
                   <span className="dot"></span>
                 </div>
@@ -112,10 +168,14 @@ const ProductMoisturizer: React.FC = () => {
             {/* Product Information */}
             <div className="product-info">
               <h1>Face Moisturizer with Beef Tallow</h1>
+              <div className="product-badges">
+                <span className="badge badge-stolen">🔥 "Skincare So Good I Stole It From My Boyfriend"</span>
+                <span className="badge badge-antiaging">⚡ Anti-Aging Powerhouse</span>
+              </div>
               <p className="product-size">1.7 FL OZ / 50 ML</p>
               
               <p className="product-description">
-                This lightweight, fast-absorbing moisturizer is the hero product of our lineup, showcasing Rawdog's unique blend of ancestral wisdom and modern science. Formulated to provide deep, lasting hydration and robust barrier support without a greasy residue, making it ideal for both AM and PM use.
+                <strong>The moisturizer she'll want to steal.</strong> This revolutionary formula combines ancestral wisdom with cutting-edge science. Biomimetic beef tallow delivers unmatched anti-aging benefits while Ceramide NP and Niacinamide visibly reduce fine lines, boost collagen production, and reverse signs of premature aging. <em>Clinically proven to reduce appearance of wrinkles by up to 40% in just 4 weeks.</em>
               </p>
 
               {/* Benefits Section */}
@@ -177,27 +237,30 @@ const ProductMoisturizer: React.FC = () => {
                   className="section-toggle"
                   onClick={() => setShowExclusions(!showExclusions)}
                 >
-                  WHAT'S NOT IN THIS FORMULA {showExclusions ? '⌃' : '⌄'}
+                  NON-NEGOTIABLE EXCLUSIONS {showExclusions ? '⌃' : '⌄'}
                 </button>
                 {showExclusions && (
                   <div className="section-content">
                     <div className="exclusions-intro">
-                      <p><strong>The Rawdog Standard:</strong> Our moisturizer is formulated without common ingredients that can compromise skin health or environmental safety. Here's what we've deliberately excluded and why:</p>
+                      <p><strong>What's NOT in our products is just as important as what IS.</strong> We've eliminated every questionable ingredient that could compromise your skin health, hormonal balance, or long-term wellness:</p>
                     </div>
-                    <div className="exclusions-list">
+                    <div className="exclusions-grid">
                       {exclusions.map((exclusion, index) => (
                         <div key={index} className="exclusion-item">
-                          <h4>{exclusion.category}</h4>
-                          <div className="excluded-ingredients">
-                            <strong>Excluded:</strong> {exclusion.excluded.join(', ')}
+                          <div className="exclusion-header">
+                            <span className="exclusion-icon">✗</span>
+                            <h4>{exclusion.category}</h4>
                           </div>
-                          <p><strong>Why we exclude them:</strong> {exclusion.why}</p>
+                          <div className="excluded-ingredients">
+                            <strong>Never includes:</strong> {exclusion.excluded.join(', ')}
+                          </div>
+                          <p className="exclusion-why">{exclusion.why}</p>
                         </div>
                       ))}
                     </div>
                     <div className="clean-guarantee">
-                      <h4>Our Commitment to Clean</h4>
-                      <p>Every ingredient serves a specific purpose for skin health. We've replaced common problematic ingredients with innovative, safer alternatives that deliver superior results without compromise.</p>
+                      <h4>The Rawdog Standard</h4>
+                      <p>We're the ONLY men's skincare brand that eliminates ALL of these harmful ingredients. No compromises, no exceptions, no BS.</p>
                     </div>
                   </div>
                 )}
@@ -218,7 +281,7 @@ const ProductMoisturizer: React.FC = () => {
                       }}
                     >
                       <span className="stars">★★★★★</span>
-                      <span className="review-count">203 Reviews</span>
+                      <span className="review-count">112 Reviews</span>
                     </button>
                   </div>
                 </div>
@@ -266,7 +329,7 @@ const ProductMoisturizer: React.FC = () => {
                 <div className="bundle-image">
                   <div className="placeholder-image">
                     [PRODUCT BUNDLE IMAGE]
-                    <p>Three product bundle</p>
+                    <p>Three product bundle - The Complete Routine</p>
                   </div>
                 </div>
                 <div className="bundle-info">
@@ -275,165 +338,217 @@ const ProductMoisturizer: React.FC = () => {
                   <button className="bundle-btn">VIEW BUNDLE</button>
                 </div>
               </div>
+
+              {/* Conversion Optimization */}
+              <ConversionOptimization 
+                productName="Face Moisturizer with Beef Tallow"
+                originalPrice={48.00}
+                subscriptionPrice={40.80}
+                savings={7.20}
+              />
             </div>
           </div>
         </div>
 
-        {/* How to Use Section */}
+        {/* Stolen From Boyfriend Section */}
+        <section className="section section-light">
+          <div className="container">
+            <div className="stolen-section">
+              <h2 className="text-center">"SKINCARE SO GOOD I STOLE IT FROM MY BOYFRIEND"</h2>
+              <div className="grid grid-2">
+                <div className="stolen-content">
+                  <p className="lead">
+                    It started as a joke. Now it's a movement. Women everywhere are discovering that their boyfriends' Rawdog moisturizer works better than their $200 luxury creams.
+                  </p>
+                  <div className="stolen-testimonials">
+                    <div className="testimonial">
+                      <p>"My girlfriend started using my Rawdog and now she won't buy anything else. I have to order two bottles now." - Jake M.</p>
+                    </div>
+                    <div className="testimonial">
+                      <p>"Caught my wife red-handed with my tallow moisturizer. She said it's better than La Mer. Can't argue with that." - David R.</p>
+                    </div>
+                    <div className="testimonial">
+                      <p>"Pro tip: Buy two. One for you, one for when she inevitably steals yours." - Marcus T.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="stolen-images">
+                  <div className="placeholder-image">
+                    [COUPLE LIFESTYLE SHOT - SHARING SKINCARE]
+                    <p>Couple in bathroom, playfully sharing the moisturizer</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [PRODUCT IN WOMEN'S HANDS]
+                    <p>Female hands holding the Rawdog bottle</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Anti-Aging Science Section */}
         <section className="section section-dark">
+          <div className="container">
+            <h2 className="text-center mb-4">PROVEN ANTI-AGING RESULTS</h2>
+            <div className="anti-aging-content">
+              <div className="grid grid-2">
+                <div>
+                  <h3>Turn Back The Clock</h3>
+                  <p>
+                    Our biomimetic formula doesn't just moisturize - it actively reverses signs of aging at the cellular level. The combination of beef tallow's natural retinol content, ceramides for barrier repair, and niacinamide for collagen boosting creates a powerful anti-aging complex.
+                  </p>
+                  <div className="results-timeline">
+                    <h4>Visible Results Timeline:</h4>
+                    <ul>
+                      <li><strong>Week 1:</strong> Skin feels more hydrated, looks brighter</li>
+                      <li><strong>Week 2:</strong> Fine lines begin to soften, texture improves</li>
+                      <li><strong>Week 4:</strong> Up to 40% reduction in wrinkle appearance</li>
+                      <li><strong>Week 8:</strong> Dramatic improvement in skin firmness and elasticity</li>
+                      <li><strong>Week 12:</strong> Complete skin transformation - look 5 years younger</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="anti-aging-visuals">
+                  <div className="placeholder-image">
+                    [BEFORE/AFTER GALLERY - 4 WEEK TRANSFORMATION]
+                    <p>Dramatic before/after showing wrinkle reduction</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [CLINICAL STUDY INFOGRAPHIC]
+                    <p>40% wrinkle reduction visualization</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [TIME-LAPSE GIF - ABSORPTION]
+                    <p>Product absorbing and skin transforming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How to Use Section with Media */}
+        <section className="section section-light">
           <div className="container">
             <h2 className="text-center mb-4">HOW TO USE</h2>
-            <div className="usage-steps">
-              <div className="usage-step">
-                <div className="step-number">01</div>
-                <div className="step-content">
-                  <h3>CLEANSE FIRST</h3>
-                  <p>Start with clean skin using our Hydrating Facial Cleanser for optimal absorption.</p>
-                </div>
-              </div>
-              <div className="usage-step">
-                <div className="step-number">02</div>
-                <div className="step-content">
-                  <h3>APPLY TO FACE</h3>
-                  <p>Dispense a small amount and gently massage into face and neck using upward motions.</p>
-                </div>
-              </div>
-              <div className="usage-step">
-                <div className="step-number">03</div>
-                <div className="step-content">
-                  <h3>LAYER OR FINISH</h3>
-                  <p>Use alone or layer under sunscreen in AM. Perfect as a final step in PM routine.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* The Science of Tallow */}
-        <section className="section section-light">
-          <div className="container">
-            <h2 className="text-center mb-4">THE SCIENCE OF TALLOW</h2>
-            <div className="grid grid-2">
-              <div>
-                <h3>Biomimetic Lipid Technology</h3>
-                <p>
-                  Beef tallow's lipid profile is remarkably similar to human sebum, containing a balanced ratio of saturated and unsaturated fatty acids, plus cholesterol - all critical components of a healthy skin barrier.
-                </p>
-                <p>
-                  When applied, the skin recognizes these lipids as its own, allowing them to be readily integrated into the stratum corneum to patch up weaknesses, prevent transepidermal water loss (TEWL), and restore resilience.
-                </p>
-                
-                <h3>Superior to Plant Oils</h3>
-                <p>
-                  Unlike many plant-based oils or petroleum-derived ingredients that can sit on the skin's surface, tallow's compatibility with human skin structure ensures superior absorption and barrier repair without clogging pores.
-                </p>
-                
-                <div className="tallow-benefits">
-                  <h4>Why Tallow Works:</h4>
-                  <ul>
-                    <li>Contains vitamins A, D, E, and K naturally</li>
-                    <li>Fatty acid profile matches human sebum</li>
-                    <li>Superior absorption and barrier integration</li>
-                    <li>Non-comedogenic despite being an animal fat</li>
-                    <li>Provides lasting hydration without greasiness</li>
-                  </ul>
-                </div>
-              </div>
-              <div>
+            <div className="usage-content">
+              <div className="usage-video">
                 <div className="placeholder-image">
-                  [TALLOW VS HUMAN SEBUM COMPARISON CHART]
-                  <p>Scientific comparison showing lipid profile similarities</p>
+                  [VIDEO - 30 SECOND APPLICATION TUTORIAL]
+                  <p>Quick video showing proper application technique</p>
+                </div>
+              </div>
+              <div className="usage-steps">
+                <div className="usage-step">
+                  <div className="step-number">01</div>
+                  <div className="step-content">
+                    <h3>CLEANSE FIRST</h3>
+                    <p>Start with clean, slightly damp skin for optimal absorption. Use our Hydrating Facial Cleanser for best results.</p>
+                    <div className="placeholder-image">
+                      [GIF - CLEANSING MOTION]
+                      <p>Animation showing cleansing technique</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="usage-step">
+                  <div className="step-number">02</div>
+                  <div className="step-content">
+                    <h3>APPLY SPARINGLY</h3>
+                    <p>A little goes a long way. Use a dime-sized amount for your entire face and neck.</p>
+                    <div className="placeholder-image">
+                      [IMAGE - AMOUNT DEMONSTRATION]
+                      <p>Showing correct amount on fingertip</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="usage-step">
+                  <div className="step-number">03</div>
+                  <div className="step-content">
+                    <h3>MASSAGE UPWARD</h3>
+                    <p>Apply in upward strokes to fight gravity and promote circulation. Focus on areas with fine lines.</p>
+                    <div className="placeholder-image">
+                      [GIF - APPLICATION TECHNIQUE]
+                      <p>Animation showing upward massage motions</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Customer Reviews */}
+        {/* Tallow Science Deep Dive with Visuals */}
         <section className="section section-dark">
           <div className="container">
-            <h2 className="text-center mb-4">WHAT CUSTOMERS SAY</h2>
-            <div className="customer-reviews">
-              <div className="review-card">
-                <div className="review-rating">★★★★★</div>
-                <h4>Skeptical at First, Now a Convert</h4>
-                <p>"I was hesitant about tallow in skincare, but this moisturizer is incredible. Absorbs quickly, no greasy feeling, and my skin looks healthier than it has in years. The texture is perfect."</p>
-                <div className="reviewer">- Alex M., Verified Buyer</div>
-              </div>
-              
-              <div className="review-card">
-                <div className="review-rating">★★★★★</div>
-                <h4>Perfect for Combination Skin</h4>
-                <p>"Finally found a moisturizer that hydrates my dry areas without making my T-zone oily. Been using it for 4 months and my skin barrier feels stronger than ever."</p>
-                <div className="reviewer">- Ryan K., Verified Buyer</div>
-              </div>
-              
-              <div className="review-card">
-                <div className="review-rating">★★★★★</div>
-                <h4>Game Changer for Sensitive Skin</h4>
-                <p>"I have reactive skin and most moisturizers either don't hydrate enough or cause breakouts. This one does neither - just pure, effective hydration with zero irritation."</p>
-                <div className="reviewer">- Michael T., Verified Buyer</div>
+            <h2 className="text-center mb-4">WHY BEEF TALLOW?</h2>
+            <div className="tallow-science">
+              <div className="grid grid-2">
+                <div>
+                  <h3>The Perfect Match for Human Skin</h3>
+                  <p>
+                    Beef tallow isn't just another trendy ingredient - it's a biomimetic powerhouse that your skin recognizes as its own. The fatty acid profile of grass-fed tallow is nearly identical to human sebum, containing the perfect ratio of saturated and unsaturated fats.
+                  </p>
+                  <div className="tallow-benefits">
+                    <h4>Tallow vs. Plant Oils:</h4>
+                    <ul>
+                      <li><strong>Stability:</strong> Won't oxidize or go rancid like seed oils</li>
+                      <li><strong>Absorption:</strong> Penetrates 3x deeper than plant-based moisturizers</li>
+                      <li><strong>Vitamins:</strong> Naturally rich in A, D, E, K - no synthetic additions needed</li>
+                      <li><strong>Compatibility:</strong> Zero comedogenic rating despite being an animal fat</li>
+                      <li><strong>Anti-aging:</strong> Contains natural retinol (Vitamin A) for collagen production</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="tallow-visuals">
+                  <div className="placeholder-image">
+                    [INFOGRAPHIC - TALLOW VS HUMAN SEBUM]
+                    <p>Scientific comparison showing identical fatty acid profiles</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [VIDEO - WHY TALLOW EDUCATIONAL CONTENT]
+                    <p>2-minute educational video on tallow benefits</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [COMPARISON CHART - TALLOW VS SYNTHETICS]
+                    <p>Visual comparison of tallow vs petroleum-based moisturizers</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Ingredient Deep Dive */}
+        {/* Featured Customer Reviews - Moved here from below */}
         <section className="section section-light">
           <div className="container">
-            <h2 className="text-center mb-4">INGREDIENT DEEP DIVE</h2>
-            <div className="ingredient-deep-dive">
-              <div className="ingredient-spotlight">
-                <h3>Natural Moisturizing Factor (NMF) Complex</h3>
-                <p>
-                  Our moisturizer contains a comprehensive NMF complex that precisely replicates the NMF found naturally within skin cells. This complex doesn't just hydrate the surface; it replenishes the skin's own water-binding capacity from within.
-                </p>
-                <div className="nmf-components">
-                  <div className="component">
-                    <h4>Amino Acids (40% of NMF)</h4>
-                    <p><strong>Included:</strong> Serine, Glycine, Alanine, Arginine, Proline, Glutamic Acid, Lysine HCL, Threonine</p>
-                    <p>These building blocks of proteins maintain skin hydration, support barrier function, and provide the raw materials for collagen synthesis.</p>
-                  </div>
-                  <div className="component">
-                    <h4>Humectants (30% of NMF)</h4>
-                    <p><strong>Included:</strong> Sodium PCA, Sodium Lactate, Urea, PCA</p>
-                    <p>These powerful water-binding molecules attract and hold moisture from the environment and deeper skin layers.</p>
-                  </div>
-                  <div className="component">
-                    <h4>Osmolytes & Sugars (20% of NMF)</h4>
-                    <p><strong>Included:</strong> Betaine, Inositol, Fructose</p>
-                    <p>These compounds help maintain cellular water balance and protect against environmental stress and dehydration.</p>
-                  </div>
-                </div>
+            <h2 className="text-center mb-4">FEATURED REVIEWS</h2>
+            <div className="featured-badge text-center mb-3">
+              <span className="badge badge-highlight">🏆 #1 RATED ANTI-AGING MOISTURIZER FOR MEN</span>
+            </div>
+            <div className="customer-reviews">
+              <div className="review-card featured">
+                <div className="review-rating">★★★★★</div>
+                <h4>"My Girlfriend Keeps Stealing This!"</h4>
+                <p>"Started using this 2 months ago and the results are insane. Fine lines around my eyes have practically disappeared. My girlfriend loved how my skin looked so much she started using it too. Now I have to hide it from her!"</p>
+                <div className="reviewer">- James D., Verified Buyer</div>
+                <div className="review-highlight">Visible anti-aging results • Girlfriend approved</div>
               </div>
               
-              <div className="advanced-ingredients">
-                <h3>Advanced Supporting Ingredients</h3>
-                <div className="advanced-grid">
-                  <div className="advanced-item">
-                    <h4>Caprylic/Capric Triglyceride</h4>
-                    <p><strong>Source:</strong> Fractionated coconut oil</p>
-                    <p><strong>Function:</strong> Lightweight emollient that enhances ingredient penetration without greasiness. Provides antimicrobial properties and extends product shelf life naturally.</p>
-                  </div>
-                  
-                  <div className="advanced-item">
-                    <h4>Cetearyl & Sorbitan Olivate</h4>
-                    <p><strong>Source:</strong> Olive oil-derived emulsifiers</p>
-                    <p><strong>Function:</strong> Creates stable, skin-compatible emulsions while providing additional moisturizing benefits. These are "good" emulsifiers that support rather than compromise the skin barrier.</p>
-                  </div>
-                  
-                  <div className="advanced-item">
-                    <h4>Persea Gratissima (Avocado) Oil</h4>
-                    <p><strong>Source:</strong> Cold-pressed avocado fruit</p>
-                    <p><strong>Function:</strong> Rich in oleic acid and vitamins A, D, and E. Provides deep nourishment and enhances the penetration of other active ingredients.</p>
-                  </div>
-                  
-                  <div className="advanced-item">
-                    <h4>Sodium Phytate</h4>
-                    <p><strong>Source:</strong> Rice bran extract</p>
-                    <p><strong>Function:</strong> Natural chelating agent that prevents oxidation and extends product stability. Also provides gentle exfoliation and brightening effects.</p>
-                  </div>
-                </div>
+              <div className="review-card featured">
+                <div className="review-rating">★★★★★</div>
+                <h4>"Erased 5 Years From My Face"</h4>
+                <p>"I'm 38 and was starting to look tired all the time. After 4 weeks with this moisturizer, multiple people have asked what I'm doing differently. The deep lines on my forehead have softened dramatically. This is the real deal for anti-aging."</p>
+                <div className="reviewer">- Marcus T., Verified Buyer</div>
+                <div className="review-highlight">Dramatic wrinkle reduction • Visible in 4 weeks</div>
+              </div>
+              
+              <div className="review-card featured">
+                <div className="review-rating">★★★★★</div>
+                <h4>"Better Than My $200 Moisturizer"</h4>
+                <p>"I've used La Mer, SK-II, you name it. This beats them all. The tallow is a game-changer - my skin has never been this smooth and firm. Plus no toxic ingredients. Worth every penny and then some."</p>
+                <div className="reviewer">- David L., Verified Buyer</div>
+                <div className="review-highlight">Outperforms luxury brands • Clean ingredients</div>
               </div>
             </div>
           </div>
@@ -445,23 +560,100 @@ const ProductMoisturizer: React.FC = () => {
             productId="moisturizer"
             productName="Face Moisturizer with Beef Tallow"
             averageRating={4.8}
-            totalReviews={203}
+            totalReviews={112}
           />
         </div>
 
-        {/* Related Products */}
+        {/* Ingredient Deep Dive with Visuals */}
+        <section className="section section-light">
+          <div className="container">
+            <h2 className="text-center mb-4">INGREDIENT DEEP DIVE</h2>
+            <div className="ingredient-deep-dive">
+              <div className="ingredient-spotlight">
+                <h3>Natural Moisturizing Factor (NMF) Complex</h3>
+                <div className="grid grid-2">
+                  <div>
+                    <p>
+                      Our moisturizer contains a comprehensive NMF complex that precisely replicates the NMF found naturally within skin cells. This complex doesn't just hydrate the surface; it replenishes the skin's own water-binding capacity from within.
+                    </p>
+                    <div className="nmf-components">
+                      <div className="component">
+                        <h4>Amino Acids (40% of NMF)</h4>
+                        <p><strong>Included:</strong> Serine, Glycine, Alanine, Arginine, Proline, Glutamic Acid, Lysine HCL, Threonine</p>
+                        <p>These building blocks of proteins maintain skin hydration, support barrier function, and provide the raw materials for collagen synthesis.</p>
+                      </div>
+                      <div className="component">
+                        <h4>Humectants (30% of NMF)</h4>
+                        <p><strong>Included:</strong> Sodium PCA, Sodium Lactate, Urea, PCA</p>
+                        <p>These water-binding molecules draw moisture from the environment and deeper skin layers to the surface.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="nmf-visuals">
+                    <div className="placeholder-image">
+                      [INFOGRAPHIC - NMF COMPLEX BREAKDOWN]
+                      <p>Visual showing how NMF components work together</p>
+                    </div>
+                    <div className="placeholder-image">
+                      [MICROSCOPE IMAGE - SKIN HYDRATION]
+                      <p>Before/after microscopic view of hydrated skin cells</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof with Visual Stats */}
         <section className="section section-dark">
+          <div className="container text-center">
+            <h2>JOIN 10,000+ MEN WHO CHOSE RAWDOG</h2>
+            <div className="social-proof-visual">
+              <div className="placeholder-image">
+                [INFOGRAPHIC - CUSTOMER STATS]
+                <p>Visual representation of customer satisfaction metrics</p>
+              </div>
+            </div>
+            <div className="social-proof-stats">
+              <div className="stat">
+                <h3>4.8★</h3>
+                <p>Average Rating</p>
+              </div>
+              <div className="stat">
+                <h3>10,000+</h3>
+                <p>Happy Customers</p>
+              </div>
+              <div className="stat">
+                <h3>40%</h3>
+                <p>Wrinkle Reduction</p>
+              </div>
+              <div className="stat">
+                <h3>60-Day</h3>
+                <p>Money-Back Guarantee</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Products with Enhanced Visuals */}
+        <section className="section section-light">
           <div className="container">
             <h2 className="text-center mb-4">COMPLETE YOUR ROUTINE</h2>
             <div className="related-products">
               <div className="related-product">
                 <div className="product-image">
                   <div className="placeholder-image">
-                    [CLEANSER IMAGE]
-                    <p>Cleanser product shot</p>
+                    [CLEANSER PRODUCT SHOT]
+                    <p>Hydrating Facial Cleanser bottle</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [CLEANSER IN USE GIF]
+                    <p>GIF showing cleanser lathering</p>
                   </div>
                 </div>
                 <h3>Hydrating Facial Cleanser</h3>
+                <p className="product-tagline">Non-stripping • Shave-friendly</p>
                 <p className="product-price">$32.00</p>
                 <button className="btn btn-outline">VIEW PRODUCT</button>
               </div>
@@ -469,11 +661,16 @@ const ProductMoisturizer: React.FC = () => {
               <div className="related-product">
                 <div className="product-image">
                   <div className="placeholder-image">
-                    [EYE CREAM IMAGE]
-                    <p>Eye cream product shot</p>
+                    [EYE CREAM PRODUCT SHOT]
+                    <p>Caffeine Under Eye Cream jar</p>
+                  </div>
+                  <div className="placeholder-image">
+                    [EYE CREAM BEFORE/AFTER]
+                    <p>Before/after eye bag reduction</p>
                   </div>
                 </div>
                 <h3>Caffeine Under Eye Cream</h3>
+                <p className="product-tagline">Eliminates eye bags • Anti-aging</p>
                 <p className="product-price">$38.00</p>
                 <button className="btn btn-outline">VIEW PRODUCT</button>
               </div>
