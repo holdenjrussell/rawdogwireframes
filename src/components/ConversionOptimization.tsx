@@ -145,31 +145,7 @@ const ConversionOptimization: React.FC<ConversionOptimizationProps> = ({
         </div>
       )}
 
-      {/* Price Comparison */}
-      <div className="price-comparison">
-        <h4>Why Subscribe & Save?</h4>
-        <div className="comparison-table">
-          <div className="comparison-row">
-            <span className="comparison-label">One-time purchase:</span>
-            <span className="comparison-price">${originalPrice.toFixed(2)}</span>
-          </div>
-          <div className="comparison-row highlight">
-            <span className="comparison-label">Subscribe & Save:</span>
-            <span className="comparison-price">
-              ${subscriptionPrice.toFixed(2)}
-              <span className="savings-badge">Save ${savings.toFixed(2)}</span>
-            </span>
-          </div>
-          <div className="comparison-benefits">
-            <ul>
-              <li>✓ 15% off every order</li>
-              <li>✓ Free shipping always</li>
-              <li>✓ Skip or cancel anytime</li>
-              <li>✓ Never run out</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+
 
       {/* Trust Signals */}
       <div className="trust-signals">

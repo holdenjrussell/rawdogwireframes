@@ -59,8 +59,8 @@
   text-align: center;
 }
 
-.offer-header h3 {
-  color: #ff6b35;
+.limited-time-offer .offer-header h3 {
+  color: #ffffff !important;
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1rem;

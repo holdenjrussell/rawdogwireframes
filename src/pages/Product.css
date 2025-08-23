@@ -401,6 +401,7 @@
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .urgency-banner p {
@@ -1262,7 +1263,7 @@
 }
 
 .bundle-info h3 {
-  color: #fff;
+  color: #ffffff !important;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;

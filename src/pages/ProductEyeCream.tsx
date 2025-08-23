@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
 import ConversionOptimization from '../components/ConversionOptimization';
 import StickyAddToCart from '../components/StickyAddToCart';
-import ScrollCTAs from '../components/ScrollCTAs';
 import './Product.css';
 
 const ProductEyeCream: React.FC = () => {
