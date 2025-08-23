@@ -251,6 +251,10 @@
   letter-spacing: 0.01em;
 }
 
+.comparison-row.highlight .comparison-price span {
+  color: #ffffff !important;
+}
+
 .comparison-row.highlight .savings-badge {
   background-color: #ffffff;
   color: #28a745 !important;
