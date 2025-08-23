@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               <li><Link to="/about">About Us</Link></li>
               <li><a href="#ingredients">Ingredients</a></li>
               <li><a href="#routine">Skincare Routine</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <li><Link to="/faq">FAQ</Link></li>
             </ul>
           </div>
 
@@ -60,9 +60,9 @@ const Footer: React.FC = () => {
             <h4>Support</h4>
             <ul>
               <li><Link to="/contact">Contact Us</Link></li>
-              <li><a href="#shipping">Shipping Info</a></li>
-              <li><a href="#returns">Returns & Refunds</a></li>
-              <li><a href="#subscription">Manage Subscription</a></li>
+              <li><Link to="/shipping">Shipping Info</Link></li>
+              <li><Link to="/returns">Returns & Refunds</Link></li>
+              <li><Link to="/subscription">Manage Subscription</Link></li>
               <li><a href="#wholesale">Wholesale</a></li>
             </ul>
           </div>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
             <ul>
               <li><Link to="/terms">Terms of Service</Link></li>
               <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><a href="#cookies">Cookie Policy</a></li>
+              <li><Link to="/cookies">Cookie Policy</Link></li>
               <li><a href="#accessibility">Accessibility</a></li>
             </ul>
           </div>

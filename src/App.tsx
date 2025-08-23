@@ -11,6 +11,12 @@ import ProductBundle from './pages/ProductBundle';
 import TermsOfService from './pages/TermsOfService';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ContactUs from './pages/ContactUs';
+import ReturnsRefunds from './pages/ReturnsRefunds';
+import ShippingInfo from './pages/ShippingInfo';
+import CookiePolicy from './pages/CookiePolicy';
+import ManageSubscription from './pages/ManageSubscription';
+import Account from './pages/Account';
+import FAQ from './pages/FAQ';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -44,6 +50,12 @@ const App: React.FC = () => {
               <Link to="/about" className="nav-link">
                 About
               </Link>
+              <Link to="/faq" className="nav-link">
+                FAQ
+              </Link>
+              <Link to="/contact" className="nav-link">
+                Contact
+              </Link>
             </div>
           </div>
         </nav>
@@ -61,6 +73,12 @@ const App: React.FC = () => {
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/returns" element={<ReturnsRefunds />} />
+          <Route path="/shipping" element={<ShippingInfo />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
+          <Route path="/subscription" element={<ManageSubscription />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
         <Footer />
       </div>

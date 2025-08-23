@@ -309,7 +309,7 @@ const ProductCleanser: React.FC = () => {
               {/* Purchase Options */}
               <div className="purchase-options">
                 <div className="option-group">
-                  <label className="option-label">
+                  <label className={`option-label ${selectedOption === 'onetime' ? 'selected' : ''}`}>
                     <input
                       type="radio"
                       name="purchase-type"
@@ -323,7 +323,7 @@ const ProductCleanser: React.FC = () => {
                     </span>
                   </label>
                   
-                  <label className="option-label selected">
+                  <label className={`option-label ${selectedOption === 'subscribe' ? 'selected' : ''}`}>
                     <input
                       type="radio"
                       name="purchase-type"

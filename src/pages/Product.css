@@ -1162,8 +1162,29 @@
 }
 
 .option-label.selected {
-  border-color: #fff;
-  background-color: #111;
+  border-color: #28a745;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.option-label.selected .option-text {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.option-label.selected .option-text strong {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.option-label.selected .option-price {
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+.option-label.selected .original-price {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: line-through;
 }
 
 .option-label input[type="radio"] {
