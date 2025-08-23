@@ -122,7 +122,7 @@ const ReturnsRefunds: React.FC = () => {
             <button 
               className="faq-question"
               onClick={() => toggleSection('subscription')}
-              aria-expanded={activeSection === 'subscription'}
+              aria-expanded={activeSection === 'subscription' ? 'true' : 'false'}
             >
               Can I return subscription products?
               <span className="toggle-icon">{activeSection === 'subscription' ? '−' : '+'}</span>
@@ -141,7 +141,7 @@ const ReturnsRefunds: React.FC = () => {
             <button 
               className="faq-question"
               onClick={() => toggleSection('bundle')}
-              aria-expanded={activeSection === 'bundle'}
+              aria-expanded={activeSection === 'bundle' ? 'true' : 'false'}
             >
               Can I return individual items from a bundle?
               <span className="toggle-icon">{activeSection === 'bundle' ? '−' : '+'}</span>
@@ -161,7 +161,7 @@ const ReturnsRefunds: React.FC = () => {
             <button 
               className="faq-question"
               onClick={() => toggleSection('international')}
-              aria-expanded={activeSection === 'international'}
+              aria-expanded={activeSection === 'international' ? 'true' : 'false'}
             >
               What about international returns?
               <span className="toggle-icon">{activeSection === 'international' ? '−' : '+'}</span>
@@ -181,7 +181,7 @@ const ReturnsRefunds: React.FC = () => {
             <button 
               className="faq-question"
               onClick={() => toggleSection('damaged')}
-              aria-expanded={activeSection === 'damaged'}
+              aria-expanded={activeSection === 'damaged' ? 'true' : 'false'}
             >
               What if my product arrived damaged?
               <span className="toggle-icon">{activeSection === 'damaged' ? '−' : '+'}</span>

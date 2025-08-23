@@ -221,7 +221,7 @@ const FAQ: React.FC = () => {
                   <button
                     className="faq-question-btn"
                     onClick={() => toggleItem(item.id)}
-                    aria-expanded={expandedItems.includes(item.id)}
+                    aria-expanded={expandedItems.includes(item.id) ? 'true' : 'false'}
                   >
                     <h3>{item.question}</h3>
                     <span className="toggle-icon">

@@ -183,32 +183,36 @@ const Account: React.FC = () => {
                     ) : (
                       <form onSubmit={(e) => { e.preventDefault(); handleSaveInfo(); }}>
                         <div className="form-group">
-                          <label>First Name</label>
+                          <label htmlFor="firstName">First Name</label>
                           <input 
+                            id="firstName"
                             type="text" 
                             value={userInfo.firstName}
                             onChange={(e) => setUserInfo({...userInfo, firstName: e.target.value})}
                           />
                         </div>
                         <div className="form-group">
-                          <label>Last Name</label>
+                          <label htmlFor="lastName">Last Name</label>
                           <input 
+                            id="lastName"
                             type="text" 
                             value={userInfo.lastName}
                             onChange={(e) => setUserInfo({...userInfo, lastName: e.target.value})}
                           />
                         </div>
                         <div className="form-group">
-                          <label>Email</label>
+                          <label htmlFor="email">Email</label>
                           <input 
+                            id="email"
                             type="email" 
                             value={userInfo.email}
                             onChange={(e) => setUserInfo({...userInfo, email: e.target.value})}
                           />
                         </div>
                         <div className="form-group">
-                          <label>Phone</label>
+                          <label htmlFor="phone">Phone</label>
                           <input 
+                            id="phone"
                             type="tel" 
                             value={userInfo.phone}
                             onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})}
@@ -259,7 +263,7 @@ const Account: React.FC = () => {
                       </div>
                       <div className="loyalty-progress">
                         <div className="progress-bar">
-                          <div className="progress-fill" style={{ width: '33%' }}></div>
+                          <div className="progress-fill progress-33"></div>
                         </div>
                         <p>$334 away from Gold status</p>
                       </div>

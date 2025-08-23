@@ -153,6 +153,7 @@ const ManageSubscription: React.FC = () => {
                           value={subscription.frequency}
                           onChange={(e) => handleFrequencyChange(subscription.id, Number(e.target.value))}
                           onBlur={() => setEditingId(null)}
+                          aria-label="Delivery frequency"
                         >
                           <option value={30}>Every 30 days</option>
                           <option value={45}>Every 45 days</option>

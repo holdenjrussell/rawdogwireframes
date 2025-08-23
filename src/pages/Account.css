@@ -216,6 +216,10 @@
   transition: width 0.3s ease;
 }
 
+.progress-33 {
+  width: 33%;
+}
+
 .loyalty-benefits h4 {
   font-size: 1rem;
   margin-bottom: 10px;

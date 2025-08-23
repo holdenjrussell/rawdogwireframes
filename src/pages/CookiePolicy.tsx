@@ -103,7 +103,7 @@ const CookiePolicy: React.FC = () => {
                 <button
                   className="category-header"
                   onClick={() => toggleCategory(category.id)}
-                  aria-expanded={expandedCategory === category.id}
+                  aria-expanded={expandedCategory === category.id ? 'true' : 'false'}
                 >
                   <div className="category-info">
                     <span className="category-icon">{category.icon}</span>
