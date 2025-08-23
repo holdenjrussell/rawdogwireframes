@@ -177,7 +177,9 @@ const ReviewsSystem: React.FC<ReviewsSystemProps> = ({
       .rating-bar-1 .bar-fill { width: ${(distribution[1] / totalReviews) * 100}%; }
     `;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
   }, [distribution, totalReviews]);
 
   return (
