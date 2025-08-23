@@ -237,20 +237,58 @@
 
 /* Featured Review Cards */
 .review-card.featured {
-  background: linear-gradient(135deg, #f8f8f8, #fff);
+  background: linear-gradient(135deg, #2a2a2a, #333);
   border: 2px solid #ffd700;
   position: relative;
+  color: #fff;
+}
+
+.review-card.featured h4 {
+  color: #fff;
+}
+
+.review-card.featured p {
+  color: #e0e0e0;
+}
+
+.review-card.featured .reviewer {
+  color: #ccc;
 }
 
 .review-highlight {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.25rem 0.5rem;
-  background: #ffd70020;
+  background: rgba(255, 215, 0, 0.2);
+  border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: 4px;
   font-size: 0.85rem;
-  color: #666;
+  color: #ffd700;
   font-weight: 600;
+}
+
+/* Light section featured reviews */
+.section-light .review-card.featured {
+  background: linear-gradient(135deg, #f8f8f8, #fff);
+  color: #333;
+}
+
+.section-light .review-card.featured h4 {
+  color: #333;
+}
+
+.section-light .review-card.featured p {
+  color: #555;
+}
+
+.section-light .review-card.featured .reviewer {
+  color: #666;
+}
+
+.section-light .review-highlight {
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: #b8860b;
 }
 
 /* Reviews Link Styles */
