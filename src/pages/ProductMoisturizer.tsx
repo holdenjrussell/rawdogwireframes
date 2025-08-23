@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
 import ConversionOptimization from '../components/ConversionOptimization';
+import StickyAddToCart from '../components/StickyAddToCart';
+import ScrollCTAs from '../components/ScrollCTAs';
 import './Product.css';
 
 const ProductMoisturizer: React.FC = () => {
@@ -119,8 +121,20 @@ const ProductMoisturizer: React.FC = () => {
     }
   ];
 
+  const handleAddToCart = () => {
+    alert(`Added to cart: ${selectedOption === 'subscribe' ? 'Subscribe & Save' : 'One-time purchase'}`);
+  };
+
   return (
     <div className="page-container">
+      {/* Sticky Add to Cart */}
+      <StickyAddToCart
+        productName="Face Moisturizer with Beef Tallow"
+        price={48.00}
+        subscriptionPrice={40.80}
+        onAddToCart={handleAddToCart}
+      />
+      
       <div className="container">
         <div className="product-detail-section">
           <div className="grid grid-2">
@@ -350,6 +364,14 @@ const ProductMoisturizer: React.FC = () => {
           </div>
         </div>
 
+        {/* CTA After Benefits/Ingredients */}
+        <ScrollCTAs
+          productName="Face Moisturizer with Beef Tallow"
+          price={48.00}
+          subscriptionPrice={40.80}
+          position="after-ingredients"
+        />
+
         {/* Stolen From Boyfriend Section */}
         <section className="section section-light">
           <div className="container">
@@ -518,6 +540,14 @@ const ProductMoisturizer: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA After Science Section */}
+        <ScrollCTAs
+          productName="Face Moisturizer with Beef Tallow"
+          price={48.00}
+          subscriptionPrice={40.80}
+          position="after-science"
+        />
 
         {/* Featured Customer Reviews - Moved here from below */}
         <section className="section section-light">

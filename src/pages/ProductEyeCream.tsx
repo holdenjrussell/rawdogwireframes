@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
 import ConversionOptimization from '../components/ConversionOptimization';
+import StickyAddToCart from '../components/StickyAddToCart';
+import ScrollCTAs from '../components/ScrollCTAs';
 import './Product.css';
 
 const ProductEyeCream: React.FC = () => {
@@ -119,8 +121,20 @@ const ProductEyeCream: React.FC = () => {
     }
   ];
 
+  const handleAddToCart = () => {
+    alert(`Added to cart: ${selectedOption === 'subscribe' ? 'Subscribe & Save' : 'One-time purchase'}`);
+  };
+
   return (
     <div className="page-container">
+      {/* Sticky Add to Cart */}
+      <StickyAddToCart
+        productName="Caffeine Under Eye Cream"
+        price={38.00}
+        subscriptionPrice={32.30}
+        onAddToCart={handleAddToCart}
+      />
+      
       <div className="container">
         <div className="product-detail-section">
           <div className="grid grid-2">

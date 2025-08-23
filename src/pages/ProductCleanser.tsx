@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
 import ConversionOptimization from '../components/ConversionOptimization';
+import StickyAddToCart from '../components/StickyAddToCart';
+import ScrollCTAs from '../components/ScrollCTAs';
 import './Product.css';
 
 const ProductCleanser: React.FC = () => {
@@ -119,8 +121,20 @@ const ProductCleanser: React.FC = () => {
     }
   ];
 
+  const handleAddToCart = () => {
+    alert(`Added to cart: ${selectedOption === 'subscribe' ? 'Subscribe & Save' : 'One-time purchase'}`);
+  };
+
   return (
     <div className="page-container">
+      {/* Sticky Add to Cart */}
+      <StickyAddToCart
+        productName="Hydrating Facial Cleanser"
+        price={32.00}
+        subscriptionPrice={27.20}
+        onAddToCart={handleAddToCart}
+      />
+      
       <div className="container">
         <div className="product-detail-section">
           <div className="grid grid-2">
@@ -398,6 +412,14 @@ const ProductCleanser: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA After Shaving Section */}
+        <ScrollCTAs
+          productName="Hydrating Facial Cleanser"
+          price={32.00}
+          subscriptionPrice={27.20}
+          position="after-benefits"
+        />
 
         {/* Non-Stripping Science Section */}
         <section className="section section-dark">
