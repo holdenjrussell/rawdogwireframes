@@ -102,7 +102,7 @@ const ReturnsRefunds: React.FC = () => {
             <button 
               className="faq-question"
               onClick={() => toggleSection('condition')}
-              aria-expanded={activeSection === 'condition'}
+              aria-expanded={activeSection === 'condition' ? 'true' : 'false'}
             >
               What condition do products need to be in for return?
               <span className="toggle-icon">{activeSection === 'condition' ? '−' : '+'}</span>
