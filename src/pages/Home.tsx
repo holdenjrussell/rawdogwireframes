@@ -17,18 +17,7 @@ interface Review {
   image: string;
 }
 
-interface Expert {
-  name: string;
-  title: string;
-  testimonial: string;
-  image: string;
-}
 
-interface Ambassador {
-  name: string;
-  title: string;
-  image: string;
-}
 
 const Home: React.FC = () => {
   // Countdown timer state
@@ -201,55 +190,7 @@ const Home: React.FC = () => {
     }
   ];
 
-  const experts: Expert[] = [
-    {
-      name: 'Dr. Sarah Mitchell',
-      title: 'DERMATOLOGIST, MD',
-      testimonial: 'Rawdog\'s approach to biomimetic formulation is scientifically sound. The use of tallow and ceramides creates an ideal environment for skin barrier repair.',
-      image: '[DR. SARAH MITCHELL PHOTO]'
-    },
-    {
-      name: 'Dr. James Chen',
-      title: 'COSMETIC CHEMIST, PhD',
-      testimonial: 'The precision in their ingredient selection is impressive. Every component serves a purpose, and the synergy between actives is expertly crafted.',
-      image: '[DR. JAMES CHEN PHOTO]'
-    },
-    {
-      name: 'Dr. Maria Rodriguez',
-      title: 'CLINICAL RESEARCHER, MD',
-      testimonial: 'Their commitment to eliminating endocrine disruptors while maintaining efficacy sets a new standard for men\'s skincare formulation.',
-      image: '[DR. MARIA RODRIGUEZ PHOTO]'
-    },
-    {
-      name: 'Dr. Michael Thompson',
-      title: 'BIOCHEMIST, PhD',
-      testimonial: 'The NMF complex in their moisturizer is one of the most comprehensive I\'ve seen. It truly mimics the skin\'s natural hydration system.',
-      image: '[DR. MICHAEL THOMPSON PHOTO]'
-    }
-  ];
 
-  const ambassadors: Ambassador[] = [
-    {
-      name: 'James R.',
-      title: 'ATHLETE, INFLUENCER',
-      image: '[JAMES R. ATHLETE IMAGE]'
-    },
-    {
-      name: 'Kevin G.',
-      title: 'MUSICIAN, INFLUENCER',
-      image: '[KEVIN G. MUSICIAN IMAGE]'
-    },
-    {
-      name: 'Michael M.',
-      title: 'ATHLETE, INFLUENCER',
-      image: '[MICHAEL M. ATHLETE IMAGE]'
-    },
-    {
-      name: 'David L.',
-      title: 'ACTOR, INFLUENCER',
-      image: '[DAVID L. ACTOR IMAGE]'
-    }
-  ];
 
   return (
     <div className="page-container">
