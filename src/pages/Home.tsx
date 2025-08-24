@@ -87,47 +87,47 @@ const Home: React.FC = () => {
     {
       name: "BEEF TALLOW",
       description: [
-        "The signature biomimetic occlusive ingredient in our Face Moisturizer. Rich in skin-compatible fatty acids and vitamins A, D, E, & K, it provides unparalleled barrier support and nourishment with a lipid profile remarkably similar to human sebum.",
-        "This powerhouse ingredient closely resembles the natural composition of human skin, delivering deep hydration while strengthening the skin's natural barrier. Unlike synthetic alternatives, tallow is instantly recognized and absorbed by your skin."
+        "The signature biomimetic occlusive in our Face Moisturizer. With a fatty acid profile that mirrors human sebum—containing optimal ratios of palmitic, stearic, and oleic acids—tallow is instantly recognized and utilized by your skin. Rich in fat-soluble vitamins A, D, E, and K naturally occurring in grass-fed sources.",
+        "Unlike plant oils that oxidize or synthetic occlusives that sit on the surface, tallow integrates with your skin's lipid matrix for true barrier repair. This ancestral ingredient provides deep nourishment while being completely non-comedogenic—a rare combination in skincare."
       ],
-      image: "[BLACK AND WHITE IMAGE OF BEEF TALLOW TEXTURE]",
-      imageDesc: "Artistic texture shot of tallow"
+      image: "[MICROSCOPIC VIEW OF TALLOW LIPID STRUCTURE]",
+      imageDesc: "Biomimetic lipid structure visualization"
     },
     {
-      name: "NIACINAMIDE (VITAMIN B3)",
+      name: "BETAINE SALICYLATE",
       description: [
-        "A versatile active found in our Face Moisturizer that helps regulate sebum, reduce inflammation, minimize the appearance of pores, and improve overall skin tone. This multi-functional ingredient is ideal for men's typically oilier skin.",
-        "Clinically proven to strengthen the skin barrier and reduce the appearance of fine lines, niacinamide works synergistically with our other actives to deliver comprehensive skin improvement while being gentle enough for daily use."
+        "The game-changing BHA in our Hydrating Facial Cleanser. This naturally-derived alternative to harsh salicylic acid provides gentle exfoliation without irritation, unclogging pores while maintaining skin comfort. Perfect for preventing ingrown hairs and razor bumps.",
+        "What makes it revolutionary for men's skincare: it works at a higher pH than traditional BHAs, meaning it exfoliates effectively without disrupting your skin barrier. The result? Smoother texture, fewer breakouts, and no post-cleanse tightness."
       ],
-      image: "[MOLECULAR STRUCTURE OF NIACINAMIDE]",
-      imageDesc: "Scientific visualization of niacinamide molecule"
+      image: "[MOLECULAR STRUCTURE WITH SKIN PENETRATION VISUALIZATION]",
+      imageDesc: "BHA molecule penetrating pore structure"
     },
     {
-      name: "CERAMIDE NP",
+      name: "NMF COMPLEX",
       description: [
-        "A crucial skin-identical ceramide in our Face Moisturizer that reinforces the skin's natural barrier, locking in moisture and protecting against environmental stressors. This is the same ceramide naturally found in healthy skin.",
-        "As we age, natural ceramide production decreases, leading to dryness and sensitivity. By replenishing with Ceramide NP, we help restore the skin's natural defense system and maintain optimal hydration levels throughout the day."
+        "Our Face Moisturizer features a comprehensive Natural Moisturizing Factor complex—including Sodium PCA, amino acids (Serine, Glycine, Alanine, Arginine, Proline), Sodium Lactate, and Urea. This isn't just hydration; it's literally rebuilding your skin's own water-holding system.",
+        "While competitors use cheap humectants like basic glycerin, we replicate the exact composition of healthy skin's NMF. This means hydration that lasts, improves over time, and actually strengthens your skin rather than creating dependency."
       ],
-      image: "[MICROSCOPIC VIEW OF SKIN BARRIER WITH CERAMIDES]",
-      imageDesc: "Cross-section showing ceramide structure in skin"
-    },
-    {
-      name: "CAFFEINE",
-      description: [
-        "A well-known vasoconstrictor in our Under Eye Cream that helps reduce fluid retention and puffiness for a tighter, more toned appearance around the eyes. This powerful antioxidant provides immediate visible results.",
-        "Beyond its de-puffing properties, caffeine stimulates circulation and helps diminish the appearance of dark circles while providing protection against environmental stressors. Perfect for men who want to look alert and refreshed."
-      ],
-      image: "[CLOSE-UP OF COFFEE BEANS AND MOLECULAR STRUCTURE]",
-      imageDesc: "Artistic composition of caffeine source and structure"
+      image: "[DIAGRAM OF NMF COMPONENTS IN SKIN LAYERS]",
+      imageDesc: "Natural Moisturizing Factor distribution in epidermis"
     },
     {
       name: "SYN-AKE PEPTIDE",
       description: [
-        "A neuromodulating peptide in our Under Eye Cream that mimics a component of temple viper venom to relax muscle contractions, smoothing expression lines and crow's feet. This cutting-edge ingredient works like 'topical botox'.",
-        "This biomimetic peptide communicates with skin cells to reduce the depth of wrinkles caused by facial movements. The result is visibly smoother, firmer skin with reduced appearance of fine lines, especially around the eyes."
+        "A revolutionary neuromodulating peptide in our Under Eye Cream, inspired by temple viper venom. This dipeptide (Diaminobutyroyl Benzylamide Diacetate) targets specific ion channels to reduce muscle contraction frequency—essentially relaxing crow's feet from the inside out.",
+        "Clinical studies show up to 52% reduction in wrinkle depth after 28 days. Unlike topical fillers that temporarily plump, SYN-AKE actually prevents the muscle movements that create expression lines, providing cumulative anti-aging benefits."
       ],
-      image: "[3D VISUALIZATION OF PEPTIDE CHAINS]",
-      imageDesc: "Scientific rendering of peptide molecular structure"
+      image: "[3D ANIMATION OF PEPTIDE BLOCKING NERVE SIGNALS]",
+      imageDesc: "Neuromodulation mechanism visualization"
+    },
+    {
+      name: "ZERUMBONE",
+      description: [
+        "The secret weapon in our Under Eye Cream—a rare bioactive compound from wild ginger (Zingiber zerumbet). This potent antioxidant doesn't just protect; it actively brightens dark circles by inhibiting melanin transfer and reducing hemoglobin degradation products.",
+        "With 10x the antioxidant power of Vitamin E, zerumbone shields the delicate eye area from blue light damage and oxidative stress. It's particularly effective against the purple-brown discoloration common in men who spend long hours in front of screens."
+      ],
+      image: "[WILD GINGER ROOT WITH MOLECULAR EXTRACTION]",
+      imageDesc: "Zerumbone extraction from Zingiber zerumbet"
     }
   ];
 
@@ -162,21 +162,21 @@ const Home: React.FC = () => {
       name: 'Hydrating Facial Cleanser',
       price: '$32',
       image: '[CLEANSER BOTTLE IMAGE]',
-      description: 'Gentle milky cleanser that purifies without stripping'
+      description: 'Made for all skin types, this cleanser removes excess oil without drying, leaves skin hydrated, and is shave-friendly.'
     },
     {
       id: 'moisturizer',
-      name: 'Face Moisturizer with Beef Tallow',
+      name: 'Facial Moisturizer with Beef Tallow',
       price: '$48',
       image: '[MOISTURIZER BOTTLE IMAGE]',
-      description: 'Lightweight moisturizer with biomimetic tallow technology'
+      description: 'Non-greasy and fast-absorbing, this beef tallow-powered moisturizer hydrates deeply and helps fight fine lines and wrinkles.'
     },
     {
       id: 'eyecream',
       name: 'Caffeine Under Eye Cream',
       price: '$38',
       image: '[EYE CREAM JAR IMAGE]',
-      description: 'Advanced peptide eye cream for puffiness and fine lines'
+      description: 'Caffeine-powered to fix tired eyes, this under eye cream helps to reduce dark circles, puffiness, and wrinkles.'
     }
   ];
 
@@ -267,12 +267,12 @@ const Home: React.FC = () => {
             <div className="hero-intro">INTRODUCING</div>
             <h1 className="hero-title">rawdog</h1>
             <p className="hero-description">
-              Elevate your skincare routine with rawdog's powerful, natural formulations. 
-              Discover the confidence that comes from products designed to perform.
+              Elevated, easy skincare for your everyday routine.<br />
+              Formulated around raw performance—stripped down to only what works.<br />
+              Simple. Effective. Honest.
             </p>
             <div className="hero-buttons">
-              <Link to="/collection" className="btn btn-primary">START YOUR TRANSFORMATION - 30% OFF</Link>
-              <Link to="/science" className="btn btn-outline">SEE THE SCIENCE</Link>
+              <Link to="/collection" className="btn btn-primary">SHOP NOW - 30% OFF</Link>
             </div>
             <div className="hero-social-proof">
               <div className="rating-stars">★★★★★</div>
@@ -285,7 +285,7 @@ const Home: React.FC = () => {
       {/* Featured Products */}
       <section className="section section-dark">
         <div className="container">
-          <h2 className="section-title text-center">FEATURED</h2>
+          <h2 className="section-title text-center">THE PRODUCT LINEUP</h2>
           
           <div className="products-scroll-container">
             <div className="products-scroll">
@@ -297,7 +297,8 @@ const Home: React.FC = () => {
                   </div>
                 </div>
                 <div className="product-info">
-                  <h3>The Complete Routine</h3>
+                  <h3>Core Set</h3>
+                  <p className="product-description">The three essentials in one simple routine: cleanse, moisturize, wake up eyes.</p>
                   <p className="product-price">$98 <span className="original-price">$118</span></p>
                   <div className="product-buttons">
                     <button className="btn">ADD TO CART</button>
@@ -316,6 +317,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="product-info">
                     <h3>{product.name}</h3>
+                    <p className="product-description">{product.description}</p>
                     <p className="product-price">{product.price}</p>
                     <div className="product-buttons">
                       <button className="btn">ADD TO CART</button>
@@ -372,38 +374,32 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* The Raw Power of Ingredients */}
+      {/* The Rawdog Difference */}
       <section className="section section-light">
         <div className="container">
           <div className="raw-power-section">
             <div className="grid grid-2">
               <div className="raw-power-content">
-                <h2>THE RAW POWER OF INGREDIENTS</h2>
+                <h2>THE NEW STANDARD IN MEN'S SKINCARE</h2>
                 
-                <div className="power-points">
-                  <div className="power-point">
-                    <div className="point-number">01.</div>
-                    <div className="point-content">
-                      <h3>POWERED BY NATURE</h3>
-                      <p>Our products harness the raw, unfiltered power of nature's most effective ingredients. We obsessively select each element for its potency and ability to deliver visible, real results.</p>
-                    </div>
-                  </div>
+                <div className="rawdog-difference-text">
+                  <p>Rawdog isn't built on old formulas or marketing fluff—it's built on uncompromising standards no one else in men's skincare has touched.</p>
                   
-                  <div className="power-point">
-                    <div className="point-number">02.</div>
-                    <div className="point-content">
-                      <h3>ELEVATED SKINCARE, SIMPLIFIED</h3>
-                      <p>We redefine men's skincare with clean, high-performance products that streamline your routine without compromising on effectiveness. No clutter, just top-tier formulations that work.</p>
-                    </div>
-                  </div>
+                  <p>We've cut seed oils, PEGs, and microplastics—ingredients that have no place in a modern routine—and replaced them with clinically validated actives and biomimetic systems, meaning formulas designed to work like your skin does.</p>
                   
-                  <div className="power-point">
-                    <div className="point-number">03.</div>
-                    <div className="point-content">
-                      <h3>DESIGNED FOR THE MODERN MAN</h3>
-                      <p>Today's men demand more from their skincare. rawdog meets that challenge with clean, premium products crafted to boost confidence and prioritize health, giving you the confidence to take on the world.</p>
-                    </div>
-                  </div>
+                  <p>The result: simple, effective products that are barrier-safe, bioavailable, and built for real results.</p>
+                </div>
+                
+                <div className="rawdog-standard">
+                  <h3>THE RAWDOG STANDARD</h3>
+                  <ul className="no-list">
+                    <li>✗ Seed Oils</li>
+                    <li>✗ Fragrance & Dyes</li>
+                    <li>✗ PEGs</li>
+                    <li>✗ Silicones</li>
+                    <li>✗ Sulfates</li>
+                    <li>✗ Fillers</li>
+                  </ul>
                 </div>
                 
                 <Link to="/science" className="btn">LEARN MORE</Link>
@@ -420,158 +416,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="section section-dark">
-        <div className="container">
-          <div className="philosophy-section">
-            <div className="grid grid-2">
-              <div className="philosophy-visual">
-                <div className="placeholder-image">
-                  [CLOSE-UP IMAGE OF MAN'S FACE]
-                  <p>Artistic black and white portrait</p>
-                </div>
-              </div>
-              
-              <div className="philosophy-content">
-                <p className="philosophy-text">
-                  ...most assume "raw" refers to the source of something, but it can also refer to something's innate potential, or source of natural power. rawdog's unique combination of natural ingredients to create performance products is the result of obsessively choosing ingredients raw in source and raw in power, with proven results.
-                </p>
-                <Link to="/about" className="btn">LEARN MORE</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Ingredient Spotlight */}
-      <section className="section section-light">
-        <div className="container">
-          <div className="ingredient-spotlight">
-            <div className="grid grid-2">
-              <div className="ingredient-content">
-                <div className="ingredient-header">
-                  <span className="ingredient-label">INGREDIENTS</span>
-                  <h2 id="ingredient-title">BEEF TALLOW</h2>
-                </div>
-                
-                <div id="ingredient-description">
-                  <p>
-                    Beef tallow is a powerhouse ingredient that closely resembles the natural composition of human skin. Rich in essential fatty acids such as stearic and oleic acid, it provides deep hydration and helps strengthen the skin's natural barrier.
-                  </p>
-                  
-                  <p>
-                    These fatty acids are crucial for maintaining soft, supple skin while reducing moisture loss. In addition, beef tallow is abundant in fat-soluble vitamins like A, D, E, and K, which are known for their skin-rejuvenating properties and antioxidant benefits.
-                  </p>
-                </div>
-                
-                <div className="ingredient-navigation">
-                  <span className="nav-item active" onClick={() => showIngredient(0)}>(01)</span>
-                  <span className="nav-item" onClick={() => showIngredient(1)}>(02)</span>
-                  <span className="nav-item" onClick={() => showIngredient(2)}>(03)</span>
-                  <span className="nav-item" onClick={() => showIngredient(3)}>(04)</span>
-                  <span className="nav-item" onClick={() => showIngredient(4)}>(05)</span>
-                </div>
-              </div>
-              
-              <div className="ingredient-visual">
-                <div className="placeholder-image" id="ingredient-image">
-                  [BLACK AND WHITE IMAGE OF BEEF TALLOW TEXTURE]
-                  <p>Artistic texture shot of tallow</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured In */}
-      <section className="section section-dark">
-        <div className="container text-center">
-          <h2>FEATURED IN</h2>
-          <div className="featured-logos">
-            <div className="logo-placeholder">GQ</div>
-            <div className="logo-placeholder">Esquire</div>
-            <div className="logo-placeholder">Men's Health</div>
-            <div className="logo-placeholder">Another Man</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews */}
-      <section className="section section-light">
-        <div className="container">
-          <h2 className="section-title text-center">THE REVIEWS ARE IN</h2>
-          
-          <div className="reviews-grid">
-            {reviews.map((review, index) => (
-              <div key={index} className="review-card">
-                <div className="review-image">
-                  <div className="placeholder-image">
-                    {review.image}
-                    <p>Customer using product</p>
-                  </div>
-                </div>
-                <div className="review-content">
-                  <div className="review-rating">
-                    {'★'.repeat(review.rating)}
-                  </div>
-                  <h3>{review.product}</h3>
-                  <p>"{review.text}"</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Science Section */}
-      <section className="section section-dark">
-        <div className="container">
-          <div className="science-section">
-            <h2 className="section-title text-center">SCIENCE BACKED INGREDIENTS</h2>
-            
-            <div className="science-visual text-center">
-              <div className="placeholder-image">
-                [IMAGE OF WHITE CREAM SMEAR]
-                <p>Product texture showcase</p>
-              </div>
-            </div>
-            
-            <div className="science-points">
-              <div className="science-point">
-                <div className="point-number">01.</div>
-                <div className="point-content">
-                  <h3>Beef Tallow: Nature's Moisture Powerhouse</h3>
-                  <p>Our hero ingredient, beef tallow, is packed with essential fatty acids and vitamins that mimic the skin's natural oils, delivering intense hydration and nourishment.</p>
-                </div>
-              </div>
-              
-              <div className="science-point">
-                <div className="point-number">02.</div>
-                <div className="point-content">
-                  <h3>Raw Ingredients, Maximum Potency</h3>
-                  <p>We source ingredients in their purest forms to ensure their natural power remains intact, providing you with skincare that genuinely works.</p>
-                </div>
-              </div>
-              
-              <div className="science-point">
-                <div className="point-number">03.</div>
-                <div className="point-content">
-                  <h3>Clean & Effective Formulations</h3>
-                  <p>No unnecessary fillers—just powerful, natural ingredients that deliver uncompromised results for healthier, more resilient skin.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <Link to="/science" className="btn">LEARN MORE</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Whole Body Health Risk Matrix */}
-      <section className="section section-light">
+      <section className="section section-dark">
         <div className="container">
           <div className="text-center mb-4">
             <h2>WHOLE BODY HEALTH RISK MATRIX</h2>
@@ -739,30 +585,113 @@ const Home: React.FC = () => {
             <p>Don't settle for brands that compromise your health. Choose the only seed oil-free, hormone-safe skincare built specifically for men.</p>
             <div className="cta-buttons">
               <Link to="/collection" className="btn btn-primary">SHOP NOW - SAVE 15%</Link>
-              <Link to="/collection" className="btn btn-outline">TRY RISK-FREE</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Expert Trust */}
+      {/* Proof Section */}
+      <section className="section section-light">
+        <div className="container">
+          <div className="proof-section">
+            <h2 className="section-title text-center">RESULTS YOU CAN SEE. FORMULAS YOU CAN TRUST.</h2>
+            <p className="proof-description text-center">
+              Rawdog delivers real, visible results—hydration, smoother texture, fewer lines, and less tired eyes.
+            </p>
+            
+            <div className="before-after-grid">
+              <div className="before-after-item">
+                <div className="placeholder-image">
+                  [BEFORE & AFTER SLIDER - HYDRATION]
+                  <p>Skin hydration improvement over 28 days</p>
+                </div>
+                <h3>HYDRATION</h3>
+                <p>Visible moisture improvement in just 7 days</p>
+              </div>
+              
+              <div className="before-after-item">
+                <div className="placeholder-image">
+                  [BEFORE & AFTER SLIDER - CLARITY]
+                  <p>Skin clarity and texture improvement</p>
+                </div>
+                <h3>CLARITY</h3>
+                <p>Smoother texture and reduced pore appearance</p>
+              </div>
+              
+              <div className="before-after-item">
+                <div className="placeholder-image">
+                  [BEFORE & AFTER SLIDER - UNDER-EYE]
+                  <p>Under-eye puffiness and dark circle reduction</p>
+                </div>
+                <h3>UNDER-EYE APPEARANCE</h3>
+                <p>Reduced puffiness and brighter eye area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ingredient Spotlight */}
       <section className="section section-dark">
         <div className="container">
-          <h2 className="section-title text-center">TRUSTED BY EXPERTS</h2>
+          <div className="ingredient-spotlight">
+            <div className="grid grid-2">
+              <div className="ingredient-content">
+                <div className="ingredient-header">
+                  <span className="ingredient-label">SCIENCE BACKED INGREDIENTS</span>
+                  <h2 id="ingredient-title">BEEF TALLOW</h2>
+                </div>
+                
+                <div id="ingredient-description">
+                  <p>
+                    Beef tallow is a powerhouse ingredient that closely resembles the natural composition of human skin. Rich in essential fatty acids such as stearic and oleic acid, it provides deep hydration and helps strengthen the skin's natural barrier.
+                  </p>
+                  
+                  <p>
+                    These fatty acids are crucial for maintaining soft, supple skin while reducing moisture loss. In addition, beef tallow is abundant in fat-soluble vitamins like A, D, E, and K, which are known for their skin-rejuvenating properties and antioxidant benefits.
+                  </p>
+                </div>
+                
+                <div className="ingredient-navigation">
+                  <span className="nav-item active" onClick={() => showIngredient(0)}>(01)</span>
+                  <span className="nav-item" onClick={() => showIngredient(1)}>(02)</span>
+                  <span className="nav-item" onClick={() => showIngredient(2)}>(03)</span>
+                  <span className="nav-item" onClick={() => showIngredient(3)}>(04)</span>
+                  <span className="nav-item" onClick={() => showIngredient(4)}>(05)</span>
+                </div>
+              </div>
+              
+              <div className="ingredient-visual">
+                <div className="placeholder-image" id="ingredient-image">
+                  [BLACK AND WHITE IMAGE OF BEEF TALLOW TEXTURE]
+                  <p>Artistic texture shot of tallow</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="section section-light">
+        <div className="container">
+          <h2 className="section-title text-center">THE REVIEWS ARE IN</h2>
           
-          <div className="experts-grid">
-            {experts.map((expert, index) => (
-              <div key={index} className="expert-card">
-                <div className="expert-image">
+          <div className="reviews-grid">
+            {reviews.map((review, index) => (
+              <div key={index} className="review-card">
+                <div className="review-image">
                   <div className="placeholder-image">
-                    {expert.image}
-                    <p>Professional headshot</p>
+                    {review.image}
+                    <p>Customer using product</p>
                   </div>
                 </div>
-                <div className="expert-content">
-                  <h3>{expert.name}</h3>
-                  <h4>{expert.title}</h4>
-                  <p>"{expert.testimonial}"</p>
+                <div className="review-content">
+                  <div className="review-rating">
+                    {'★'.repeat(review.rating)}
+                  </div>
+                  <h3>{review.product}</h3>
+                  <p>"{review.text}"</p>
                 </div>
               </div>
             ))}
@@ -777,26 +706,28 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Brand Ambassadors */}
+      {/* Closing Call to Action */}
       <section className="section section-dark">
         <div className="container">
-          <h2 className="section-title text-center">RAWDOG REPS</h2>
-          
-          <div className="ambassadors-grid">
-            {ambassadors.map((ambassador, index) => (
-              <div key={index} className="ambassador-card">
-                <div className="ambassador-image">
-                  <div className="placeholder-image">
-                    {ambassador.image}
-                    <p>Ambassador portrait</p>
-                  </div>
-                </div>
-                <div className="ambassador-info">
-                  <h3>{ambassador.name}</h3>
-                  <p>{ambassador.title}</p>
+          <div className="closing-cta-section">
+            <div className="grid grid-2">
+              <div className="closing-cta-content">
+                <h2>UPGRADE YOUR ROUTINE</h2>
+                <p className="closing-cta-description">
+                  Rawdog sets a new standard in men's skincare—simple, effective, and built for long-term health.
+                </p>
+                <div className="closing-cta-buttons">
+                  <Link to="/collection" className="btn btn-primary">SHOP NOW</Link>
                 </div>
               </div>
-            ))}
+              
+              <div className="closing-cta-visual">
+                <div className="placeholder-image">
+                  [HERO SHOT OF THE THREE SKUS TOGETHER - CORE SET]
+                  <p>Complete rawdog skincare routine</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -817,3 +748,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
