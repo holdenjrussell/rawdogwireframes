@@ -215,10 +215,7 @@ const Home: React.FC = () => {
             <div className="hero-buttons">
               <Link to="/collection" className="btn btn-primary">SHOP NOW - 30% OFF</Link>
             </div>
-            <div className="hero-social-proof">
-              <div className="rating-stars">★★★★★</div>
-              <p>Trusted by 10,000+ men • 4.9/5 rating • 60-day guarantee</p>
-            </div>
+
           </div>
         </div>
       </section>
@@ -275,8 +272,8 @@ const Home: React.FC = () => {
               <div className="badge">
                 <span className="badge-icon">🛡️</span>
                 <div>
-                  <h4>60-DAY GUARANTEE</h4>
-                  <p>Love it or get your money back</p>
+                  <h4>SEED OIL FREE</h4>
+                  <p>Clean, stable formulations</p>
                 </div>
               </div>
               <div className="badge">
@@ -365,16 +362,22 @@ const Home: React.FC = () => {
             <p>Rawdog is the only brand that eliminates seed oils, synthetic polymers, and systemic toxins—while using clinically validated actives, custom-built for men's skin.</p>
           </div>
           
-          <div className="comparison-table">
-            <div className="table-header">
-              <div className="brand-col">BRAND</div>
-              <div className="risk-col">SEED OILS</div>
-              <div className="risk-col">ENDOCRINE DISRUPTORS</div>
-              <div className="risk-col">CARCINOGEN LINKS</div>
-              <div className="risk-col">MICROPLASTICS</div>
-              <div className="risk-col">SYNTHETIC FRAGRANCE</div>
-              <div className="positioning-col">BRAND POSITIONING</div>
+          <div className="comparison-table-container">
+            <div className="table-scroll-indicator">
+              <span className="scroll-arrows">←</span>
+              <span>Scroll to compare all brands</span>
+              <span className="scroll-arrows">→</span>
             </div>
+            <div className="comparison-table">
+              <div className="table-header">
+                <div className="brand-col">BRAND</div>
+                <div className="risk-col">SEED OILS</div>
+                <div className="risk-col">ENDOCRINE DISRUPTORS</div>
+                <div className="risk-col">CARCINOGEN LINKS</div>
+                <div className="risk-col">MICROPLASTICS</div>
+                <div className="risk-col">SYNTHETIC FRAGRANCE</div>
+                <div className="positioning-col">BRAND POSITIONING</div>
+              </div>
             
             <div className="table-row rawdog-row">
               <div className="brand-col">
@@ -519,6 +522,7 @@ const Home: React.FC = () => {
                 Claims to lead men's health—formulates with PEGs, fillers, and synthetic fragrance.
               </div>
             </div>
+          </div>
           </div>
 
           <div className="conversion-cta-section">

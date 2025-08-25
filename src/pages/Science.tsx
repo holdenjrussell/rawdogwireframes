@@ -141,7 +141,7 @@ const Science: React.FC = () => {
             </p>
             <div className="hero-description">
               <p>
-                RAWDOG IS THE FIRST-EVER SEED OIL–FREE SKINCARE BRAND BUILT SPECIFICALLY FOR MEN—CLEAN, CLINICAL, AND DESIGNED PURELY FOR PERFORMANCE. WE FORMULATE FROM SCRATCH USING ONLY WHAT WORKS—AND NOTHING THAT DOESN'T.
+                RAWDOG IS THE FIRST-EVER SEED OIL–FREE SKINCARE BRAND BUILT SPECIFICALLY FOR MEN—CLEAN, CLINICAL, AND DESIGNED PURELY FOR PERFORMANCE. WE REJECT CHEAP, PROCESSED COMMODITY INGREDIENTS AND BUILD FORMULAS ON PROVEN, STABLE ACTIVES THAT DELIVER REAL RESULTS.
               </p>
             </div>
           </div>
@@ -257,16 +257,22 @@ const Science: React.FC = () => {
             <p>Rawdog is the only brand that eliminates seed oils, synthetic polymers, and systemic toxins—while using clinically validated actives, custom-built for men's skin.</p>
           </div>
           
-          <div className="comparison-table">
-            <div className="table-header">
-              <div className="brand-col">BRAND</div>
-              <div className="risk-col">SEED OILS</div>
-              <div className="risk-col">ENDOCRINE DISRUPTORS</div>
-              <div className="risk-col">CARCINOGEN LINKS</div>
-              <div className="risk-col">MICROPLASTICS</div>
-              <div className="risk-col">SYNTHETIC FRAGRANCE</div>
-              <div className="positioning-col">BRAND POSITIONING</div>
+          <div className="comparison-table-container">
+            <div className="table-scroll-indicator">
+              <span className="scroll-arrows">←</span>
+              <span>Scroll to compare all brands</span>
+              <span className="scroll-arrows">→</span>
             </div>
+            <div className="comparison-table">
+              <div className="table-header">
+                <div className="brand-col">BRAND</div>
+                <div className="risk-col">SEED OILS</div>
+                <div className="risk-col">ENDOCRINE DISRUPTORS</div>
+                <div className="risk-col">CARCINOGEN LINKS</div>
+                <div className="risk-col">MICROPLASTICS</div>
+                <div className="risk-col">SYNTHETIC FRAGRANCE</div>
+                <div className="positioning-col">BRAND POSITIONING</div>
+              </div>
             
             {competitors.map((competitor, index) => (
               <div key={index} className={`table-row ${competitor.brand === 'rawdog' ? 'rawdog-row' : ''}`}>
@@ -303,6 +309,7 @@ const Science: React.FC = () => {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>

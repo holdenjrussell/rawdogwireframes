@@ -77,23 +77,13 @@ const Collection: React.FC = () => {
       <div className="container">
         {/* Collection Header */}
         <div className="collection-header">
-          <div className="collection-intro">
-            <h1>All Products</h1>
-            <p>The complete rawdog collection - scientifically formulated, clinically proven, built for men.</p>
-          </div>
-          
-          <div className="collection-stats">
-            <div className="stat">
-              <span className="stat-number">10,000+</span>
-              <span className="stat-label">Happy Customers</span>
+          <div className="collection-hero-image">
+            <div className="hero-image-placeholder">
+              [HERO BACKGROUND IMAGE]
             </div>
-            <div className="stat">
-              <span className="stat-number">4.9/5</span>
-              <span className="stat-label">Average Rating</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">60-Day</span>
-              <span className="stat-label">Guarantee</span>
+            <div className="collection-hero-content">
+              <h1>All Products</h1>
+              <p>The complete rawdog collection - scientifically formulated, clinically proven, built for men.</p>
             </div>
           </div>
         </div>
@@ -186,10 +176,7 @@ const Collection: React.FC = () => {
                   </Link>
                 </div>
                 
-                <div className="product-guarantee">
-                  <span className="guarantee-icon">🛡️</span>
-                  <span>60-day money-back guarantee</span>
-                </div>
+
               </div>
             </div>
           ))}
@@ -202,7 +189,7 @@ const Collection: React.FC = () => {
             <div className="why-choose-item">
               <div className="why-icon">🚫</div>
               <h3>First Seed Oil-Free Brand</h3>
-              <p>The only men's skincare brand that completely eliminates inflammatory seed oils from all formulations.</p>
+              <p>The only men's skincare brand that completely eliminates cheap, processed seed oils—choosing stable, proven ingredients over cost-cutting commodity fillers.</p>
             </div>
             <div className="why-choose-item">
               <div className="why-icon">🧬</div>
@@ -250,10 +237,7 @@ const Collection: React.FC = () => {
             <h2>Ready to Transform Your Skin?</h2>
             <p>Join thousands of men who've discovered the power of clean, effective skincare.</p>
             <div className="cta-benefits">
-              <div className="cta-benefit">
-                <span className="benefit-icon">✓</span>
-                <span>60-day money-back guarantee</span>
-              </div>
+
               <div className="cta-benefit">
                 <span className="benefit-icon">✓</span>
                 <span>Free shipping on orders $50+</span>

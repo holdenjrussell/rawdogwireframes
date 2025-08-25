@@ -687,19 +687,45 @@
 }
 
 /* Comparison Table */
+.comparison-table-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.table-scroll-indicator {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.85rem;
+  font-style: italic;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.scroll-arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+}
+
 .comparison-table {
   background-color: #111;
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .table-header,
 .table-row {
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr 1.2fr 1fr 0.8fr 1fr 2fr;
-  gap: 1rem;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1.2fr 1fr 1.2fr 2fr;
+  gap: 0.75rem;
   padding: 1rem 1.5rem;
   align-items: center;
   border-bottom: 1px solid #333;
@@ -754,6 +780,10 @@
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 /* Experts Grid */
@@ -902,11 +932,11 @@
   
   .comparison-table .table-header,
   .comparison-table .table-row {
-    grid-template-columns: 1.2fr 0.6fr 0.8fr 0.8fr 0.6fr 0.8fr 1.5fr;
+    grid-template-columns: 1.2fr 0.8fr 1.2fr 1fr 0.8fr 1fr 1.8fr;
     gap: 0.5rem;
     padding: 0.8rem 1rem;
     font-size: 0.8rem;
-    min-width: 800px;
+    min-width: 900px;
   }
 }
 
@@ -922,6 +952,20 @@
   
   .hero-buttons .btn {
     width: 200px;
+  }
+  
+  /* Stack products vertically on mobile */
+  .products-scroll {
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 1.5rem;
+  }
+  
+  .product-card,
+  .bundle-card {
+    flex: none;
+    min-width: auto;
+    width: 100%;
   }
   
   .power-point,
@@ -947,24 +991,24 @@
     font-size: 2.5rem;
   }
   
+  .table-scroll-indicator {
+    display: flex;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+  
+  .scroll-arrows {
+    font-size: 1.2rem;
+    color: #aaa;
+  }
+  
   .comparison-table {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: #444 #111;
-    position: relative;
-  }
-  
-  .comparison-table::before {
-    content: "← Scroll to see all columns →";
-    position: absolute;
-    top: -30px;
-    right: 0;
-    font-size: 0.7rem;
-    color: #666;
-    font-style: italic;
-    z-index: 1;
   }
   
   .comparison-table::-webkit-scrollbar {
@@ -987,12 +1031,18 @@
   
   .comparison-table .table-header,
   .comparison-table .table-row {
-    grid-template-columns: 120px 80px 120px 100px 80px 100px 200px;
+    grid-template-columns: 140px 100px 140px 120px 100px 120px 220px;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
     font-size: 0.75rem;
-    min-width: 700px;
-    white-space: nowrap;
+    min-width: 840px;
+  }
+  
+  .comparison-table .table-header .risk-col,
+  .comparison-table .table-header .positioning-col {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2;
   }
   
   .comparison-table .brand-col {

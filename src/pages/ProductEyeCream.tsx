@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
-import ConversionOptimization from '../components/ConversionOptimization';
+
 import StickyAddToCart from '../components/StickyAddToCart';
 import './Product.css';
 
@@ -85,8 +85,8 @@ const ProductEyeCream: React.FC = () => {
     },
     {
       category: 'Seed Oils',
-      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil'],
-      why: 'High in inflammatory omega-6s that can worsen puffiness. We use stable, non-inflammatory alternatives.'
+      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil', 'Soybean Oil', 'Corn Oil', 'Cottonseed Oil', 'Evening Primrose Oil', 'Pumpkin Seed Oil', 'Hemp Seed Oil'],
+      why: 'Unstable, processed commodity oils that oxidize easily under light and heat—generating free radicals that contribute to skin stress around the delicate eye area. We use stable, biomimetic ingredients that maintain their integrity and effectiveness over time.'
     },
     {
       category: 'Parabens',
@@ -357,13 +357,7 @@ const ProductEyeCream: React.FC = () => {
                 </div>
               </div>
 
-              {/* Conversion Optimization */}
-              <ConversionOptimization 
-                productName="Caffeine Under Eye Cream"
-                originalPrice={38.00}
-                subscriptionPrice={32.30}
-                savings={5.70}
-              />
+
             </div>
           </div>
         </div>
@@ -574,39 +568,7 @@ const ProductEyeCream: React.FC = () => {
         </section>
 
         {/* Stolen From Boyfriend Angle */}
-        <section className="section section-dark">
-          <div className="container">
-            <h2 className="text-center">"MY GIRLFRIEND DISCOVERED MY SECRET"</h2>
-            <div className="stolen-eye-cream">
-              <div className="grid grid-2">
-                <div className="stolen-stories">
-                  <p className="lead">
-                    It's not just the moisturizer she's stealing anymore. Women are discovering that our eye cream works better than their $300 luxury brands.
-                  </p>
-                  <div className="testimonial">
-                    <p>"She noticed my eyes looked less tired and asked what I was using. Now we fight over the jar every morning." - Daniel K.</p>
-                  </div>
-                  <div className="testimonial">
-                    <p>"My wife threw out her La Prairie eye cream after trying mine. Says the results are better and faster." - Robert M.</p>
-                  </div>
-                  <div className="testimonial">
-                    <p>"Started hiding it in my gym bag. She still found it. Ordering two from now on." - Chris T.</p>
-                  </div>
-                </div>
-                <div className="stolen-visuals">
-                  <div className="placeholder-image">
-                    [LIFESTYLE - COUPLE SHARING BATHROOM]
-                    <p>Couple both reaching for the eye cream</p>
-                  </div>
-                  <div className="placeholder-image">
-                    [PRODUCT IN FEMALE HANDS]
-                    <p>Woman applying Rawdog eye cream</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Featured Customer Reviews - Moved Above Main Reviews */}
         <section className="section section-light">
@@ -704,10 +666,7 @@ const ProductEyeCream: React.FC = () => {
                 <h3>30%</h3>
                 <p>Wrinkle Reduction</p>
               </div>
-              <div className="stat">
-                <h3>60-Day</h3>
-                <p>Money-Back Guarantee</p>
-              </div>
+
             </div>
           </div>
         </section>

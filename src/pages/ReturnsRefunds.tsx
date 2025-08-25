@@ -16,10 +16,10 @@ const ReturnsRefunds: React.FC = () => {
         <p className="last-updated">Last Updated: January 2025</p>
 
         <div className="guarantee-banner">
-          <h2>🛡️ 60-Day Money-Back Guarantee</h2>
+          <h2>🛡️ Customer Satisfaction</h2>
           <p>
             We're confident you'll love rawdog products. If you're not completely satisfied, 
-            we'll give you a full refund within 60 days of purchase. No questions asked.
+            contact our customer service team to discuss your options.
           </p>
         </div>
 
@@ -27,9 +27,9 @@ const ReturnsRefunds: React.FC = () => {
           <h2>Return Policy Overview</h2>
           <div className="policy-highlights">
             <div className="highlight-card">
-              <span className="icon">📅</span>
-              <h3>60 Days</h3>
-              <p>Return window from delivery date</p>
+              <span className="icon">📞</span>
+              <h3>Contact Us</h3>
+              <p>Reach out for return assistance</p>
             </div>
             <div className="highlight-card">
               <span className="icon">💰</span>

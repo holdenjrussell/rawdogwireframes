@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewsSystem from '../components/ReviewsSystem';
-import ConversionOptimization from '../components/ConversionOptimization';
+
 import './Product.css';
 
 const ProductBundle: React.FC = () => {
@@ -160,19 +160,12 @@ const ProductBundle: React.FC = () => {
               <div className="product-actions">
                 <button className="btn btn-primary btn-large">ADD BUNDLE TO CART - $98</button>
                 <div className="guarantee-text">
-                  <p>✓ 60-day money-back guarantee</p>
                   <p>✓ Free shipping on orders over $50</p>
                   <p>✓ Results visible in 7-14 days</p>
                 </div>
               </div>
 
-              {/* Conversion Optimization */}
-              <ConversionOptimization 
-                productName="The Complete Routine"
-                originalPrice={118.00}
-                subscriptionPrice={98.00}
-                savings={20.00}
-              />
+
             </div>
           </div>
         </div>
@@ -256,7 +249,7 @@ const ProductBundle: React.FC = () => {
             <h3>Ready to Start Your Transformation?</h3>
             <p>Get all three products working together for maximum results</p>
             <button className="btn btn-primary btn-large">GET THE COMPLETE ROUTINE - $98</button>
-            <p className="guarantee-text">✓ 60-day guarantee ✓ Free shipping ✓ Results in 7-14 days</p>
+            <p className="guarantee-text">✓ Free shipping ✓ Results in 7-14 days</p>
           </div>
         </div>
       </section>
@@ -485,16 +478,22 @@ const ProductBundle: React.FC = () => {
             <p>Rawdog is the only brand that eliminates seed oils, synthetic polymers, and systemic toxins—while using clinically validated actives, custom-built for men's skin.</p>
           </div>
           
-          <div className="comparison-table">
-            <div className="table-header">
-              <div className="brand-col">BRAND</div>
-              <div className="risk-col">SEED OILS</div>
-              <div className="risk-col">ENDOCRINE DISRUPTORS</div>
-              <div className="risk-col">CARCINOGEN LINKS</div>
-              <div className="risk-col">MICROPLASTICS</div>
-              <div className="risk-col">SYNTHETIC FRAGRANCE</div>
-              <div className="positioning-col">BRAND POSITIONING</div>
+          <div className="comparison-table-container">
+            <div className="table-scroll-indicator">
+              <span className="scroll-arrows">←</span>
+              <span>Scroll to compare all brands</span>
+              <span className="scroll-arrows">→</span>
             </div>
+            <div className="comparison-table">
+              <div className="table-header">
+                <div className="brand-col">BRAND</div>
+                <div className="risk-col">SEED OILS</div>
+                <div className="risk-col">ENDOCRINE DISRUPTORS</div>
+                <div className="risk-col">CARCINOGEN LINKS</div>
+                <div className="risk-col">MICROPLASTICS</div>
+                <div className="risk-col">SYNTHETIC FRAGRANCE</div>
+                <div className="positioning-col">BRAND POSITIONING</div>
+              </div>
             
             <div className="table-row rawdog-row">
               <div className="brand-col">
@@ -640,6 +639,7 @@ const ProductBundle: React.FC = () => {
               </div>
             </div>
           </div>
+          </div>
 
           <div className="conversion-cta-section">
             <h3>NO MEN'S BRAND HAS GONE THIS FAR.</h3>
@@ -670,8 +670,8 @@ const ProductBundle: React.FC = () => {
               <p>Days to See Results</p>
             </div>
             <div className="stat">
-              <h3>60-Day</h3>
-              <p>Money-Back Guarantee</p>
+              <h3>Seed Oil</h3>
+              <p>Free Formulas</p>
             </div>
           </div>
         </div>
@@ -688,7 +688,7 @@ const ProductBundle: React.FC = () => {
             <button className="btn btn-primary btn-large">
               GET THE COMPLETE ROUTINE - $98
             </button>
-            <p className="guarantee-text">60-day money-back guarantee • Free shipping • Results in 7-14 days</p>
+            <p className="guarantee-text">Free shipping • Results in 7-14 days</p>
           </div>
         </div>
       </section>

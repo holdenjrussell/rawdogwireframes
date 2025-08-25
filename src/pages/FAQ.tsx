@@ -78,7 +78,7 @@ const FAQ: React.FC = () => {
       id: '10',
       category: 'returns',
       question: 'What is your return policy?',
-      answer: 'We offer a 60-day money-back guarantee on all products. If you\'re not completely satisfied, return the product (even if partially used) for a full refund. We provide a prepaid return label for US customers.'
+      answer: 'We stand behind our products. If you\'re not completely satisfied, contact our customer service team to discuss return options. We provide a prepaid return label for US customers.'
     },
     {
       id: '11',

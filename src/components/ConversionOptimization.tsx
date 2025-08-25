@@ -102,13 +102,7 @@ const ConversionOptimization: React.FC<ConversionOptimizationProps> = ({
       {/* Value Proposition */}
       <div className="value-proposition">
         <div className="value-grid">
-          <div className="value-item">
-            <div className="value-icon">✓</div>
-            <div className="value-content">
-              <h4>60-Day Guarantee</h4>
-              <p>Risk-free trial with full refund</p>
-            </div>
-          </div>
+
           <div className="value-item">
             <div className="value-icon">🚚</div>
             <div className="value-content">

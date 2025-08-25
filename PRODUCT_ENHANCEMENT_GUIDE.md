@@ -82,7 +82,7 @@ This guide outlines comprehensive enhancements to the Rawdog product pages to be
 ✗ NO PEGS (PEG-40, PEG-100)
 ✗ NO SILICONES (Dimethicone, Cyclopentasiloxane)
 ✗ NO SYNTHETIC FRAGRANCE (Parfum, Phthalates)
-✗ NO SEED OILS (Sunflower, Safflower, Grapeseed)
+✗ NO SEED OILS (Sunflower, Safflower, Grapeseed, Canola, Soybean, Corn, Cottonseed, Evening Primrose, Pumpkin Seed, Hemp Seed)
 ✗ NO PARABENS (Methylparaben, Propylparaben)
 ✗ NO SULFATES (SLS, SLES)
 ✗ NO HARSH PRESERVATIVES (Phenoxyethanol, MIT)

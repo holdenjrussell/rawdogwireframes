@@ -114,7 +114,6 @@ This guide documents all the issues identified and optimizations needed across t
 - "Sale ends in [countdown]"
 
 ### Trust Signals
-- "60-day money-back guarantee"
 - "Free shipping on orders $50+"
 - "Results visible in 7-14 days"
 - "Made in USA with premium ingredients"

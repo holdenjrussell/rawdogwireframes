@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
-import ConversionOptimization from '../components/ConversionOptimization';
+
 import StickyAddToCart from '../components/StickyAddToCart';
 import ScrollCTAs from '../components/ScrollCTAs';
 import './Product.css';
@@ -20,7 +20,7 @@ const ProductMoisturizer: React.FC = () => {
     'Strengthens skin\'s protective barrier against environmental damage',
     'Rich in vitamins A, D, E, and K for deep nourishment',
     'Regulates oil production with clinical-grade Niacinamide',
-    'Zero toxins - the moisturizer she\'ll want to steal'
+    'Zero toxins - clean, effective skincare for men'
   ];
 
   const keyIngredients = [
@@ -86,8 +86,8 @@ const ProductMoisturizer: React.FC = () => {
     },
     {
       category: 'Seed Oils',
-      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil', 'Soybean Oil'],
-      why: 'High in inflammatory omega-6 fatty acids that can oxidize on the skin. We\'re the ONLY men\'s brand that\'s completely seed oil-free.'
+      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil', 'Soybean Oil', 'Corn Oil', 'Cottonseed Oil', 'Evening Primrose Oil', 'Pumpkin Seed Oil', 'Hemp Seed Oil'],
+      why: 'Cheap, mass-produced commodity ingredients that are solvent-extracted, deodorized, and heat-processed—degrading antioxidants and leaving trace impurities. These unstable oils oxidize easily, generating free radicals that stress your skin. We build formulas on proven, stable ingredients, not cost-cutting fillers.'
     },
     {
       category: 'Parabens',
@@ -353,13 +353,7 @@ const ProductMoisturizer: React.FC = () => {
                 </div>
               </div>
 
-              {/* Conversion Optimization */}
-              <ConversionOptimization 
-                productName="Face Moisturizer with Beef Tallow"
-                originalPrice={48.00}
-                subscriptionPrice={40.80}
-                savings={7.20}
-              />
+
             </div>
           </div>
         </div>
@@ -372,42 +366,7 @@ const ProductMoisturizer: React.FC = () => {
           position="after-ingredients"
         />
 
-        {/* Stolen From Boyfriend Section */}
-        <section className="section section-light">
-          <div className="container">
-            <div className="stolen-section">
-              <h2 className="text-center">"SKINCARE SO GOOD I STOLE IT FROM MY BOYFRIEND"</h2>
-              <div className="grid grid-2">
-                <div className="stolen-content">
-                  <p className="lead">
-                    It started as a joke. Now it's a movement. Women everywhere are discovering that their boyfriends' Rawdog moisturizer works better than their $200 luxury creams.
-                  </p>
-                  <div className="stolen-testimonials">
-                    <div className="testimonial">
-                      <p>"My girlfriend started using my Rawdog and now she won't buy anything else. I have to order two bottles now." - Jake M.</p>
-                    </div>
-                    <div className="testimonial">
-                      <p>"Caught my wife red-handed with my tallow moisturizer. She said it's better than La Mer. Can't argue with that." - David R.</p>
-                    </div>
-                    <div className="testimonial">
-                      <p>"Pro tip: Buy two. One for you, one for when she inevitably steals yours." - Marcus T.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="stolen-images">
-                  <div className="placeholder-image">
-                    [COUPLE LIFESTYLE SHOT - SHARING SKINCARE]
-                    <p>Couple in bathroom, playfully sharing the moisturizer</p>
-                  </div>
-                  <div className="placeholder-image">
-                    [PRODUCT IN WOMEN'S HANDS]
-                    <p>Female hands holding the Rawdog bottle</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Anti-Aging Science Section */}
         <section className="section section-dark">
@@ -512,13 +471,14 @@ const ProductMoisturizer: React.FC = () => {
                     Beef tallow isn't just another trendy ingredient - it's a biomimetic powerhouse that your skin recognizes as its own. The fatty acid profile of grass-fed tallow is nearly identical to human sebum, containing the perfect ratio of saturated and unsaturated fats.
                   </p>
                   <div className="tallow-benefits">
-                    <h4>Tallow vs. Plant Oils:</h4>
+                    <h4>Tallow vs. Processed Seed Oils:</h4>
                     <ul>
-                      <li><strong>Stability:</strong> Won't oxidize or go rancid like seed oils</li>
-                      <li><strong>Absorption:</strong> Penetrates 3x deeper than plant-based moisturizers</li>
+                      <li><strong>Stability:</strong> Won't oxidize or generate free radicals like mass-produced seed oils</li>
+                      <li><strong>Absorption:</strong> Penetrates 3x deeper than commodity plant-based moisturizers</li>
                       <li><strong>Vitamins:</strong> Naturally rich in A, D, E, K - no synthetic additions needed</li>
                       <li><strong>Compatibility:</strong> Zero comedogenic rating despite being an animal fat</li>
                       <li><strong>Anti-aging:</strong> Contains natural retinol (Vitamin A) for collagen production</li>
+                      <li><strong>Purity:</strong> No solvent extraction, deodorization, or heat processing that degrades antioxidants</li>
                     </ul>
                   </div>
                 </div>

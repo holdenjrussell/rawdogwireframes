@@ -126,10 +126,7 @@ const Footer: React.FC = () => {
             <span>🛡️</span>
             <span>SSL Secured</span>
           </div>
-          <div className="trust-badge">
-            <span>✅</span>
-            <span>60-Day Guarantee</span>
-          </div>
+
           <div className="trust-badge">
             <span>🚚</span>
             <span>Free Shipping $50+</span>

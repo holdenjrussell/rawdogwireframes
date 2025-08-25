@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
-import ConversionOptimization from '../components/ConversionOptimization';
+
 import StickyAddToCart from '../components/StickyAddToCart';
 import ScrollCTAs from '../components/ScrollCTAs';
 import './Product.css';
@@ -17,42 +17,33 @@ const ProductCleanser: React.FC = () => {
     'pH-balanced to prevent dryness and irritation',
     'Hydrating cleanse technology - skin feels soft, never tight',
     '2-in-1: Premium cleanser + luxury shave cream',
-    'Reduces razor burn by 70% when used for shaving',
-    'Saves time, doubles results - one product, two uses',
-    'So gentle, she uses it too (and will probably steal it)',
-    'Non-foaming formula that actually works better'
+    'Reduces razor burn when used for shaving'
   ];
 
   const keyIngredients = [
     {
       name: 'Cocamidopropyl Betaine',
-      description: 'The anti-strip champion. This coconut-derived surfactant is the opposite of harsh sulfates. It cleanses effectively while preserving your skin\'s natural oils and pH balance. No more tight, dry feeling after washing - just clean, comfortable skin.',
-      benefits: ['Cleanses without stripping', 'Preserves natural moisture barrier', 'Maintains optimal pH balance', 'Perfect for sensitive skin', 'Creates ideal shaving slip']
+      description: 'The anti-strip champion. This coconut-derived surfactant is the opposite of harsh sulfates. It cleanses effectively while preserving your skin\'s natural oils and pH balance. No more tight, dry feeling after washing - just clean, comfortable skin.'
     },
     {
       name: 'Squalane',
-      description: 'Your skin\'s best friend during cleansing. This biomimetic moisturizer prevents the moisture loss that makes other cleansers feel stripping. It also provides the perfect glide for shaving, reducing friction and preventing razor burn.',
-      benefits: ['Prevents moisture stripping', 'Creates protective barrier', 'Ideal shaving lubrication', 'Reduces razor friction', 'Leaves skin soft and supple']
+      description: 'Your skin\'s best friend during cleansing. This biomimetic moisturizer prevents the moisture loss that makes other cleansers feel stripping. It also provides the perfect glide for shaving, reducing friction and preventing razor burn.'
     },
     {
       name: 'Glycerin',
-      description: 'The hydration hero that makes our cleanser feel like a treatment, not a stripper. Glycerin attracts moisture to your skin during cleansing, ensuring you finish with more hydration, not less. Essential for that post-cleanse comfort.',
-      benefits: ['Attracts moisture during cleansing', 'Prevents trans-epidermal water loss', 'Softens beard for easier shaving', 'Leaves skin plump and hydrated', 'No post-wash tightness']
+      description: 'The hydration hero. Glycerin attracts moisture to your skin during cleansing, ensuring you finish with more hydration, not less. Essential for that post-cleanse comfort.'
     },
     {
       name: 'Betaine Salicylate',
-      description: 'Gentle exfoliation without the burn. This naturally-derived BHA unclogs pores and smooths skin texture without the irritation of traditional acids. Perfect for preventing ingrown hairs and razor bumps.',
-      benefits: ['Prevents ingrown hairs', 'Unclogs pores gently', 'Smooths skin texture', 'Reduces razor bumps', 'Anti-inflammatory action']
+      description: 'A naturally derived BHA that gently exfoliates to keep pores clear and skin texture smooth. It helps prevent buildup and supports a clearer, healthier-looking complexion.'
     },
     {
       name: 'Panthenol (Pro-Vitamin B5)',
-      description: 'The post-shave soother. Panthenol converts to Vitamin B5 on your skin, providing powerful healing and anti-inflammatory benefits. It\'s like having aftershave built into your cleanser.',
-      benefits: ['Heals razor irritation', 'Reduces post-shave redness', 'Accelerates skin repair', 'Anti-inflammatory action', 'Strengthens skin barrier']
+      description: 'The built-in aftershave. Panthenol transforms into Vitamin B5 on your skin, delivering soothing, healing, and anti-inflammatory benefits that calm irritation and ease post-shave redness.'
     },
     {
       name: 'Allantoin',
-      description: 'Nature\'s healing agent. Allantoin promotes cell regeneration and creates a protective barrier against irritation. It\'s why you can shave with our cleanser daily without destroying your face.',
-      benefits: ['Promotes healing', 'Soothes razor burn', 'Protects against irritation', 'Accelerates cell turnover', 'Creates protective barrier']
+      description: 'Nature\'s recovery agent. Allantoin supports skin renewal while calming sensitivity and reinforcing the barrier, leaving skin balanced, comfortable, and cared for after every cleanse.'
     }
   ];
 
@@ -60,14 +51,14 @@ const ProductCleanser: React.FC = () => {
 
   const exclusions = [
     {
-      category: 'Forever Chemicals (PFAS)',
+      category: 'No Added Forever Chemicals (PFAS)',
       excluded: ['PFAS', 'PTFE', 'Perfluorinated compounds', 'Fluorinated surfactants'],
       why: 'These "forever chemicals" accumulate in your body and never break down. Most brands ignore this - we don\'t.'
     },
     {
-      category: 'Microplastics',
+      category: 'No Added Microplastics',
       excluded: ['Polyethylene', 'Acrylates', 'Carbomer', 'Microbeads'],
-      why: 'No plastic pollution in our formulas. We use biodegradable alternatives that are gentler on skin and planet.'
+      why: 'We never add microplastics to our formulas. Instead, we use biodegradable alternatives that are safer for skin and better for the planet.'
     },
     {
       category: 'PEGs',
@@ -86,8 +77,8 @@ const ProductCleanser: React.FC = () => {
     },
     {
       category: 'Seed Oils',
-      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil'],
-      why: 'We\'re the ONLY men\'s brand with zero seed oils. No inflammatory omega-6s that can worsen acne.'
+      excluded: ['Sunflower (Helianthus Annuus)', 'Safflower (Carthamus Tinctorius)', 'Soybean (Glycine Soja)', 'Grapeseed (Vitis Vinifera)', 'Canola (Brassica Napus)'],
+      why: 'Never includes: Sunflower (Helianthus Annuus), Safflower (Carthamus Tinctorius), Soybean (Glycine Soja), Grapeseed (Vitis Vinifera), Canola (Brassica Napus). Men\'s brands rely on these cheap, over-processed oils because they\'re easy to source, not because they\'re best for skin. We cut them entirely—no unstable fillers, no shortcuts.'
     },
     {
       category: 'Parabens',
@@ -113,11 +104,6 @@ const ProductCleanser: React.FC = () => {
       category: 'Dyes',
       excluded: ['FD&C Colors', 'Synthetic Colorants', 'Artificial Colors'],
       why: 'Colors serve no purpose in skincare except to potentially irritate. Our natural color comes from the ingredients.'
-    },
-    {
-      category: 'Endocrine Disruptors',
-      excluded: ['BPA', 'Triclosan', 'Oxybenzone', 'BHA/BHT'],
-      why: 'Chemicals that mess with your hormones have no place in daily-use products. We protect your testosterone.'
     }
   ];
 
@@ -191,10 +177,10 @@ const ProductCleanser: React.FC = () => {
                 <span className="badge badge-nonstrip">💧 Never Strips, Always Hydrates</span>
                 <span className="badge badge-shave">🪒 2-in-1: Cleanser + Shave Cream</span>
               </div>
-              <p className="product-size">4.0 FL OZ / 120 ML</p>
+              <p className="product-size">3.38 FL OZ / 100 ML</p>
               
               <p className="product-description">
-                <strong>The cleanser that doesn't strip - it hydrates.</strong> Finally, a face wash that cleanses without that tight, dry feeling. Our pH-balanced formula maintains your skin's natural protective oils while removing dirt and oil. <em>Plus, it doubles as the best shave cream you've ever used - reducing razor burn by 70%.</em> So gentle, she'll steal this one too.
+                The cleanser that doesn't strip - it hydrates. Finally, a face wash that cleanses without that tight, dry feeling. Our pH-balanced formula maintains your skin's natural protective oils while removing dirt and oil. Plus, it doubles as the best shave cream you've ever used, while reducing razor burn.
               </p>
 
               {/* Benefits Section */}
@@ -231,14 +217,6 @@ const ProductCleanser: React.FC = () => {
                         <div key={index} className="ingredient-item">
                           <h4>{ingredient.name}</h4>
                           <p>{ingredient.description}</p>
-                          <div className="ingredient-benefits">
-                            <strong>Key Benefits:</strong>
-                            <ul>
-                              {ingredient.benefits.map((benefit, idx) => (
-                                <li key={idx}>{benefit}</li>
-                              ))}
-                            </ul>
-                          </div>
                         </div>
                       ))}
                     </div>
@@ -358,68 +336,10 @@ const ProductCleanser: React.FC = () => {
                 </div>
               </div>
 
-              {/* Conversion Optimization */}
-              <ConversionOptimization 
-                productName="Hydrating Facial Cleanser"
-                originalPrice={32.00}
-                subscriptionPrice={27.20}
-                savings={4.80}
-              />
+
             </div>
           </div>
         </div>
-
-        {/* The Shaving Revolution Section */}
-        <section className="section section-light">
-          <div className="container">
-            <h2 className="text-center">THE SHAVING REVOLUTION</h2>
-            <div className="shaving-content">
-              <div className="grid grid-2">
-                <div className="shaving-story">
-                  <h3>One Product. Two Game-Changing Uses.</h3>
-                  <p className="lead">
-                    We discovered something incredible: our non-stripping cleanser creates the perfect shaving environment. The result? The smoothest shave of your life with 70% less irritation.
-                  </p>
-                  <div className="shaving-benefits">
-                    <h4>Why It Works for Shaving:</h4>
-                    <ul>
-                      <li><strong>Superior Glide:</strong> Squalane creates frictionless razor movement</li>
-                      <li><strong>Softens Beard:</strong> Glycerin penetrates hair for easier cutting</li>
-                      <li><strong>Prevents Irritation:</strong> Panthenol and Allantoin soothe as you shave</li>
-                      <li><strong>No Residue:</strong> Rinses clean without clogging your razor</li>
-                      <li><strong>Post-Shave Comfort:</strong> Leaves skin hydrated, never tight</li>
-                    </ul>
-                  </div>
-                  <div className="shaving-testimonial">
-                    <p>"I haven't bought shaving cream in 6 months. This cleanser gives me a better shave than any dedicated shave product I've tried." - Marcus K.</p>
-                  </div>
-                </div>
-                <div className="shaving-visuals">
-                  <div className="placeholder-image">
-                    [VIDEO - SHAVING DEMONSTRATION]
-                    <p>Full shaving routine using cleanser</p>
-                  </div>
-                  <div className="placeholder-image">
-                    [BEFORE/AFTER - RAZOR BURN]
-                    <p>Comparison: traditional vs cleanser shave</p>
-                  </div>
-                  <div className="placeholder-image">
-                    [GIF - RAZOR GLIDE TEST]
-                    <p>Showing superior glide and cushion</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA After Shaving Section */}
-        <ScrollCTAs
-          productName="Hydrating Facial Cleanser"
-          price={32.00}
-          subscriptionPrice={27.20}
-          position="after-benefits"
-        />
 
         {/* Non-Stripping Science Section */}
         <section className="section section-dark">
@@ -475,6 +395,50 @@ const ProductCleanser: React.FC = () => {
           </div>
         </section>
 
+        {/* The Shaving Revolution Section */}
+        <section className="section section-light">
+          <div className="container">
+            <h2 className="text-center">THE SHAVING REVOLUTION</h2>
+            <div className="shaving-content">
+              <div className="grid grid-2">
+                <div className="shaving-story">
+                  <h3>One Product. Two Game-Changing Uses.</h3>
+                  <p className="lead">
+                    Our milky cleanser actually doubles as a shaving cream, so you can cleanse and shave at the same time. It's the ultimate convenience for your morning routine—no need for separate products.
+                  </p>
+                  <div className="shaving-benefits">
+                    <h4>Why It Works for Shaving:</h4>
+                    <ul>
+                      <li><strong>Milky Texture:</strong> Creates a smooth, protective layer for your razor</li>
+                      <li><strong>Dual Purpose:</strong> Cleanses your skin while you shave</li>
+                      <li><strong>Time Saver:</strong> One step instead of cleansing then shaving</li>
+                      <li><strong>No Residue:</strong> Rinses clean without clogging your razor</li>
+                      <li><strong>Gentle Formula:</strong> Won't strip or irritate like harsh shaving foams</li>
+                    </ul>
+                  </div>
+                  <div className="shaving-testimonial">
+                    <p>"I haven't bought shaving cream in 6 months. This cleanser gives me a better shave than any dedicated shave product I've tried." - Marcus K.</p>
+                  </div>
+                </div>
+                <div className="shaving-visuals">
+                  <div className="placeholder-image">
+                    [VIDEO - SHAVING DEMONSTRATION]
+                    <p>Shaving in action using the cleanser</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA After Shaving Section */}
+        <ScrollCTAs
+          productName="Hydrating Facial Cleanser"
+          price={32.00}
+          subscriptionPrice={27.20}
+          position="after-benefits"
+        />
+
         {/* How to Use Section */}
         <section className="section section-light">
           <div className="container">
@@ -507,8 +471,8 @@ const ProductCleanser: React.FC = () => {
                   <div className="usage-step">
                     <div className="step-number">02</div>
                     <div className="step-content">
-                      <h3>APPLY DIME-SIZED AMOUNT</h3>
-                      <p>Less is more. Our concentrated formula means you need less than traditional cleansers.</p>
+                      <h3>APPLY 2-3 PUMPS</h3>
+                      <p>Use 2-3 pumps for your entire face. Our concentrated formula means you need less than traditional cleansers.</p>
                       <div className="placeholder-image">
                         [IMAGE - AMOUNT DEMO]
                         <p>Showing correct amount</p>
@@ -518,7 +482,7 @@ const ProductCleanser: React.FC = () => {
                   <div className="usage-step">
                     <div className="step-number">03</div>
                     <div className="step-content">
-                      <h3>MASSAGE FOR 30 SECONDS</h3>
+                      <h3>RUB IN FOR 15 SECONDS</h3>
                       <p>Gentle circular motions. No need to scrub - let the ingredients do the work.</p>
                       <div className="placeholder-image">
                         [GIF - MASSAGE TECHNIQUE]
@@ -564,87 +528,7 @@ const ProductCleanser: React.FC = () => {
           </div>
         </section>
 
-        {/* Stolen From Boyfriend Section */}
-        <section className="section section-dark">
-          <div className="container">
-            <h2 className="text-center">"SO GENTLE, SHE USES IT TOO"</h2>
-            <div className="stolen-cleanser">
-              <div className="grid grid-2">
-                <div className="stolen-content">
-                  <p className="lead">
-                    Our cleanser is so gentle and effective, it's become a unisex favorite. Women love that it removes makeup without stripping, men love that it doubles as shave cream.
-                  </p>
-                  <div className="testimonials">
-                    <div className="testimonial">
-                      <p>"My girlfriend started using my cleanser and now claims it's better than her $80 face wash. I had to start hiding it." - Jake T.</p>
-                    </div>
-                    <div className="testimonial">
-                      <p>"Wife discovered I use this as shave cream. Now she uses it for her legs. We go through bottles twice as fast." - Michael R.</p>
-                    </div>
-                    <div className="testimonial">
-                      <p>"She said it's the only cleanser that doesn't break her out. Guess I'm ordering two bottles from now on." - David K.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="stolen-visuals">
-                  <div className="placeholder-image">
-                    [LIFESTYLE - COUPLE IN BATHROOM]
-                    <p>Couple sharing the cleanser</p>
-                  </div>
-                  <div className="placeholder-image">
-                    [PRODUCT IN FEMALE HANDS]
-                    <p>Woman using the cleanser</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Featured Customer Reviews */}
-        <section className="section section-light">
-          <div className="container">
-            <h2 className="text-center mb-4">FEATURED REVIEWS</h2>
-            <div className="featured-badge text-center mb-3">
-              <span className="badge badge-highlight">🏆 #1 NON-STRIPPING CLEANSER FOR MEN</span>
-            </div>
-            <div className="customer-reviews">
-              <div className="review-card featured">
-                <div className="review-rating">★★★★★</div>
-                <h4>"Best Shave of My Life"</h4>
-                <p>"I was skeptical about using a cleanser to shave, but holy hell - this is better than any shaving cream I've used in 20 years. Zero irritation, perfect glide, and my skin feels amazing after. Game changer."</p>
-                <div className="reviewer">- Robert M., Verified Buyer</div>
-                <div className="review-highlight">Revolutionary shaving • Zero irritation</div>
-              </div>
-              
-              <div className="review-card featured">
-                <div className="review-rating">★★★★★</div>
-                <h4>"Finally, A Cleanser That Doesn't Strip"</h4>
-                <p>"Every other cleanser left my face feeling tight and dry. This one actually hydrates while it cleans. My oily T-zone is balanced, dry patches are gone. This is what cleansing should feel like."</p>
-                <div className="reviewer">- Alex D., Verified Buyer</div>
-                <div className="review-highlight">Hydrating cleanse • Perfect balance</div>
-              </div>
-              
-              <div className="review-card featured">
-                <div className="review-rating">★★★★★</div>
-                <h4>"My Wife Stole It Immediately"</h4>
-                <p>"Used it once and my wife asked what smelled so clean and fresh. She tried it and now uses it daily. Says it removes her makeup better than her expensive cleanser. Ordering in bulk now."</p>
-                <div className="reviewer">- Chris P., Verified Buyer</div>
-                <div className="review-highlight">Wife approved • Gentle yet effective</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Reviews System */}
-        <div id="reviews-section">
-          <ReviewsSystem 
-            productId="cleanser"
-            productName="Hydrating Facial Cleanser"
-            averageRating={4.6}
-            totalReviews={67}
-          />
-        </div>
 
         {/* Ingredient Deep Dive */}
         <section className="section section-dark">
@@ -683,36 +567,54 @@ const ProductCleanser: React.FC = () => {
           </div>
         </section>
 
-        {/* Social Proof */}
-        <section className="section section-light">
-          <div className="container text-center">
-            <h2>TRUSTED BY 10,000+ MEN WHO VALUE THEIR SKIN</h2>
-            <div className="social-proof-visual">
-              <div className="placeholder-image">
-                [INFOGRAPHIC - CUSTOMER STATS]
-                <p>Visual showing usage statistics and satisfaction</p>
-              </div>
+
+
+        {/* Featured Customer Reviews */}
+        <section className="section section-dark">
+          <div className="container">
+            <h2 className="text-center mb-4">FEATURED REVIEWS</h2>
+            <div className="featured-badge text-center mb-3">
+              <span className="badge badge-highlight">🏆 #1 NON-STRIPPING CLEANSER FOR MEN</span>
             </div>
-            <div className="social-proof-stats">
-              <div className="stat">
-                <h3>4.6★</h3>
-                <p>Average Rating</p>
+            <div className="customer-reviews">
+              <div className="review-card featured">
+                <div className="review-rating">★★★★★</div>
+                <h4>"Best Shave of My Life"</h4>
+                <p>"I was skeptical about using a cleanser to shave, but holy hell - this is better than any shaving cream I've used in 20 years. Zero irritation, perfect glide, and my skin feels amazing after. Game changer."</p>
+                <div className="reviewer">- Robert M., Verified Buyer</div>
+                <div className="review-highlight">Revolutionary shaving • Zero irritation</div>
               </div>
-              <div className="stat">
-                <h3>70%</h3>
-                <p>Less Razor Burn</p>
+              
+              <div className="review-card featured">
+                <div className="review-rating">★★★★★</div>
+                <h4>"Finally, A Cleanser That Doesn't Strip"</h4>
+                <p>"Every other cleanser left my face feeling tight and dry. This one actually hydrates while it cleans. My oily T-zone is balanced, dry patches are gone. This is what cleansing should feel like."</p>
+                <div className="reviewer">- Alex D., Verified Buyer</div>
+                <div className="review-highlight">Hydrating cleanse • Perfect balance</div>
               </div>
-              <div className="stat">
-                <h3>2-in-1</h3>
-                <p>Cleanser + Shave</p>
-              </div>
-              <div className="stat">
-                <h3>60-Day</h3>
-                <p>Money-Back Guarantee</p>
+              
+              <div className="review-card featured">
+                <div className="review-rating">★★★★★</div>
+                <h4>"Saves Me Time Every Morning"</h4>
+                <p>"The 2-in-1 aspect is genius. I can cleanse and shave at the same time without any irritation. My morning routine is so much faster now, and my skin looks better than ever."</p>
+                <div className="reviewer">- Marcus T., Verified Buyer</div>
+                <div className="review-highlight">Time-saving • Gentle formula</div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Reviews System */}
+        <div id="reviews-section">
+          <ReviewsSystem 
+            productId="cleanser"
+            productName="Hydrating Facial Cleanser"
+            averageRating={4.6}
+            totalReviews={67}
+          />
+        </div>
+
+
 
         {/* Related Products */}
         <section className="section section-dark">
