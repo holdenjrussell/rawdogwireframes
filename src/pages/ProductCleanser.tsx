@@ -431,13 +431,7 @@ const ProductCleanser: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA After Shaving Section */}
-        <ScrollCTAs
-          productName="Hydrating Facial Cleanser"
-          price={32.00}
-          subscriptionPrice={27.20}
-          position="after-benefits"
-        />
+
 
         {/* How to Use Section */}
         <section className="section section-light">
@@ -569,39 +563,7 @@ const ProductCleanser: React.FC = () => {
 
 
 
-        {/* Premium Ingredients CTA Section */}
-        <section className="section section-light">
-          <div className="container text-center">
-            <div className="cta-section">
-              <h3>Ready to Experience These Benefits?</h3>
-              <p>Join thousands who've transformed their skin</p>
-              
-              <div className="urgency-banner">
-                <h4>🔥 Limited time: Save 15% with Subscribe & Save</h4>
-                <div className="pricing-comparison">
-                  <div className="price-option">
-                    <strong>One-time:</strong>
-                    <span className="price">$32.00</span>
-                  </div>
-                  <div className="price-option highlighted">
-                    <strong>Subscribe & Save:</strong>
-                    <span className="price">$27.20</span>
-                    <span className="savings">SAVE $4.80</span>
-                  </div>
-                </div>
-                <div className="cta-buttons">
-                  <button className="btn btn-primary btn-large">SUBSCRIBE & SAVE - $27.20</button>
-                  <button className="btn btn-secondary btn-large">ONE-TIME PURCHASE - $32.00</button>
-                </div>
-                <div className="guarantees">
-                  <span>✓ Free Shipping</span>
-                  <span>✓ 60-Day Guarantee</span>
-                  <span>✓ Cancel Anytime</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Featured Customer Reviews */}
         <section className="section section-dark">
@@ -637,6 +599,14 @@ const ProductCleanser: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA Before Reviews */}
+        <ScrollCTAs
+          productName="Hydrating Facial Cleanser"
+          price={32.00}
+          subscriptionPrice={27.20}
+          position="after-benefits"
+        />
 
         {/* Reviews System */}
         <div id="reviews-section">
