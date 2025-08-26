@@ -379,13 +379,7 @@ const ProductEyeCream: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA After Science Section */}
-        <ScrollCTAs
-          productName="Caffeine Under Eye Cream"
-          price={38.00}
-          subscriptionPrice={32.30}
-          position="after-benefits"
-        />
+
 
 
 
@@ -491,42 +485,7 @@ const ProductEyeCream: React.FC = () => {
         {/* Stolen From Boyfriend Angle */}
 
 
-        {/* Premium Ingredients CTA Section */}
-        <section className="section section-light">
-          <div className="container text-center">
-            <h2>Premium Ingredients, Proven Results</h2>
-            <p className="lead">Science-backed formulation for visible improvements</p>
-            
-            <div className="cta-section">
-              <h3>Ready to Experience These Benefits?</h3>
-              <p>Join thousands who've transformed their skin</p>
-              
-              <div className="urgency-banner">
-                <h4>🔥 Limited time: Save 15% with Subscribe & Save</h4>
-                <div className="pricing-comparison">
-                  <div className="price-option">
-                    <strong>One-time:</strong>
-                    <span className="price">$38.00</span>
-                  </div>
-                  <div className="price-option highlighted">
-                    <strong>Subscribe & Save:</strong>
-                    <span className="price">$32.30</span>
-                    <span className="savings">SAVE $5.70</span>
-                  </div>
-                </div>
-                <div className="cta-buttons">
-                  <button className="btn btn-primary btn-large">SUBSCRIBE & SAVE - $32.30</button>
-                  <button className="btn btn-secondary btn-large">ONE-TIME PURCHASE - $38.00</button>
-                </div>
-                <div className="guarantees">
-                  <span>✓ Free Shipping</span>
-                  <span>✓ 60-Day Guarantee</span>
-                  <span>✓ Cancel Anytime</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Supporting Ingredients Deep Dive */}
         <section className="section section-dark">
@@ -590,6 +549,14 @@ const ProductEyeCream: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA Before Reviews */}
+        <ScrollCTAs
+          productName="Caffeine Under Eye Cream"
+          price={38.00}
+          subscriptionPrice={32.30}
+          position="after-benefits"
+        />
 
         {/* Reviews System */}
         <div id="reviews-section">
