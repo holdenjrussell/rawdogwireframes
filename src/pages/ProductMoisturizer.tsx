@@ -12,7 +12,7 @@ const ProductMoisturizer: React.FC = () => {
   const [showExclusions, setShowExclusions] = useState(false);
 
   const benefits = [
-    'Reduces appearance of fine lines by up to 40% in 4 weeks',
+    'Helps to reduce appearance of fine lines and wrinkles',
     'Boosts natural collagen production for firmer skin',
     'Reverses signs of premature aging and sun damage',
     'Biomimetic tallow technology mimics natural skin lipids',
@@ -20,39 +20,33 @@ const ProductMoisturizer: React.FC = () => {
     'Strengthens skin\'s protective barrier against environmental damage',
     'Rich in vitamins A, D, E, and K for deep nourishment',
     'Regulates oil production with clinical-grade Niacinamide',
-    'Zero toxins - clean, effective skincare for men'
+    'No added toxins - clean, effective skincare for men'
   ];
 
   const keyIngredients = [
     {
       name: 'Beef Tallow',
-      description: 'The signature biomimetic occlusive that revolutionizes moisturization. Tallow contains a fatty acid profile remarkably similar to human sebum, with optimal ratios of palmitic, stearic, and oleic acids. Rich in fat-soluble vitamins A, D, E, and K, it provides deep nourishment while strengthening the skin barrier. Unlike plant oils that can oxidize or clog pores, tallow is naturally stable and non-comedogenic.',
-      benefits: ['Biomimetic lipid profile matches human sebum', 'Rich in vitamins A, D, E, K naturally', 'Superior barrier repair and protection', 'Non-comedogenic despite being an animal fat', 'Exceptional stability and shelf-life']
+      description: 'Think of this as nature\'s perfect match for your skin. Tallow is like a VIP pass that your skin immediately recognizes and welcomes in. It\'s packed with the same fats your skin naturally produces, plus vitamins that fight aging. Unlike cheap oils that sit on top of your skin, this absorbs deep and gets to work.'
     },
     {
       name: 'Ceramide NP',
-      description: 'A crucial skin-identical ceramide (specifically N-stearoyl phytosphingosine) that makes up a significant portion of the skin\'s natural barrier. This bioidentical lipid helps restore and maintain the skin\'s protective function, preventing moisture loss and protecting against environmental damage. Essential for healthy skin barrier function.',
-      benefits: ['Restores compromised skin barriers', 'Prevents transepidermal water loss', 'Reduces sensitivity and irritation', 'Supports natural skin repair processes']
+      description: 'Your skin\'s protective shield needs ceramides like a wall needs bricks. When your skin gets damaged (from sun, shaving, or harsh products), ceramides fill in the cracks and rebuild that protection. This keeps moisture in and irritants out, so your skin stays strong and comfortable.'
     },
     {
       name: 'Niacinamide (Vitamin B3)',
-      description: 'A versatile, well-researched active ingredient that addresses multiple skin concerns simultaneously. Niacinamide regulates sebum production, reduces inflammation, minimizes pore appearance, and improves skin tone. It also boosts ceramide synthesis, working synergistically with our Ceramide NP for enhanced barrier function.',
-      benefits: ['Regulates oil production without drying', 'Reduces inflammation and redness', 'Minimizes pore appearance', 'Improves skin texture and tone', 'Boosts natural ceramide production']
+      description: 'The multitasker that controls shine without drying you out. If your forehead gets oily by noon but your cheeks feel dry, this ingredient helps balance everything out. It also calms redness, shrinks the look of pores, and helps your skin build its own protective layer. Plus, it\'s proven to reduce signs of aging.'
     },
     {
       name: 'Natural Moisturizing Factor (NMF) Complex',
-      description: 'A comprehensive blend of humectants that precisely replicates the skin\'s own Natural Moisturizing Factor. Includes Sodium PCA, amino acids (Serine, Glycine, Alanine, Arginine, Proline), Sodium Lactate, Urea, and other osmolytes. This complex doesn\'t just hydrate the surface - it replenishes the skin\'s own water-binding capacity.',
-      benefits: ['Replicates skin\'s natural hydration system', 'Provides both immediate and long-term hydration', 'Supports cellular water balance', 'Enhances skin\'s natural moisture retention']
+      description: 'Your skin naturally holds water using special molecules called NMF. As you age or damage your skin, you lose these molecules and get dry. We\'ve recreated the exact same molecules your skin uses, so this moisturizer doesn\'t just sit on top - it actually restores your skin\'s ability to stay hydrated all day.'
     },
     {
       name: 'Squalane',
-      description: 'A lightweight, plant-derived emollient that closely mimics the squalene naturally produced by human sebaceous glands. This biomimetic ingredient provides excellent spreadability, rapid absorption, and antioxidant protection without any greasy residue. Perfect for all skin types, including acne-prone skin.',
-      benefits: ['Biomimetic and readily absorbed', 'Non-comedogenic and lightweight', 'Provides antioxidant protection', 'Enhances other ingredient penetration']
+      description: 'The lightweight moisture that sinks in fast. While heavy creams leave you looking greasy, squalane absorbs instantly and leaves your skin soft without shine. It fights aging by protecting against damage, and helps all the other ingredients penetrate deeper where they can actually work.'
     },
     {
       name: 'Advanced Emulsifier System',
-      description: 'Our silicone-free formula uses innovative emulsifiers: Methylheptylglycerin and Diheptyl Succinate combined with Capryloyl Glycerin/Sebacic Acid Copolymer. These plant-derived alternatives provide the smooth, non-greasy feel typically achieved with silicones, but with better skin compatibility and environmental safety.',
-      benefits: ['Silicone-free smooth texture', 'Enhanced ingredient stability', 'Better skin compatibility', 'Environmentally sustainable']
+      description: 'Most moisturizers use silicones to feel smooth, but silicones just coat your skin like plastic wrap - they don\'t actually moisturize. Our plant-based system gives you that same smooth, non-greasy feel while actually letting your skin breathe and absorb nutrients. It\'s the difference between real results and fake smoothness.'
     }
   ];
 
@@ -60,14 +54,14 @@ const ProductMoisturizer: React.FC = () => {
 
   const exclusions = [
     {
-      category: 'Forever Chemicals (PFAS)',
+      category: 'No Added Forever Chemicals (PFAS)',
       excluded: ['PFAS', 'PTFE', 'Perfluorinated compounds', 'Fluorinated surfactants'],
-      why: 'These "forever chemicals" accumulate in the body and environment, never breaking down. While many brands ignore this emerging concern, we take a proactive stance on long-term health.'
+      why: 'These "forever chemicals" accumulate in your body and never break down. Most brands ignore this - we don\'t.'
     },
     {
-      category: 'Microplastics',
+      category: 'No Added Microplastics',
       excluded: ['Polyethylene', 'Acrylates', 'Carbomer', 'Nylon-12'],
-      why: 'Microplastics contribute to environmental pollution and may accumulate in the body. Our formulas use natural alternatives that are fully biodegradable.'
+      why: 'We never add microplastics to our formulas. Instead, we use biodegradable alternatives that are safer for skin and better for the planet.'
     },
     {
       category: 'PEGs (Polyethylene Glycols)',
@@ -86,8 +80,8 @@ const ProductMoisturizer: React.FC = () => {
     },
     {
       category: 'Seed Oils',
-      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil', 'Soybean Oil', 'Corn Oil', 'Cottonseed Oil', 'Evening Primrose Oil', 'Pumpkin Seed Oil', 'Hemp Seed Oil'],
-      why: 'Cheap, mass-produced commodity ingredients that are solvent-extracted, deodorized, and heat-processed—degrading antioxidants and leaving trace impurities. These unstable oils oxidize easily, generating free radicals that stress your skin. We build formulas on proven, stable ingredients, not cost-cutting fillers.'
+      excluded: ['Sunflower (Helianthus Annuus)', 'Safflower (Carthamus Tinctorius)', 'Soybean (Glycine Soja)', 'Grapeseed (Vitis Vinifera)', 'Canola (Brassica Napus)'],
+      why: 'Men\'s brands rely on these cheap, over-processed oils because they\'re easy to source, not because they\'re best for skin. We cut them entirely—no unstable fillers, no shortcuts.'
     },
     {
       category: 'Parabens',
@@ -118,6 +112,11 @@ const ProductMoisturizer: React.FC = () => {
       category: 'Endocrine Disruptors',
       excluded: ['BPA', 'Triclosan', 'Oxybenzone', 'BHA/BHT', 'Resorcinol'],
       why: 'These chemicals interfere with hormone function, particularly concerning for men\'s testosterone levels. We prioritize your long-term hormonal health.'
+    },
+    {
+      category: 'Alcohol',
+      excluded: ['Denatured Alcohol', 'SD Alcohol', 'Isopropyl Alcohol', 'Ethanol'],
+      why: 'Drying alcohols strip your skin and damage the barrier. Our formula hydrates without any harsh, drying ingredients.'
     }
   ];
 
@@ -183,13 +182,13 @@ const ProductMoisturizer: React.FC = () => {
             <div className="product-info">
               <h1>Face Moisturizer with Beef Tallow</h1>
               <div className="product-badges">
-                <span className="badge badge-stolen">🔥 "Skincare So Good I Stole It From My Boyfriend"</span>
+                <span className="badge badge-tsa">✈️ TSA-Approved</span>
                 <span className="badge badge-antiaging">⚡ Anti-Aging Powerhouse</span>
               </div>
-              <p className="product-size">1.7 FL OZ / 50 ML</p>
+              <p className="product-size">1.69 FL OZ / 50 ML</p>
               
               <p className="product-description">
-                <strong>The moisturizer she'll want to steal.</strong> This revolutionary formula combines ancestral wisdom with cutting-edge science. Biomimetic beef tallow delivers unmatched anti-aging benefits while Ceramide NP and Niacinamide visibly reduce fine lines, boost collagen production, and reverse signs of premature aging. <em>Clinically proven to reduce appearance of wrinkles by up to 40% in just 4 weeks.</em>
+                This revolutionary moisturizer combines ancestral wisdom with cutting-edge science. Biomimetic beef tallow delivers unmatched anti-aging benefits while Ceramide NP and Niacinamide visibly helps to reduce fine lines, boost collagen production, and reverse signs of premature aging.
               </p>
 
               {/* Benefits Section */}
@@ -226,14 +225,6 @@ const ProductMoisturizer: React.FC = () => {
                         <div key={index} className="ingredient-item">
                           <h4>{ingredient.name}</h4>
                           <p>{ingredient.description}</p>
-                          <div className="ingredient-benefits">
-                            <strong>Key Benefits:</strong>
-                            <ul>
-                              {ingredient.benefits.map((benefit, idx) => (
-                                <li key={idx}>{benefit}</li>
-                              ))}
-                            </ul>
-                          </div>
                         </div>
                       ))}
                     </div>
@@ -358,15 +349,6 @@ const ProductMoisturizer: React.FC = () => {
           </div>
         </div>
 
-        {/* CTA After Benefits/Ingredients */}
-        <ScrollCTAs
-          productName="Face Moisturizer with Beef Tallow"
-          price={48.00}
-          subscriptionPrice={40.80}
-          position="after-ingredients"
-        />
-
-
 
         {/* Anti-Aging Science Section */}
         <section className="section section-dark">
@@ -377,27 +359,27 @@ const ProductMoisturizer: React.FC = () => {
                 <div>
                   <h3>Turn Back The Clock</h3>
                   <p>
-                    Our biomimetic formula doesn't just moisturize - it actively reverses signs of aging at the cellular level. The combination of beef tallow's natural retinol content, ceramides for barrier repair, and niacinamide for collagen boosting creates a powerful anti-aging complex.
+                    Our biomimetic formula doesn't just moisturize - it actively reverses signs of aging at the cellular level. The combination of beef tallow's natural retinol content, ceramides for barrier repair, and niacinamide for collagen boosting creates a powerful anti-aging complex that visibly reduces fine lines and wrinkles.
                   </p>
-                  <div className="results-timeline">
-                    <h4>Visible Results Timeline:</h4>
+                  <div className="anti-aging-benefits">
+                    <h4>Clinical Results:</h4>
                     <ul>
-                      <li><strong>Week 1:</strong> Skin feels more hydrated, looks brighter</li>
-                      <li><strong>Week 2:</strong> Fine lines begin to soften, texture improves</li>
-                      <li><strong>Week 4:</strong> Up to 40% reduction in wrinkle appearance</li>
-                      <li><strong>Week 8:</strong> Dramatic improvement in skin firmness and elasticity</li>
-                      <li><strong>Week 12:</strong> Complete skin transformation - look 5 years younger</li>
+                      <li>Visibly reduces appearance of fine lines and wrinkles</li>
+                      <li>Boosts natural collagen production</li>
+                      <li>Improves skin firmness and elasticity</li>
+                      <li>Reverses signs of sun damage</li>
+                      <li>Delivers deep hydration for plumper skin</li>
                     </ul>
                   </div>
                 </div>
                 <div className="anti-aging-visuals">
                   <div className="placeholder-image">
-                    [BEFORE/AFTER GALLERY - 4 WEEK TRANSFORMATION]
-                    <p>Dramatic before/after showing wrinkle reduction</p>
+                    [BEFORE/AFTER GALLERY - TRANSFORMATION]
+                    <p>Before/after showing visible improvement</p>
                   </div>
                   <div className="placeholder-image">
                     [CLINICAL STUDY INFOGRAPHIC]
-                    <p>40% wrinkle reduction visualization</p>
+                    <p>Key anti-aging benefits visualization</p>
                   </div>
                   <div className="placeholder-image">
                     [TIME-LAPSE GIF - ABSORPTION]
@@ -412,7 +394,7 @@ const ProductMoisturizer: React.FC = () => {
         {/* How to Use Section with Media */}
         <section className="section section-light">
           <div className="container">
-            <h2 className="text-center mb-4">HOW TO USE</h2>
+            <h2 className="text-center mb-4 how-to-use-title">HOW TO USE</h2>
             <div className="usage-content">
               <div className="usage-video">
                 <div className="placeholder-image">
@@ -424,8 +406,8 @@ const ProductMoisturizer: React.FC = () => {
                 <div className="usage-step">
                   <div className="step-number">01</div>
                   <div className="step-content">
-                    <h3>CLEANSE FIRST</h3>
-                    <p>Start with clean, slightly damp skin for optimal absorption. Use our Hydrating Facial Cleanser for best results.</p>
+                    <h3 className="usage-step-title">CLEANSE FIRST</h3>
+                    <p>Start with clean skin for optimal absorption. Use our Hydrating Facial Cleanser for best results.</p>
                     <div className="placeholder-image">
                       [GIF - CLEANSING MOTION]
                       <p>Animation showing cleansing technique</p>
@@ -435,8 +417,8 @@ const ProductMoisturizer: React.FC = () => {
                 <div className="usage-step">
                   <div className="step-number">02</div>
                   <div className="step-content">
-                    <h3>APPLY SPARINGLY</h3>
-                    <p>A little goes a long way. Use a dime-sized amount for your entire face and neck.</p>
+                    <h3 className="usage-step-title">APPLY 2-3 PUMPS</h3>
+                    <p>Use 2-3 pumps for your entire face. Our concentrated formula means you need less than traditional moisturizers.</p>
                     <div className="placeholder-image">
                       [IMAGE - AMOUNT DEMONSTRATION]
                       <p>Showing correct amount on fingertip</p>
@@ -446,8 +428,8 @@ const ProductMoisturizer: React.FC = () => {
                 <div className="usage-step">
                   <div className="step-number">03</div>
                   <div className="step-content">
-                    <h3>MASSAGE UPWARD</h3>
-                    <p>Apply in upward strokes to fight gravity and promote circulation. Focus on areas with fine lines.</p>
+                    <h3 className="usage-step-title">RUB IT IN</h3>
+                    <p>Apply until fully absorbed. No grease, no shine, and no residue.</p>
                     <div className="placeholder-image">
                       [GIF - APPLICATION TECHNIQUE]
                       <p>Animation showing upward massage motions</p>
@@ -466,34 +448,46 @@ const ProductMoisturizer: React.FC = () => {
             <div className="tallow-science">
               <div className="grid grid-2">
                 <div>
-                  <h3>The Perfect Match for Human Skin</h3>
+                  <h3>Why Our Tallow Formula Beats "Pure" Tallow</h3>
                   <p>
-                    Beef tallow isn't just another trendy ingredient - it's a biomimetic powerhouse that your skin recognizes as its own. The fatty acid profile of grass-fed tallow is nearly identical to human sebum, containing the perfect ratio of saturated and unsaturated fats.
+                    Straight tallow is a phenomenal raw material, but a terrible final product. It's greasy, smelly, and while it contains good natural molecules, it's missing critical components your skin needs. That's why we engineered the perfect formula around it.
                   </p>
                   <div className="tallow-benefits">
-                    <h4>Tallow vs. Processed Seed Oils:</h4>
+                    <h4>The Problem with "100% Tallow" Brands:</h4>
                     <ul>
-                      <li><strong>Stability:</strong> Won't oxidize or generate free radicals like mass-produced seed oils</li>
-                      <li><strong>Absorption:</strong> Penetrates 3x deeper than commodity plant-based moisturizers</li>
-                      <li><strong>Vitamins:</strong> Naturally rich in A, D, E, K - no synthetic additions needed</li>
-                      <li><strong>Compatibility:</strong> Zero comedogenic rating despite being an animal fat</li>
-                      <li><strong>Anti-aging:</strong> Contains natural retinol (Vitamin A) for collagen production</li>
-                      <li><strong>Purity:</strong> No solvent extraction, deodorization, or heat processing that degrades antioxidants</li>
+                      <li><strong>Greasy & Heavy:</strong> Straight tallow sits on your skin like a thick layer of grease</li>
+                      <li><strong>Smells Like Beef:</strong> Without proper formulation, you'll smell like a steakhouse</li>
+                      <li><strong>Only an Occlusive:</strong> Tallow alone only traps moisture - it doesn't add hydration</li>
+                      <li><strong>Missing Key Ingredients:</strong> No peptides, ceramides, or omega acids for complete skin health</li>
+                      <li><strong>Poor Absorption:</strong> Without emulsifiers, it doesn't penetrate properly</li>
                     </ul>
                   </div>
+                  <div className="tallow-benefits">
+                    <h4>Our Scientifically Enhanced Formula:</h4>
+                    <ul>
+                      <li><strong>Perfect Balance:</strong> Tallow + hydrators (glycerin, NMF) + occlusives work together</li>
+                      <li><strong>Fine-Tuned Omega Acids:</strong> Added 3, 6, and 9 for all skin types</li>
+                      <li><strong>Advanced Delivery:</strong> Our emulsifier system ensures deep penetration</li>
+                      <li><strong>No Grease or Smell:</strong> Lightweight, fast-absorbing, unscented formula</li>
+                      <li><strong>Complete Moisturization:</strong> Both brings in water AND locks it in</li>
+                    </ul>
+                  </div>
+                  <p className="disclaimer-note">
+                    <em>Note: Most "pure" or "100% tallow" moisturizers are actually emulsions - they mean the tallow they use is 100% tallow, not that the formula is 100% tallow. And it's clear that time and attention wasn't paid to those other ingredients.</em>
+                  </p>
                 </div>
                 <div className="tallow-visuals">
                   <div className="placeholder-image">
-                    [INFOGRAPHIC - TALLOW VS HUMAN SEBUM]
-                    <p>Scientific comparison showing identical fatty acid profiles</p>
+                    [INFOGRAPHIC - FORMULA COMPARISON]
+                    <p>Our complete formula vs straight tallow</p>
                   </div>
                   <div className="placeholder-image">
-                    [VIDEO - WHY TALLOW EDUCATIONAL CONTENT]
-                    <p>2-minute educational video on tallow benefits</p>
+                    [VIDEO - WHY FORMULATION MATTERS]
+                    <p>2-minute video explaining the science</p>
                   </div>
                   <div className="placeholder-image">
-                    [COMPARISON CHART - TALLOW VS SYNTHETICS]
-                    <p>Visual comparison of tallow vs petroleum-based moisturizers</p>
+                    [COMPARISON CHART - ABSORPTION RATES]
+                    <p>Visual showing absorption difference</p>
                   </div>
                 </div>
               </div>
@@ -544,16 +538,6 @@ const ProductMoisturizer: React.FC = () => {
           </div>
         </section>
 
-        {/* Reviews System */}
-        <div id="reviews-section">
-          <ReviewsSystem 
-            productId="moisturizer"
-            productName="Face Moisturizer with Beef Tallow"
-            averageRating={4.8}
-            totalReviews={112}
-          />
-        </div>
-
         {/* Ingredient Deep Dive with Visuals */}
         <section className="section section-light">
           <div className="container">
@@ -595,36 +579,17 @@ const ProductMoisturizer: React.FC = () => {
           </div>
         </section>
 
-        {/* Social Proof with Visual Stats */}
-        <section className="section section-dark">
-          <div className="container text-center">
-            <h2>JOIN 10,000+ MEN WHO CHOSE RAWDOG</h2>
-            <div className="social-proof-visual">
-              <div className="placeholder-image">
-                [INFOGRAPHIC - CUSTOMER STATS]
-                <p>Visual representation of customer satisfaction metrics</p>
-              </div>
-            </div>
-            <div className="social-proof-stats">
-              <div className="stat">
-                <h3>4.8★</h3>
-                <p>Average Rating</p>
-              </div>
-              <div className="stat">
-                <h3>10,000+</h3>
-                <p>Happy Customers</p>
-              </div>
-              <div className="stat">
-                <h3>40%</h3>
-                <p>Wrinkle Reduction</p>
-              </div>
-              <div className="stat">
-                <h3>60-Day</h3>
-                <p>Money-Back Guarantee</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Reviews System */}
+        <div id="reviews-section">
+          <ReviewsSystem 
+            productId="moisturizer"
+            productName="Face Moisturizer with Beef Tallow"
+            averageRating={4.8}
+            totalReviews={112}
+          />
+        </div>
+
+
 
         {/* Related Products with Enhanced Visuals */}
         <section className="section section-light">

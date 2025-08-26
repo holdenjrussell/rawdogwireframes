@@ -1,5 +1,15 @@
 /* Product Page Shared Styles */
 
+/* How to Use Title - White Text */
+.how-to-use-title {
+  color: white !important;
+}
+
+/* Usage Step Titles - White Text */
+.usage-step-title {
+  color: white !important;
+}
+
 /* Product Image Gallery Styles */
 .product-images {
   position: relative;

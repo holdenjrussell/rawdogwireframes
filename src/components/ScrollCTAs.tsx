@@ -26,8 +26,8 @@ const ScrollCTAs: React.FC<ScrollCTAsProps> = ({
       urgency: "⚡ Most customers see results in 7-14 days"
     },
     'after-science': {
-      headline: "Don't Wait to Start Your Transformation",
-      subheadline: "Every day without proper skincare is a missed opportunity",
+      headline: "Premium Ingredients, Proven Results",
+      subheadline: "Science-backed formulation for visible improvements",
       urgency: "💪 60-day money-back guarantee - zero risk"
     },
     'before-reviews': {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReviewsSystem from '../components/ReviewsSystem';
 
 import StickyAddToCart from '../components/StickyAddToCart';
+import ScrollCTAs from '../components/ScrollCTAs';
 import './Product.css';
 
 const ProductEyeCream: React.FC = () => {
@@ -11,47 +12,33 @@ const ProductEyeCream: React.FC = () => {
   const [showExclusions, setShowExclusions] = useState(false);
 
   const benefits = [
-    'Eliminates under-eye bags from late nights and screen fatigue',
-    'Erases evidence of all-nighters and startup stress',
-    'Board-room ready in 5 minutes - instant puffiness reduction',
-    'Reduces crow\'s feet by up to 30% in 8 weeks',
-    'Peptides proven to rival injectable treatments',
-    'Reverses 5 years of eye aging naturally',
-    'Immediate caffeine tightening effect for morning meetings',
-    'Non-greasy formula perfect under concealer',
-    'So effective, she\'ll steal it for herself'
+    'Helps to eliminate under eye bags, dark circles, and crows feet',
+    'Immediate caffeine tightening',
+    'Lightweight, non-greasy formula',
+    'Delivers both instant and lasting results'
   ];
 
   const keyIngredients = [
     {
       name: 'Caffeine',
-      description: 'Your secret weapon against all-nighters. This clinically-proven vasoconstrictor immediately tightens blood vessels to eliminate fluid retention and puffiness. Perfect for those early morning meetings after late night work sessions. Caffeine also provides powerful antioxidant protection against screen-induced oxidative stress.',
-      benefits: ['Instant eye bag reduction in 5 minutes', 'Eliminates puffiness from lack of sleep', 'Improves microcirculation', 'Protects against blue light damage', 'Energizes tired-looking eyes']
+      description: 'Your secret weapon against all-nighters. This clinically-proven vasoconstrictor immediately tightens blood vessels to eliminate fluid retention and puffiness. Perfect for those early morning meetings after late night work sessions. Caffeine also provides powerful antioxidant protection against screen-induced oxidative stress.'
     },
     {
       name: 'SYN-AKE (Dipeptide Diaminobutyroyl Benzylamide Diacetate)',
-      description: 'A revolutionary biomimetic peptide inspired by temple viper venom that targets specific ion channels in nerve endings. This neuromodulating peptide reduces the frequency and intensity of muscle contractions that cause expression lines, providing a non-invasive alternative to injectable treatments.',
-      benefits: ['Reduces muscle contraction frequency', 'Smooths dynamic wrinkles', 'Targets crow\'s feet specifically', 'Non-invasive wrinkle reduction', 'Cumulative anti-aging effects']
+      description: 'A revolutionary biomimetic peptide inspired by temple viper venom. This advanced ingredient works by relaxing the tiny muscles around your eyes that cause wrinkles when you squint or smile. Think of it as a gentler, topical alternative to injections that helps smooth out crow\'s feet over time.'
     },
     {
       name: 'Argireline (Acetyl Hexapeptide-8)',
-      description: 'Often called "Botox in a jar," this hexapeptide interferes with the SNARE complex that enables neurotransmitter release. By reducing the intensity of muscle contractions, Argireline helps prevent the formation of new expression lines while smoothing existing ones.',
-      benefits: ['Interferes with neurotransmitter release', 'Reduces muscle contraction intensity', 'Prevents new wrinkle formation', 'Smooths existing expression lines', 'Synergistic with SYN-AKE']
+      description: 'Often called "Botox in a jar," this peptide helps relax facial muscles to reduce the appearance of expression lines. It works by limiting how intensely your muscles contract when you make facial expressions, which helps prevent new wrinkles from forming and softens existing ones.'
     },
     {
       name: 'Zerumbone',
-      description: 'A rare and potent bioactive compound extracted from Zingiber zerumbet (wild ginger). This powerful antioxidant and anti-inflammatory agent helps brighten dark under-eye circles caused by stress and lack of sleep, protects against environmental damage, and supports the skin\'s natural repair processes.',
-      benefits: ['Brightens stress-induced dark circles', 'Reduces inflammation from eye strain', 'Protects against screen radiation', 'Supports overnight repair', 'Superior antioxidant activity']
+      description: 'A rare compound from wild ginger that helps brighten dark under-eye circles. This powerful antioxidant targets the inflammation and damage caused by stress, lack of sleep, and screen time - the main culprits behind those stubborn dark circles that make you look tired even when you\'re not.'
     },
-    {
-      name: 'Advanced Peptide Complex',
-      description: 'Our eye cream features an additional Arginine/Lysine Polypeptide that supports collagen synthesis and skin repair. This multi-peptide approach ensures comprehensive anti-aging benefits targeting different aspects of skin aging around the delicate eye area.',
-      benefits: ['Supports collagen synthesis', 'Enhances skin repair processes', 'Improves skin firmness', 'Complements neuromodulating peptides', 'Provides comprehensive anti-aging']
-    },
+
     {
       name: 'Hydration & Barrier Complex',
-      description: 'A sophisticated blend including Glyceryl Glucoside (a natural osmoprotectant), Betaine, and our signature emollient system. This complex provides immediate and long-lasting hydration while supporting the delicate eye area\'s barrier function.',
-      benefits: ['Immediate and long-term hydration', 'Supports delicate eye area barrier', 'Provides osmoprotection', 'Non-greasy formula', 'Compatible with makeup application']
+      description: 'A blend of moisturizing ingredients that keeps the delicate eye area hydrated without feeling heavy or greasy. This complex helps strengthen your skin\'s natural protective barrier - think of it as a shield that keeps moisture in and irritants out, which is especially important for the thin skin around your eyes.'
     }
   ];
 
@@ -59,64 +46,59 @@ const ProductEyeCream: React.FC = () => {
 
   const exclusions = [
     {
-      category: 'Forever Chemicals (PFAS)',
+      category: 'No Added Forever Chemicals (PFAS)',
       excluded: ['PFAS', 'PTFE', 'Perfluorinated compounds', 'Fluorinated surfactants'],
-      why: 'These "forever chemicals" accumulate in the body and environment. The delicate eye area is particularly susceptible to absorption.'
+      why: 'These "forever chemicals" accumulate in your body and never break down. Most brands ignore this - we don\'t.'
     },
     {
-      category: 'Microplastics',
-      excluded: ['Polyethylene', 'Acrylates', 'Carbomer', 'Nylon-12'],
-      why: 'Microplastics can cause irritation and environmental damage. Our natural alternatives are gentler on sensitive eye skin.'
+      category: 'No Added Microplastics',
+      excluded: ['Polyethylene', 'Acrylates', 'Carbomer', 'Microbeads'],
+      why: 'We never add microplastics to our formulas. Instead, we use biodegradable alternatives that are safer for skin and better for the planet.'
     },
     {
       category: 'PEGs',
       excluded: ['PEG-40', 'PEG-100', 'PEG compounds', 'Polysorbates'],
-      why: 'PEGs can increase penetration of harmful ingredients and may be contaminated with carcinogens. Not worth the risk around your eyes.'
+      why: 'PEGs can be contaminated with carcinogens and strip your skin barrier. Our plant-based system is safer and gentler.'
     },
     {
       category: 'Silicones',
-      excluded: ['Dimethicone', 'Cyclopentasiloxane', 'Cyclohexasiloxane', 'Phenyl Trimethicone'],
-      why: 'While not harmful, silicones can prevent beneficial ingredients from penetrating and may cause milia around the eyes.'
+      excluded: ['Dimethicone', 'Cyclopentasiloxane', 'Cyclohexasiloxane'],
+      why: 'Silicones create a false smoothness while preventing real hydration. Our formula provides genuine skin benefits.'
     },
     {
       category: 'Synthetic Fragrances',
-      excluded: ['Parfum/Fragrance', 'Phthalates', 'Limonene', 'Linalool', 'Essential Oils'],
-      why: 'The #1 cause of eye area irritation and allergic reactions. Our formula is completely unscented for maximum tolerance.'
+      excluded: ['Parfum/Fragrance', 'Phthalates', 'Limonene', 'Linalool'],
+      why: 'The #1 cause of skin irritation in cleansers. Our unscented formula eliminates this risk completely.'
     },
     {
       category: 'Seed Oils',
-      excluded: ['Sunflower Oil', 'Safflower Oil', 'Grapeseed Oil', 'Canola Oil', 'Soybean Oil', 'Corn Oil', 'Cottonseed Oil', 'Evening Primrose Oil', 'Pumpkin Seed Oil', 'Hemp Seed Oil'],
-      why: 'Unstable, processed commodity oils that oxidize easily under light and heat—generating free radicals that contribute to skin stress around the delicate eye area. We use stable, biomimetic ingredients that maintain their integrity and effectiveness over time.'
+      excluded: ['Sunflower (Helianthus Annuus)', 'Safflower (Carthamus Tinctorius)', 'Soybean (Glycine Soja)', 'Grapeseed (Vitis Vinifera)', 'Canola (Brassica Napus)'],
+      why: 'Men\'s brands rely on these cheap, over-processed oils because they\'re easy to source, not because they\'re best for skin. We cut them entirely—no unstable fillers, no shortcuts.'
     },
     {
       category: 'Parabens',
-      excluded: ['Methylparaben', 'Propylparaben', 'Butylparaben', 'Ethylparaben'],
-      why: 'Hormone disruptors that can affect testosterone levels. Particularly concerning for daily use products.'
+      excluded: ['Methylparaben', 'Propylparaben', 'Butylparaben'],
+      why: 'Hormone disruptors that can reduce testosterone. Not worth the risk for a preservative.'
     },
     {
       category: 'Sulfates',
-      excluded: ['SLS', 'SLES', 'ALS'],
-      why: 'Harsh detergents that can severely irritate the delicate eye area. No place for these in eye care.'
+      excluded: ['SLS (Sodium Lauryl Sulfate)', 'SLES (Sodium Laureth Sulfate)', 'ALS'],
+      why: 'The ultimate skin strippers. These harsh detergents destroy your moisture barrier and cause that tight, dry feeling.'
     },
     {
       category: 'Harsh Preservatives',
-      excluded: ['Phenoxyethanol', 'MIT/MCI', 'Formaldehyde-releasers', 'Methylisothiazolinone'],
-      why: 'Can cause severe allergic reactions around sensitive eye area. Our gentle preservation system is safer.'
+      excluded: ['Formaldehyde-releasers', 'MIT/MCI', 'DMDM Hydantoin'],
+      why: 'Old-school preservatives that cause allergic reactions. Our modern system is gentler and just as effective.'
     },
     {
-      category: 'Harsh Actives',
-      excluded: ['Retinol', 'Glycolic Acid', 'Salicylic Acid', 'L-Ascorbic Acid'],
-      why: 'Too aggressive for the delicate eye area. Our peptide approach is gentler yet more effective.'
+      category: 'Fillers',
+      excluded: ['Talc', 'Kaolin', 'Unnecessary thickeners'],
+      why: 'No pointless bulking agents. Every ingredient has a purpose in our formula.'
     },
     {
-      category: 'Drying Alcohols',
-      excluded: ['Denatured Alcohol', 'SD Alcohol', 'Isopropyl Alcohol'],
-      why: 'Can severely dry the already thin eye area skin, worsening fine lines. We use only beneficial fatty alcohols.'
-    },
-    {
-      category: 'Endocrine Disruptors',
-      excluded: ['BPA', 'Triclosan', 'Oxybenzone', 'BHA/BHT'],
-      why: 'Chemicals that interfere with hormone function. Your testosterone levels are safe with us.'
+      category: 'Dyes',
+      excluded: ['FD&C Colors', 'Synthetic Colorants', 'Artificial Colors'],
+      why: 'Colors serve no purpose in skincare except to potentially irritate. Our natural color comes from the ingredients.'
     }
   ];
 
@@ -187,13 +169,13 @@ const ProductEyeCream: React.FC = () => {
             <div className="product-info">
               <h1>Caffeine Under Eye Cream</h1>
               <div className="product-badges">
-                <span className="badge badge-eyebags">💼 Erases All-Nighter Evidence</span>
-                <span className="badge badge-stolen">🔥 "So Good She Steals It"</span>
+                <span className="badge badge-eyebags">💼 Fights Bags & Dark Circles</span>
+                <span className="badge badge-stolen">⚡ Instant Wake Up Effect</span>
               </div>
-              <p className="product-size">0.5 FL OZ / 15 ML</p>
+              <p className="product-size">0.50 FL OZ / 15 ML</p>
               
               <p className="product-description">
-                <strong>Your secret weapon against startup stress and screen fatigue.</strong> This targeted treatment eliminates under-eye bags in minutes, erases evidence of all-nighters, and gets you board-room ready fast. Advanced peptides work like "Botox in a jar" to reduce crow's feet by up to 30% in 8 weeks. <em>From exhausted to executive in 5 minutes.</em>
+                Your secret weapon against work stress and screen fatigue. This targeted treatment helps to eliminate under eye bags and dark circles, without leaving a film like other creams. Advanced peptides work like "Botox in a jar" to reduce crow's feet. From exhausted to executive in 5 minutes.
               </p>
 
               {/* Benefits Section */}
@@ -230,14 +212,6 @@ const ProductEyeCream: React.FC = () => {
                         <div key={index} className="ingredient-item">
                           <h4>{ingredient.name}</h4>
                           <p>{ingredient.description}</p>
-                          <div className="ingredient-benefits">
-                            <strong>Key Benefits:</strong>
-                            <ul>
-                              {ingredient.benefits.map((benefit, idx) => (
-                                <li key={idx}>{benefit}</li>
-                              ))}
-                            </ul>
-                          </div>
                         </div>
                       ))}
                     </div>
@@ -260,7 +234,7 @@ const ProductEyeCream: React.FC = () => {
                 {showExclusions && (
                   <div className="section-content">
                     <div className="exclusions-intro">
-                      <p><strong>What's NOT in our products is just as important as what IS.</strong> The delicate eye area demands the highest standards - we eliminate every questionable ingredient:</p>
+                      <p><strong>What's NOT in our products is just as important as what IS.</strong> We've eliminated every harsh, stripping, and questionable ingredient found in other cleansers:</p>
                     </div>
                     <div className="exclusions-grid">
                       {exclusions.map((exclusion, index) => (
@@ -276,10 +250,7 @@ const ProductEyeCream: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="clean-guarantee">
-                      <h4>Gentle Yet Powerful</h4>
-                      <p>Our peptide-based approach delivers dramatic results without harsh ingredients. Perfect for the sensitive eye area.</p>
-                    </div>
+
                   </div>
                 )}
               </div>
@@ -362,50 +333,7 @@ const ProductEyeCream: React.FC = () => {
           </div>
         </div>
 
-        {/* The Professional's Secret Section */}
-        <section className="section section-light">
-          <div className="container">
-            <h2 className="text-center">THE PROFESSIONAL'S SECRET WEAPON</h2>
-            <div className="professional-content">
-              <div className="grid grid-2">
-                <div className="professional-story">
-                  <h3>From All-Nighter to All-Star</h3>
-                  <p className="lead">
-                    We get it. Late nights are part of the hustle. Whether you're closing deals, shipping code, or building your empire, those eye bags tell a story you'd rather keep to yourself.
-                  </p>
-                  <div className="use-cases">
-                    <div className="use-case">
-                      <strong>The Startup Founder:</strong>
-                      <p>"3 hours of sleep, 9am pitch meeting. This eye cream saved my Series A." - Tech CEO</p>
-                    </div>
-                    <div className="use-case">
-                      <strong>The Investment Banker:</strong>
-                      <p>"All-nighter on a deal. Client meeting at 7am. Looked fresh as hell." - VP, Goldman</p>
-                    </div>
-                    <div className="use-case">
-                      <strong>The Creative Director:</strong>
-                      <p>"Deadline crunch had me looking rough. 5 minutes later, ready for client presentation." - Agency Partner</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="professional-visuals">
-                  <div className="placeholder-image">
-                    [LIFESTYLE - EXECUTIVE AT DESK]
-                    <p>Professional applying eye cream before important meeting</p>
-                  </div>
-                  <div className="placeholder-image">
-                    [BEFORE/AFTER - CONFERENCE ROOM]
-                    <p>Split image: tired vs. refreshed in business setting</p>
-                  </div>
-                  <div className="placeholder-image">
-                    [VIDEO - MORNING ROUTINE]
-                    <p>Quick morning routine for busy professionals</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Eye Bag Science Section */}
         <section className="section section-dark">
@@ -416,25 +344,19 @@ const ProductEyeCream: React.FC = () => {
                 <div>
                   <h3>Why Eye Bags Form (And How We Fix Them)</h3>
                   <p>
-                    Under-eye bags aren't just about lack of sleep. They're caused by fluid retention, weakened skin structure, and poor circulation - all amplified by stress, screen time, and yes, those all-nighters.
+                    Under eye bags aren't just about lack of sleep. They're caused by fluid retention, weakened skin structure, and poor circulation - all amplified by stress, screen time, and lack of sleep.
                   </p>
                   <div className="solution-timeline">
-                    <h4>Our Multi-Phase Approach:</h4>
+                    <h4>Immediate Effects, Long-Lasting Results</h4>
                     <div className="phase">
-                      <strong>Phase 1 (0-5 minutes):</strong>
-                      <p>Caffeine immediately constricts blood vessels, reducing fluid retention and puffiness</p>
+                      <strong>Day-of Benefits:</strong>
+                      <p>Caffeine tightens blood vessels for an instantly refreshed look</p>
+                      <p>Improved circulation reduces swelling and smooths under the eyes</p>
                     </div>
                     <div className="phase">
-                      <strong>Phase 2 (5-30 minutes):</strong>
-                      <p>Improved microcirculation drains excess fluid, visibly reducing bag size</p>
-                    </div>
-                    <div className="phase">
-                      <strong>Phase 3 (Daily use):</strong>
-                      <p>Peptides strengthen skin structure, preventing future bag formation</p>
-                    </div>
-                    <div className="phase">
-                      <strong>Phase 4 (4-8 weeks):</strong>
-                      <p>Collagen production increases, permanently improving eye area appearance</p>
+                      <strong>Ongoing Benefits:</strong>
+                      <p>Peptides strengthen skin to help stop bags from coming back</p>
+                      <p>Consistent use boosts collagen, firming and brightening the under eye area over time</p>
                     </div>
                   </div>
                 </div>
@@ -457,21 +379,20 @@ const ProductEyeCream: React.FC = () => {
           </div>
         </section>
 
-        {/* Urgency Section */}
-        <section className="section section-light">
-          <div className="container text-center">
-            <div className="urgency-banner">
-              <h3>🔥 LIMITED TIME: Save 15% with Subscribe & Save</h3>
-              <p>Join 10,000+ professionals who never look tired (even when they are)</p>
-              <button className="btn btn-primary btn-large">SUBSCRIBE & SAVE - $32.30</button>
-            </div>
-          </div>
-        </section>
+        {/* CTA After Science Section */}
+        <ScrollCTAs
+          productName="Caffeine Under Eye Cream"
+          price={38.00}
+          subscriptionPrice={32.30}
+          position="after-benefits"
+        />
+
+
 
         {/* How to Use Section with Professional Focus */}
         <section className="section section-dark">
           <div className="container">
-            <h2 className="text-center mb-4">HOW TO USE FOR MAXIMUM RESULTS</h2>
+            <h2 className="text-center mb-4 how-to-use-title">HOW TO USE</h2>
             <div className="usage-professional">
               <div className="usage-video">
                 <div className="placeholder-image">
@@ -483,33 +404,33 @@ const ProductEyeCream: React.FC = () => {
                 <div className="usage-step">
                   <div className="step-number">01</div>
                   <div className="step-content">
-                    <h3>MORNING EMERGENCY PROTOCOL</h3>
-                    <p>Rough night? Apply immediately upon waking. The caffeine works fastest on morning puffiness.</p>
+                    <h3 className="usage-step-title">Wash Face</h3>
+                    <p>Start with clean skin for optimal absorption. Use our Hydrating Facial Cleanser for best results.</p>
                     <div className="placeholder-image">
-                      [GIF - WAKE UP APPLICATION]
-                      <p>Quick application right after waking</p>
+                      [GIF - FACE WASHING]
+                      <p>Clean skin preparation</p>
                     </div>
                   </div>
                 </div>
                 <div className="usage-step">
                   <div className="step-number">02</div>
                   <div className="step-content">
-                    <h3>GENTLE TAPPING TECHNIQUE</h3>
-                    <p>Use ring finger to gently tap (never rub) around orbital bone. This stimulates drainage.</p>
+                    <h3 className="usage-step-title">Apply Minimal Amount</h3>
+                    <p>With our concentrated formula, a little goes a long way. Gently tap under the eyes and around crow's feet.</p>
                     <div className="placeholder-image">
                       [GIF - TAPPING TECHNIQUE]
-                      <p>Proper tapping motion demonstration</p>
+                      <p>Proper application technique</p>
                     </div>
                   </div>
                 </div>
                 <div className="usage-step">
                   <div className="step-number">03</div>
                   <div className="step-content">
-                    <h3>5-MINUTE TRANSFORMATION</h3>
-                    <p>Let it work while you shower/shave. By the time you're dressed, bags are gone.</p>
+                    <h3 className="usage-step-title">Wake Up Your Eyes</h3>
+                    <p>Let the formula work instantly, and look more alert in minutes.</p>
                     <div className="placeholder-image">
-                      [BEFORE/AFTER - 5 MINUTES]
-                      <p>Dramatic change in just 5 minutes</p>
+                      [BEFORE/AFTER - INSTANT RESULTS]
+                      <p>Immediate transformation</p>
                     </div>
                   </div>
                 </div>
@@ -532,7 +453,7 @@ const ProductEyeCream: React.FC = () => {
                   <div className="peptide-comparison">
                     <h4>Peptides vs. Injectables:</h4>
                     <div className="comparison-point">
-                      <strong>Safety:</strong> No needles, no toxins, no side effects
+                      <strong>Safety:</strong> No needles, no toxins
                     </div>
                     <div className="comparison-point">
                       <strong>Natural Results:</strong> Gradual improvement, maintains natural expressions
@@ -544,7 +465,7 @@ const ProductEyeCream: React.FC = () => {
                       <strong>Convenience:</strong> Apply at home in seconds
                     </div>
                     <div className="comparison-point">
-                      <strong>Long-term:</strong> Actually improves skin health over time
+                      <strong>Long-term:</strong> Actually helps to improve skin health over time
                     </div>
                   </div>
                 </div>
@@ -569,6 +490,71 @@ const ProductEyeCream: React.FC = () => {
 
         {/* Stolen From Boyfriend Angle */}
 
+
+        {/* Premium Ingredients CTA Section */}
+        <section className="section section-light">
+          <div className="container text-center">
+            <h2>Premium Ingredients, Proven Results</h2>
+            <p className="lead">Science-backed formulation for visible improvements</p>
+            
+            <div className="cta-section">
+              <h3>Ready to Experience These Benefits?</h3>
+              <p>Join thousands who've transformed their skin</p>
+              
+              <div className="urgency-banner">
+                <h4>🔥 Limited time: Save 15% with Subscribe & Save</h4>
+                <div className="pricing-comparison">
+                  <div className="price-option">
+                    <strong>One-time:</strong>
+                    <span className="price">$38.00</span>
+                  </div>
+                  <div className="price-option highlighted">
+                    <strong>Subscribe & Save:</strong>
+                    <span className="price">$32.30</span>
+                    <span className="savings">SAVE $5.70</span>
+                  </div>
+                </div>
+                <div className="cta-buttons">
+                  <button className="btn btn-primary btn-large">SUBSCRIBE & SAVE - $32.30</button>
+                  <button className="btn btn-secondary btn-large">ONE-TIME PURCHASE - $38.00</button>
+                </div>
+                <div className="guarantees">
+                  <span>✓ Free Shipping</span>
+                  <span>✓ 60-Day Guarantee</span>
+                  <span>✓ Cancel Anytime</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Supporting Ingredients Deep Dive */}
+        <section className="section section-dark">
+          <div className="container">
+            <h2 className="text-center mb-4">SUPPORTING INGREDIENTS DEEP DIVE</h2>
+            <div className="supporting-ingredients">
+              <div className="ingredient-grid">
+                <div className="ingredient-card">
+                  <h3>Zerumbone: The Stress Fighter</h3>
+                  <p><strong>Why it matters:</strong> This rare compound from wild ginger specifically targets inflammation caused by stress and lack of sleep. It's 5x more potent than Vitamin E at neutralizing the free radicals generated by blue light exposure.</p>
+                  <div className="placeholder-image">
+                    [INFOGRAPHIC - ZERUMBONE VS VITAMIN E]
+                    <p>Antioxidant potency comparison</p>
+                  </div>
+                </div>
+                
+                <div className="ingredient-card">
+                  <h3>Glyceryl Glucoside: The Protector</h3>
+                  <p><strong>Why it matters:</strong> This natural osmoprotectant helps cells maintain water balance even under stress conditions (like dehydration from alcohol or caffeine). Perfect for maintaining eye area hydration during long work sessions.</p>
+                  <div className="placeholder-image">
+                    [DIAGRAM - CELLULAR HYDRATION]
+                    <p>How osmoprotection works</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Featured Customer Reviews - Moved Above Main Reviews */}
         <section className="section section-light">
@@ -615,61 +601,9 @@ const ProductEyeCream: React.FC = () => {
           />
         </div>
 
-        {/* Supporting Ingredients Deep Dive */}
-        <section className="section section-dark">
-          <div className="container">
-            <h2 className="text-center mb-4">SUPPORTING INGREDIENTS DEEP DIVE</h2>
-            <div className="supporting-ingredients">
-              <div className="ingredient-grid">
-                <div className="ingredient-card">
-                  <h3>Zerumbone: The Stress Fighter</h3>
-                  <p><strong>Why it matters:</strong> This rare compound from wild ginger specifically targets inflammation caused by stress and lack of sleep. It's 5x more potent than Vitamin E at neutralizing the free radicals generated by blue light exposure.</p>
-                  <div className="placeholder-image">
-                    [INFOGRAPHIC - ZERUMBONE VS VITAMIN E]
-                    <p>Antioxidant potency comparison</p>
-                  </div>
-                </div>
-                
-                <div className="ingredient-card">
-                  <h3>Glyceryl Glucoside: The Protector</h3>
-                  <p><strong>Why it matters:</strong> This natural osmoprotectant helps cells maintain water balance even under stress conditions (like dehydration from alcohol or caffeine). Perfect for maintaining eye area hydration during long work sessions.</p>
-                  <div className="placeholder-image">
-                    [DIAGRAM - CELLULAR HYDRATION]
-                    <p>How osmoprotection works</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Social Proof */}
-        <section className="section section-light">
-          <div className="container text-center">
-            <h2>TRUSTED BY 10,000+ HIGH PERFORMERS</h2>
-            <div className="social-proof-visual">
-              <div className="placeholder-image">
-                [INFOGRAPHIC - USER DEMOGRAPHICS]
-                <p>CEOs, founders, bankers, consultants who trust Rawdog</p>
-              </div>
-            </div>
-            <div className="social-proof-stats">
-              <div className="stat">
-                <h3>4.7★</h3>
-                <p>Average Rating</p>
-              </div>
-              <div className="stat">
-                <h3>5 MIN</h3>
-                <p>To Visible Results</p>
-              </div>
-              <div className="stat">
-                <h3>30%</h3>
-                <p>Wrinkle Reduction</p>
-              </div>
 
-            </div>
-          </div>
-        </section>
+
 
         {/* Related Products */}
         <section className="section section-dark">

@@ -277,3 +277,4 @@ const ShippingInfo: React.FC = () => {
 };
 
 export default ShippingInfo;
+
